@@ -1,10 +1,38 @@
 import { Button, Col, Divider, Form, Input, Row } from 'antd';
-import React from 'react';
+import React, { useState } from 'react';
 import Helmet from 'react-helmet';
-
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 function Contact() {
+	const [name,setName]=useState();
+	const [company,setCompany]=useState();
+	const [email,setEmail]=useState();
+	const [phone,setPhone]=useState();
+	const [comment,setComment]=useState();
+	const [chooseProgram,setChooseProgram]=useState();
+	const contactUs=async()=>{
+let body=
+{
+	"name": name,
+	"company_name":company,
+	"email":email,
+	"phone_number":phone,
+	"program": chooseProgram,
+	"comments": comment
+}
+let response=await axios.post('http://3.111.207.167:8000/api/contact_us',body)
+console.log('contact us',response.data.Success);
+	if(response.data.Success===1){
+toast.success("Form Successfully submitted");
+	}
+	else{
+		toast.warning("Form not  submitted");
+	}
+	}
+
 	return (
 		<>
+		 <ToastContainer />
 			<Helmet>
 				<meta charSet='utf-8' />
 				<title>Home</title>
@@ -141,7 +169,7 @@ function Contact() {
 									<Form.Item name='Email'>Comments</Form.Item>
 									<Input className='p-2 mb-3' />
 								</Form>
-								<Button className='text-center' text color='default'>Submit</Button>
+								<Button onClick={()=>contactUs()} className='text-center' text color='default'>Submit</Button>
 							</div>
 						</Col>
 					</Row>

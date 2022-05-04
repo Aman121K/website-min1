@@ -10,6 +10,7 @@ import {
   useLocation
 } from "react-router-dom";
 import axios from "axios";
+// const
 function Quiz() {
   const [Data,setData]=useState([])
   const [qes,setQues]=useState([]);
@@ -17,11 +18,8 @@ function Quiz() {
   const [image,setImage]=useState(0);
   const [time,setTime]=useState();
   const [isActive, setIsActive] = useState(false);
-  // const [seconds, setSeconds] = useState(0);
   const [description,setDescription]=useState();
   const [timeup,setTimeUp]=useState(false);
-  // const [isActive,setIsActive]=useState(false);
-  // let location = useLocation();
   const {state} = useLocation();
   const { id} = state; 
   console.log("QUiz id is",{ id});
@@ -55,6 +53,7 @@ function Quiz() {
       clearInterval(timer);
     };
   });
+  const answerArray=[];
   // conso
   return (
     <div className="container mt-5 mb-5">
@@ -134,7 +133,7 @@ function Quiz() {
     <div className="d-flex flex-row align-content-center align-items-center position-relative mb-3">
         <div className="sw-5 me-4 d-flex justify-content-center flex-grow-0 flex-shrink-0">
           <div className="d-flex justify-content-center align-items-center">
-            <input type={"radio"} className="btn-check" id="answer_1" name="radioOutline1" />
+            <input type={"radio"}  value="A" className="btn-check" id="answer_1" name="radioOutline1"  />
             <label for="answer_1" className="btn btn-foreground hover-outline sw-4 sh-4 p-0 rounded-xl d-flex justify-content-center align-items-center stretched-link">
                 A
             </label>
@@ -148,7 +147,7 @@ function Quiz() {
     <div className="d-flex flex-row align-content-center align-items-center position-relative mb-3">
         <div className="sw-5 me-4 d-flex justify-content-center flex-grow-0 flex-shrink-0">
           <div className="d-flex justify-content-center align-items-center">
-            <input type={"radio"} className="btn-check" id="answer_2" name="radioOutline1" />
+            <input type={"radio"}  value="B"  className="btn-check" id="answer_2" name="radioOutline1" />
             <label for="answer_2" className="btn btn-foreground hover-outline sw-4 sh-4 p-0 rounded-xl d-flex justify-content-center align-items-center stretched-link">
                 B
             </label>
@@ -161,7 +160,7 @@ function Quiz() {
     <div className="d-flex flex-row align-content-center align-items-center position-relative mb-3">
         <div className="sw-5 me-4 d-flex justify-content-center flex-grow-0 flex-shrink-0">
           <div className="d-flex justify-content-center align-items-center">
-            <input type={"radio"} className="btn-check" id="answer_3" name="radioOutline1" />
+            <input type={"radio"}  value="C"  className="btn-check" id="answer_3" name="radioOutline1" />
             <label for="answer_3" className="btn btn-foreground hover-outline sw-4 sh-4 p-0 rounded-xl d-flex justify-content-center align-items-center stretched-link">
                 C
             </label>
@@ -175,7 +174,7 @@ function Quiz() {
     <div className="d-flex flex-row align-content-center align-items-center position-relative mb-3">
         <div className="sw-5 me-4 d-flex justify-content-center flex-grow-0 flex-shrink-0">
           <div className="d-flex justify-content-center align-items-center">
-            <input type={"radio"} className="btn-check" id="answer_4" name="radioOutline1" />
+            <input type={"radio"}  value="D"  className="btn-check" id="answer_4" name="radioOutline1" />
             <label for="answer_4" className="btn btn-foreground hover-outline sw-4 sh-4 p-0 rounded-xl d-flex justify-content-center align-items-center stretched-link">
                 D
             </label>

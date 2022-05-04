@@ -15,6 +15,7 @@ import BlogMiniCard from "./components/BlogMiniCard";
 const { Meta } = Card;
 
 const BlogDetail = () => {
+
     return (
         <>
             <div className="blog__details-container section-container">

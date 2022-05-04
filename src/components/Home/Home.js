@@ -26,13 +26,13 @@ import Admission from "../programs/Admission";
 import Helmet from "react-helmet";
 import { ScrollElement } from "react-scroll/modules";
 import axios from "axios";
-
+import { ToastContainer, toast } from 'react-toastify';
 const { Option } = Select;
-
 const Home = () => {
   const navigate = useNavigate();
   const [name,setName]=useState();
   const [email,setEmail]=useState();
+  const [subscribeEmail,setSubscribeEmail]=useState();
   const [phone,setPhone]=useState();
   const [experience,setExperience]=useState();
   const [HighestQualification,setHighestQualification]=useState()
@@ -59,7 +59,6 @@ const Home = () => {
       text: "Cake tart apple pie bear bonbon sugar plum muffin sesame snaps sweet roll gingerbread bonbon sugar.",
     },
   ]);
-
   const [statsData, setStatsData] = useState([
     {
       title: "Total Students Placed",
@@ -86,7 +85,6 @@ const Home = () => {
       text: "160+",
     },
   ]);
-
   const [latestNewsData, setLatestNewsData] = useState([
     {
       title: "New Initiative: Free Counselling Session with Real Data Scientist before enrolling",
@@ -113,7 +111,6 @@ const Home = () => {
 
     },
   ]);
-
   const [recentTestimonialsData, setRecentTestimonialsData] = useState([
     {
       image: images.computer,
@@ -134,12 +131,10 @@ const Home = () => {
       rating: 5,
     },
   ]);
-
   const [
     isRecentTestimonialsModalVisible,
     setIsRecentTestimonialsModalVisible,
   ] = useState(false);
-
   const next = () => {
     setRegisterFormCurrentStep((prev) => prev + 1);
   };
@@ -249,8 +244,6 @@ const Home = () => {
       </Modal>
     );
   };
-
-
   const homeSubmitApi=async()=>{
    let body= {
       "name":name,
@@ -261,10 +254,35 @@ const Home = () => {
       }
       console.log("home body is..",body)
       let response=await axios.post('http://3.111.207.167:8000/api/help',body);
-      console.log("home api is...",response.data);
+      if(response.data){
+        toast.success("Your Form is succefully submit")
+      }
+      else{
+        toast.warning("Your Form is not succefully submit")
+      }
+    console.log("home api is...///...",response.data);
+  }
+  const subScribeApi=async()=>{
+    let body={
+        "email":subscribeEmail
+    }
+    console.log("body..",body)
+    let response=await axios.post('http://3.111.207.167:8000/api/Subscribe',body)
+    console.log("res",response.data);
+    console.log(response.data.Success)
+    if(response.data.Success===1)
+    {
+      toast("Your Email is successfully subscribe")
+      setSubscribeEmail('');
+    }
+    else{
+      toast.warning("Your Email not subscribe")
+    }
+
   }
   return (
     <div className="mb-5">
+      <ToastContainer/>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Home</title>
@@ -275,11 +293,8 @@ const Home = () => {
         <p className="mb-4 ">
         We don't just train, We make careers
         </p>
-
       </div>
       <div className="home__banner-left-content d-flex flex-column justify-content-center mb-5">
-
-
         <div className="container  pt-4">
           <h2 className="text-white admission_heading">Get the Edge</h2>
           <div>
@@ -293,7 +308,6 @@ const Home = () => {
                 </p>
               </Col>
             </Row>
-
             <Button type="primary" icon={<RightOutlined />}>
               Getting Started
             </Button>
@@ -455,7 +469,7 @@ const Home = () => {
               <h2 className="admission_heading">Recent Testimonials</h2>
               <Card className="test_admission">
                 {recentTestimonialsData?.map((item, index) => (
-                  <Row className="mb-3" gutter={[20, 30]}>
+                  <Row className="mb-3" key={index} gutter={[20, 30]}>
                     <Col xs={10} sm={10} md={10} lg={10}>
                       <img src={item.image} alt={item.title} />
                     </Col>
@@ -483,7 +497,8 @@ const Home = () => {
               <h2 className="admission_heading">Recent Blogs</h2>
               <Card className="test_admission">
                 {recentTestimonialsData?.map((item, index) => (
-                  <Row className="mb-3" gutter={[20, 30]}>
+                  <Row className="mb-3" key ={index
+                  } gutter={[20, 30]}>
                     <Col xs={10} sm={10} md={10} lg={10}>
                       <img src={item.image} alt={item.title} />
                     </Col>
@@ -526,10 +541,10 @@ const Home = () => {
                 },
               ]}
             >
-              <Input type="email" />
+              <Input type="email" value={subscribeEmail}  onChange={(text)=>setSubscribeEmail(text.target.value)}/>
             </Form.Item>
             <Form.Item className="text-center">
-              <Button type="primary" htmlType="submit" icon={<RightOutlined />}>
+              <Button onClick={()=>subScribeApi()} type="primary" htmlType="submit" icon={<RightOutlined />}>
                 Subscribe
               </Button>
             </Form.Item>

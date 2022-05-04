@@ -4,9 +4,7 @@ import { RightOutlined, UploadOutlined } from "@ant-design/icons";
 import BlogCard from "./components/BlogCard";
 import BlogMiniCard from "./components/BlogMiniCard";
 import axios from "axios";
-
 const { Meta } = Card;
-
 const Blogs = () => {
   const [data, setData] = useState([
     {
@@ -41,6 +39,20 @@ const Blogs = () => {
   // [[Prototype]]: Object
   // id: 1
 
+  const [name,setName]=useState();
+  const [email,setEmail]=useState();
+  const [file,setFile]=useState();
+  const JoinFormSubmit=async()=>{
+    var formData=new FormData();
+    // file , name , email
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('file', file);
+
+    console.log("form data..",formData);
+    let response=await axios.post('http://3.111.207.167:8000/api/blogupload',formData);
+    console.log("Res...",response);
+  }
   return (
     <div className="blogs__container mt-3 container">
       <h2 className="admission_heading">Blogs</h2>
@@ -64,15 +76,20 @@ const Blogs = () => {
           <Card className="blogs__mail-list">
             <Form layout="vertical">
               <Form.Item>
-                <Input placeholder="Name" type="name" />
+                <Input placeholder="Name" type="name"  onChange={(text)=>setName(text.target.value)
+                }/>
               </Form.Item>
               <Form.Item>
-                <Input placeholder="E-mail" type="email" />
+                <Input placeholder="E-mail" type="email" onChange={(e)=>setEmail(e.target.value)} />
               </Form.Item>
-              <Upload >
+              <Form.Item>
+                <Input placeholder="Upload File" onChange={(e)=>setFile(e.target.files[0])} type="file"/>
+              </Form.Item>
+
+              {/* <Upload  onChange={(e)=>setFile(e.target.files[0])}>
                 <Button  type="primary" icon={<UploadOutlined />}>Click to Upload</Button>
-              </Upload>
-              <Button className="mt-3" type="" icon={<RightOutlined />}>
+              </Upload> */}
+              <Button onClick={()=>JoinFormSubmit()} className="mt-3" type="" icon={<RightOutlined />}>
                 Join Now
               </Button>
             </Form>

@@ -21,7 +21,7 @@ import { useNavigate } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import images from "../../assets/images";
-
+import { ToastContainer, toast } from 'react-toastify';
 const { Step } = Steps;
 const { Option } = Select;
 
@@ -233,6 +233,8 @@ const Home = () => {
                 showStatus={false}
                 showIndicators={false}
                 >
+
+
                     {[1, 2, 3].map((item, index) => (
                         <Row
                             key={index}
@@ -269,8 +271,9 @@ const Home = () => {
   
     return (
         <div className="home__container">
+             <ToastContainer />
             <RecentTestimonialsModal />
-            
+           
             <div className="home__getting-started">
                 <h2>Getting Started</h2>
                 <p>
