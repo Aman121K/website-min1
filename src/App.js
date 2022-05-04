@@ -6,16 +6,21 @@ import { Footer, Navbar } from "./layout";
 import FixedPlugin from "./layout/navbar/FixedPlugin";
 import { AppRoutes } from "./routes";
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from './utils/ScrollToTop';
 
 const App = () => {
-    return (
-        <Router>
-            <Navbar />
-            <AppRoutes />
-            <Footer />
-            <FixedPlugin />
-        </Router>
-    );
+	return (
+		<StrictMode>
+			<Router>
+				<ScrollToTop>
+					<Navbar />
+					<AppRoutes />
+					<Footer />
+					<FixedPlugin />
+				</ScrollToTop>
+			</Router>
+		</StrictMode>
+	);
 };
 
 export default App;
