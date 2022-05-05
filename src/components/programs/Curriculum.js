@@ -10,7 +10,7 @@ function Curriculum({ curriculum }) {
 
 	return (
 		<div className='mt-5'>
-			<h2 className='curriculum_heading'>Curriculum</h2>
+			<h2 className='curriculum_heading custom-text-primary'>Curriculum</h2>
 
 			<div className='row mt-3'>
 				<div className='col col-lg-8 col-sm-12'>
@@ -31,15 +31,15 @@ function Curriculum({ curriculum }) {
 					<Card className='p-2'>
 						<div className='row'>
 							<div className='col col-lg-8'>
-								<small>Contact us</small>
+								<h2 className='custom-text-primary mb-2'>Contact us</h2>
 								<h6>
-									<strong>+91 7070707070</strong>
+									<strong>+91 9289460444</strong>
 								</h6>
 							</div>
-							<PhoneFilled style={{ fontSize: '30px' }} />
+							<PhoneFilled style={{ fontSize: '30px', color: '#f35d5d' }} />
 						</div>
 					</Card>
-					<Card title='Know More About the Scholarships and Offers' className='mt-5'>
+					<Card title='Know More' className='mt-5'>
 						<Form
 							//   form={form}
 							name='horizontal_login'

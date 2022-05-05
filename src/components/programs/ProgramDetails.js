@@ -48,7 +48,7 @@ const ProgramDetails = ({ programData }) => {
 						<ProgramHeader programData={programData} />
 						<KeyHighlights highlight={programData.highlight} />
 						<div className='program_details container'>
-							<div className='program_details_navbar ' id='myHeader'>
+							<div className='program_details_navbar container px-4' id='myHeader'>
 								<ScrollLink
 									className='program_details_navbar_link'
 									offset={-180}

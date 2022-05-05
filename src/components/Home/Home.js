@@ -161,10 +161,8 @@ const Home = () => {
 	};
 	const homeSubmitApi = async () => {
 		if (!name && !email && !phone && !experience && !HighestQualification) {
-			toast.error("Some Parameter is missing..")
+			toast.error('Some Parameter is missing..');
 		} else {
-
-
 			let body = {
 				name: name,
 				email: email,
@@ -185,26 +183,26 @@ const Home = () => {
 				toast.error('Your Form is not succefully submit');
 			}
 			console.log('home api is...///...', response.data);
-		};
-	}
-	const subScribeApi = async () => {
-		if(!subscribeEmail){
-			toast.error("Some parameter is missing")
-		}else{
-		let body = {
-			email: subscribeEmail,
-		};
-		console.log('body..', body);
-		let response = await axios.post('http://3.111.207.167:8000/api/Subscribe', body);
-		console.log('res', response.data);
-		console.log(response.data.Success);
-		if (response.data.Success === 1) {
-			toast('Your Email is successfully subscribe');
-			setSubscribeEmail('');
-		} else {
-			toast.error('Your Email not subscribe');
 		}
-	}
+	};
+	const subScribeApi = async () => {
+		if (!subscribeEmail) {
+			toast.error('Some parameter is missing');
+		} else {
+			let body = {
+				email: subscribeEmail,
+			};
+			console.log('body..', body);
+			let response = await axios.post('http://3.111.207.167:8000/api/Subscribe', body);
+			console.log('res', response.data);
+			console.log(response.data.Success);
+			if (response.data.Success === 1) {
+				toast('Your Email is successfully subscribe');
+				setSubscribeEmail('');
+			} else {
+				toast.error('Your Email not subscribe');
+			}
+		}
 	};
 	return (
 		<div className='mb-5'>
@@ -212,7 +210,7 @@ const Home = () => {
 			<HtmlHead title='Excelsior' desc='My beautiful home page' />
 			<div className='container mt-4'>
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
-				<p className='mb-4 '>We don't just train, We make careers</p>
+				<h3 className='mb-4 '>We don't just train, We make careers</h3>
 			</div>
 			<div className='home__banner-left-content d-flex flex-column justify-content-center mb-5 container mx-auto'>
 				<div className='container pt-4 pl-4'>
@@ -266,14 +264,13 @@ const Home = () => {
 								<Form name='horizontal_login' layout='outline'>
 									<Form.Item
 										name='name'
-										
 										rules={[
 											{ required: true, message: 'Please input your Name!' },
 										]}
 										className='mb-3'
 									>
 										<Input
-										value={name}
+											value={name}
 											placeholder='Name'
 											onChange={(text) => setName(text.target.value)}
 										/>
@@ -286,7 +283,7 @@ const Home = () => {
 										className='mb-3'
 									>
 										<Input
-										value={email}
+											value={email}
 											type='text'
 											placeholder='Email Address '
 											onChange={(text) => setEmail(text.target.value)}
@@ -303,7 +300,7 @@ const Home = () => {
 										className='mb-3'
 									>
 										<Input
-										value={phone}
+											value={phone}
 											type='number'
 											placeholder='Phone Number '
 											onChange={(text) => setPhone(text.target.value)}
@@ -320,7 +317,7 @@ const Home = () => {
 										className='mb-3'
 									>
 										<Input
-										value={experience}
+											value={experience}
 											type='number'
 											placeholder='Experience'
 											onChange={(text) => setExperience(text.target.value)}
@@ -337,7 +334,7 @@ const Home = () => {
 										className='mb-3'
 									>
 										<Input
-										value={HighestQualification}
+											value={HighestQualification}
 											type='text'
 											placeholder=' Highest Qualification'
 											onChange={(text) =>
@@ -376,7 +373,10 @@ const Home = () => {
 											</div>
 											<div className='home__videos-item-right p-2'>
 												<h3>{nameOfProgram}</h3>
-												<p className='mt-2' style={{fontSize: '13px'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur</p>
+												<p className='mt-2' style={{ fontSize: '13px' }}>
+													Lorem ipsum dolor sit amet consectetur, adipisicing
+													elit. Saepe illum, consectetur
+												</p>
 											</div>
 										</div>
 									</Col>
@@ -401,13 +401,10 @@ const Home = () => {
 								<div style={{ display: 'grid', gap: '1rem' }}>
 									{latestNewsData?.map((item, index) => (
 										<Row gutter={[20, 30]} key={index}>
-											<Col sm={2}>
-												&#10146;
-												{/* <BorderOutlined style={{ color: '#F35D5D' }} /> */}
-											</Col>
-											<Col sm={22}>
+											<div className='d-flex align-items-center'>
+												<span className='mr-2'>&#10146;</span>
 												<h4 style={{ lineHeight: '1.3' }}>{item.title}</h4>
-											</Col>
+											</div>
 										</Row>
 									))}
 								</div>

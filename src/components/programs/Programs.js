@@ -73,6 +73,7 @@ const Program = () => {
 									to={e.pathname}
 									// state={e}
 									key={index}
+									style={{color: '#f35d5d'}}
 								>
 									<li className='programs_list'>
 										<ul>{e.nameOfProgram}</ul>

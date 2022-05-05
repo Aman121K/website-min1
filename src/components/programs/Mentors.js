@@ -5,7 +5,7 @@ import React, { Fragment } from 'react';
 function Mentors({ mentorsData }) {
 	return (
 		<div>
-			<h3 className='admission_heading'>Mentors</h3>
+			<h2 className='admission_heading'>Mentors</h2>
 			<div className='row'>
 				{mentorsData.map((e, i) => (
 					<Fragment key={i}>
