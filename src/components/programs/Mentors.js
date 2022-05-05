@@ -12,26 +12,16 @@ function Mentors({ mentorsData }) {
 						<div className='col col-lg-3 col-md-3 col-sm-12'>
 							<Card hoverable className='h-100'>
 								<div className='mb-n5 card-body'>
-									<div className='d-flex align-items-center flex-column'>
-										<div className='mb-3 d-flex align-items-center flex-column'>
-											<div className='sw-13 position-relative mb-3'>
-												<img
-													className='img-fluid rounded-xl'
-													alt='ak'
-													src={e.imageURL}
-												/>
-											</div>
-											<div className='h5 mb-0 text-center'>{e.name}</div>
-											<div className='text-muted '>{e.areaOfExpert}</div>
-											<div className='text-muted'>
-												<RightCircleOutlined />
-												<span className='align-middle'>{e.location}</span>
-											</div>
+									<div className='d-flex align-items-center flex-column justify-content-center'>
+										<div className='sw-13 position-relative mb-2'>
+											<img
+												className='img-fluid rounded-xl'
+												alt='ak'
+												src={e.imageURL}
+											/>
 										</div>
-										<div className='d-flex flex-row justify-content-between w-100 w-sm-50 w-xl-100'>
-											<Button type='primary'>Hire</Button>
-											<Button type='primary'>Follow</Button>
-										</div>
+										<div className='h5 my-3 text-center'>{e.name}</div>
+										<Button type='primary'>Read More</Button>
 									</div>
 								</div>
 							</Card>

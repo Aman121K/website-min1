@@ -362,15 +362,15 @@ const Program_DB_Master = [
 		reviews: [
 			{
 				firstRow: {
-					name: 'A',
+					name: 'Rohini Jain',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
 					rating: 4.5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdamit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 				},
 				secondRow: {
-					name: 'B',
+					name: 'Rohini Jain',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
 					rating: 4.5,
@@ -380,7 +380,7 @@ const Program_DB_Master = [
 			},
 			{
 				firstRow: {
-					name: 'C',
+					name: 'Rohini Jain',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
 					rating: 4.5,
@@ -388,7 +388,7 @@ const Program_DB_Master = [
 						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 				},
 				secondRow: {
-					name: 'D',
+					name: 'Rohini Jain',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
 					rating: 4.5,
@@ -398,7 +398,7 @@ const Program_DB_Master = [
 			},
 			{
 				firstRow: {
-					name: 'E',
+					name: 'Rohini Jain',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
 					rating: 4.5,
@@ -406,13 +406,194 @@ const Program_DB_Master = [
 						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 				},
 				secondRow: {
-					name: 'F',
+					name: 'Rohini Jain',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
 					rating: 4.5,
 					description:
 						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 				},
+			},
+		],
+		faq: [
+			{
+				typeOfFAQ: 'Program',
+				content: [
+					{
+						question: 'Who is the program intended for?',
+						answer:
+							'If you want to master Data Science in the IT industry, this program is for you. Whether you are a recent graduate or want to change your domain, you can join the program. We believe that you have the right to choose your career path.',
+					},
+					{
+						question: 'Does Excelsior help me to get a job?',
+						answer: (
+							<>
+								Our career development team will help you prepare a resume,
+								conduct mock interviews, and prepare you. We will also connect you
+								with our recruitment partners, but before we do so, you must clear
+								our certification to ensure that you are eligible for the job.
+								<br />
+								Access to Opportunities The student's profile will be distributed
+								in Excelsior’s company network. For learners with more than 5
+								years of experience, switching these opportunities is more
+								difficult than others. For them, it is more about how to instill
+								data-driven leadership in their current work and plan to
+								transition to Data Science in the medium to long term.
+							</>
+						),
+					},
+					{
+						question:
+							'I work full-time but I want to take this program. Do you also offer part-time programs?',
+						answer:
+							'We do offer part-time programs. You can select the part-time program option at the time of filling the application.',
+					},
+					{
+						question: 'Will I get a certificate on Program completion?',
+						answer:
+							'After the program is completed, we will evaluate you to make sure you are ready for work. If you clear the evaluation, you will get an Excelsior certificate. Our program certificate is of high value among our recruitment partners, so you will receive a higher priority than other applicants.',
+					},
+					{
+						question:
+							'What should I NOT expect from the Certification in Data Scientist program?',
+						answer:
+							'The program is NOT going to be easy. It will be requiring at least 7-8 hours of time commitment per week, applying new concepts, and executing industry-relevant projects.',
+					},
+					{
+						question:
+							'Which topics are going to be covered as part of the program?',
+						answer:
+							'The program is designed for working professionals looking for a transition into the data domain. Considering the requirements of different data roles in the industry, the curriculum is curated to prepared you for those roles .',
+					},
+					{
+						question: 'What type of learning experience should I expect?',
+						answer:
+							'The content will be a mix of interactive lectures from industry leaders as well as world-renowned faculty. Additionally, the program comprises live lectures or hangout sessions dedicated to solving your academic queries and reinforcing learning.',
+					},
+					{
+						question: 'Can I attend the program online?',
+						answer: 'The entire program will take place online.',
+					},
+					{
+						question:
+							'How will my doubts/questions be addressed in an online program?',
+						answer:
+							'All your doubts and queries can be solved in live online classes and sessions by industry experts and facilitators. As there is no separate query solving sessions or forums, you can ask as many doubts and problems from your respective faculty during or at the end of the live class.',
+					},
+					{
+						question: 'What are the system requirements to take this program?',
+						answer:
+							'You need to have a laptop/desktop with a minimum configuration of 1GHz Processor, 4GB RAM, 120GB Hard Disc, Mic, Internet Connection (in case you are taking online sessions)',
+					},
+					{
+						question:
+							'I am not a resident of India, will I still get a job after program completion?',
+						answer:
+							'Yes, we will connect you to job opportunities through our vast employer network in India.',
+					},
+				],
+			},
+			{
+				typeOfFAQ: 'Admission',
+				content: [
+					{
+						question: 'What is the Admission Process?',
+						answer: 'Redirect to Admission Procedure Section of the website',
+					},
+					{
+						question: 'Do I need to have a background in Computer Science?',
+						answer:
+							'A computer science background is not required but a true interest and deep passion in computer science are required to learn these technologies.',
+					},
+					{
+						question: 'I am experienced. Can I still take this course?',
+						answer: 'We would love to have you with us.',
+					},
+				],
+			},
+			{
+				typeOfFAQ: 'Payment',
+				content: [
+					{
+						question: 'What is the fee for the Data Science program I choose?',
+						answer:
+							'Please consider going through the Affordable Program Fee Structure here. If there is any concern regarding the finances, feel free to contact us and let us know. We do everything possible to make sure that money doesn’t become an obstacle in your path of learning and building a successful career.',
+					},
+					{
+						question: 'Do I need to pay registration fees?',
+						answer:
+							'Yes. You need to pay the registration fee for which you can contact us to get the updated information.',
+					},
+					{
+						question: 'Are there any discounts available?',
+						answer:
+							'We offer scholarships based on your Interview score. Additionally, there are more offers available on our programs at different times. You can get in touch with our counselors to know more.',
+					},
+					{
+						question: 'How does the payment model work?',
+						answer: 'Refer to fees section of the website',
+					},
+					{
+						question: 'How does the Scholarship Scheme work?',
+						answer:
+							'We offer various scholarship plans where candidates can get a waiver on program fees. Candidates need to qualify Interview to avail of this scholarship. The waiver is based on the merit/score of the Interview.',
+					},
+					{
+						question: 'What happens if I drop out midway?',
+						answer: (
+							<>
+								If you wish to drop out within the first 10 days:
+								{/* <br /> */}
+								<ul className='pl-4 mb-2'>
+									<li>
+										We will refund any upfront payments and will terminate the
+										ISA, if applicable.
+									</li>
+								</ul>
+								If you wish to drop out after the first 10 days:
+								<ul className='pl-4 mb-0'>
+									<li>
+										We will not refund any upfront payments and the ISA contract
+										will stay valid, if applicable.
+									</li>
+								</ul>
+							</>
+						),
+					},
+					{
+						question: 'Will, there be any deductions on the refund amount?',
+						answer:
+							'Yes, the payment gateway charges of 2% to 3% will be deducted based on the payment method.',
+					},
+				],
+			},
+			{
+				typeOfFAQ: 'Selection Criteria',
+				content: [
+					{
+						question: 'How do I know if the program is right for me?',
+						answer:
+							'If you like finding meaningful insights from data and if you get excited by the prospect of informing business decisions through analysis and have an analytical bend of mind, then this program is meant for you. If you can clear the selection test (or are exempt) and are excited about the transition to Data Science , this program is meant for you.',
+					},
+					{
+						question:
+							'My current role does not include data exposure. Does it make sense for me to opt for this program?',
+						answer:
+							'Absolutely! Data Science is becoming a necessity for all industries and is no more a choice. Hence, there is a critical demand for quality data professionals and because the supply is constrained, this is one of the most lucrative career options across industries.',
+					},
+					{
+						question:
+							'What is the application process for the program and what are the timelines?',
+						answer:
+							'You can start the application process by applying. Applications have already started for the next batch',
+					},
+					{
+						question:
+							'Is there any minimum educational qualification required to take this program?',
+						answer:
+							'No. There is no degree of coding knowledge required to avail our program of Data Science.',
+					},
+				],
 			},
 		],
 	},
@@ -825,6 +1006,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
+		faq: [],
 	},
 	{
 		pathname: '/programs/deep-learning',
@@ -1235,6 +1417,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
+		faq: [],
 	},
 	{
 		pathname: '/programs/machine-learning-with-python',
@@ -1645,6 +1828,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
+		faq: [],
 	},
 	{
 		pathname: '/programs/data-analytics',
@@ -2055,6 +2239,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
+		faq: [],
 	},
 	{
 		pathname: '/programs/python-bootcamp',
@@ -2465,6 +2650,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
+		faq: [],
 	},
 ];
 

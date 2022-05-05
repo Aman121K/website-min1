@@ -2,6 +2,7 @@ import { Card, Carousel, Col, Rate, Row } from 'antd';
 import React from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 import { FiChevronRight } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa';
 
 function PrevArrow(props) {
 	const { className, style, onClick } = props;
@@ -30,9 +31,9 @@ function Review({ reviews }) {
 					return (
 						<div key={index}>
 							<Row gutter={[20, 30]}>
-								<Col lg={12}>
+								<Col lg={12} className='d-flex'>
 									<Card>
-										<Row gutter={[20, 30]}>
+										<Row gutter={[20, 30]} className='align-items-center mb-2'>
 											<Col lg={4}>
 												<img
 													className='img-fluid rounded-xl'
@@ -41,11 +42,11 @@ function Review({ reviews }) {
 												/>
 											</Col>
 											<Col lg={16}>
-												<div className='d-flex flex-column justify-content-around'>
-													<div>{firstRow.name}</div>
-													<div>
-														<Rate disabled defaultValue={firstRow.rating} />
-													</div>
+												<div className='d-flex align-items-center'>
+													<p className='mr-1'>{firstRow.name}</p>
+													<a href='/' className='d-flex'>
+														<FaLinkedin color='#0A66C2' size='28' />
+													</a>
 												</div>
 											</Col>
 										</Row>
@@ -54,9 +55,9 @@ function Review({ reviews }) {
 										</div>
 									</Card>
 								</Col>
-								<Col lg={12}>
+								<Col lg={12} className='d-flex'>
 									<Card>
-										<Row gutter={[20, 30]}>
+										<Row gutter={[20, 30]} className='align-items-center mb-2'>
 											<Col lg={4}>
 												<img
 													className='img-fluid rounded-xl'
@@ -65,14 +66,11 @@ function Review({ reviews }) {
 												/>
 											</Col>
 											<Col lg={16}>
-												<div className='d-flex flex-column justify-content-around'>
-													<div>{secondRow.name}</div>
-													<div>
-														<Rate
-															disabled
-															defaultValue={secondRow.rating}
-														/>
-													</div>
+												<div className='d-flex align-items-center'>
+													<p className='mr-1'>{secondRow.name}</p>
+													<a href='/' className='d-flex'>
+														<FaLinkedin color='#0A66C2' size='28' />
+													</a>
 												</div>
 											</Col>
 										</Row>
