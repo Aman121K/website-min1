@@ -11,6 +11,10 @@ function Contact() {
 	const [comment,setComment]=useState();
 	const [chooseProgram,setChooseProgram]=useState();
 	const contactUs=async()=>{
+		if(!name && !comment && !email && !chooseProgram){
+			toast.error("Parameters is missing")
+		}
+		else{
 let body=
 {
 	"name": name,
@@ -26,9 +30,10 @@ console.log('contact us',response.data.Success);
 toast.success("Form Successfully submitted");
 	}
 	else{
-		toast.warning("Form not  submitted");
+		toast.warning("Form not vv submitted");
 	}
 	}
+}
 
 	return (
 		<>

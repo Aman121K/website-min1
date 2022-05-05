@@ -245,6 +245,11 @@ const Home = () => {
     );
   };
   const homeSubmitApi=async()=>{
+
+    if(!name && ! email && !phone && !experience && !HighestQualification){
+      toast.error("Parameters is missing")
+    }
+    else{
    let body= {
       "name":name,
       "email":email,
@@ -255,14 +260,25 @@ const Home = () => {
       console.log("home body is..",body)
       let response=await axios.post('http://3.111.207.167:8000/api/help',body);
       if(response.data){
+        setName('');
+        setEmail('');
+        setHighestQualification('');
+        setPhone('');
+        setExperience('')
         toast.success("Your Form is succefully submit")
+        
       }
       else{
         toast.warning("Your Form is not succefully submit")
       }
     console.log("home api is...///...",response.data);
   }
+}
   const subScribeApi=async()=>{
+    if(!subscribeEmail){
+      toast.error("Email is missing");
+    }
+    else{
     let body={
         "email":subscribeEmail
     }
@@ -278,7 +294,7 @@ const Home = () => {
     else{
       toast.warning("Your Email not subscribe")
     }
-
+  }
   }
   return (
     <div className="mb-5">
@@ -348,7 +364,7 @@ const Home = () => {
                       { required: true, message: "Please input your Name!" },
                     ]}
                   >
-                    <Input placeholder="Name" onChange={(text)=>setName(text.target.value)}/>
+                    <Input placeholder="Name" value={name} onChange={(text)=>setName(text.target.value)}/>
                   </Form.Item>
                   <Form.Item
                     name="email"
@@ -356,7 +372,7 @@ const Home = () => {
                       { required: true, message: "Please input your email!" },
                     ]}
                   >
-                    <Input type="text" placeholder="Email Address "  onChange={(text)=>setEmail(text.target.value)} />
+                    <Input type="text" value={email} placeholder="Email Address "  onChange={(text)=>setEmail(text.target.value)} />
                   </Form.Item>
                   <Form.Item
                     name="phonenumber"
@@ -367,7 +383,7 @@ const Home = () => {
                       },
                     ]}
                   >
-                    <Input type="number" placeholder="Phone Number "  onChange={(text)=>setPhone(text.target.value)} />
+                    <Input type="number" value={phone} placeholder="Phone Number "  onChange={(text)=>setPhone(text.target.value)} />
                   </Form.Item>
                   <Form.Item
                     name="experience"
@@ -378,7 +394,7 @@ const Home = () => {
                       },
                     ]}
                   >
-                    <Input type="number" placeholder="Experience"  onChange={(text)=>setExperience(text.target.value)} />
+                    <Input type="number" value={experience}  placeholder="Experience"  onChange={(text)=>setExperience(text.target.value)} />
                   </Form.Item>
                   <Form.Item
                     name=" Highest Qualification"
@@ -389,7 +405,7 @@ const Home = () => {
                       },
                     ]}
                   >
-                    <Input type="text" placeholder=" Highest Qualification"   onChange={(text)=>setHighestQualification(text.target.value)}/>
+                    <Input type="text" value={HighestQualification} placeholder=" Highest Qualification"   onChange={(text)=>setHighestQualification(text.target.value)}/>
                   </Form.Item>
                   {/* <Form.Item>
                     <Radio.Group

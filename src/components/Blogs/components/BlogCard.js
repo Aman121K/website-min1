@@ -6,12 +6,19 @@ import images from "../../../assets/images";
 
 const { Meta } = Card;
 
-const BlogCard = ({title,description}) => {
+const BlogCard = (item) => {
+    
+    console.log("Blog details on detail sheet..",item.item)
     const navigate = useNavigate();
+
+    const detailPage=(item)=>{
+        console.log("Blog Data.2..",item)
+        navigate("/blog-details",{ state:{ blogId: item}})
+    }
 
     return (
         <Card
-            onClick={() => navigate("/blog-details")}
+            onClick={() => detailPage(item.item)}
             className="blogs__blog-card"
             hoverable
             cover={
@@ -22,8 +29,8 @@ const BlogCard = ({title,description}) => {
                 />
             }
         >
-            <Meta title={title} />
-            <p>{description}</p>
+            <Meta title={item.item.title} />
+            <p>{item.item.short_desc}</p>
         </Card>
     );
 };

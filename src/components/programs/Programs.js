@@ -1,15 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Col, Form, Input, Radio, Row, Button } from 'antd';
 import ProgramsCards from './ProgramsCards';
 import { DatePicker, TimePicker } from 'antd';
 import moment from 'moment';
+import axios from 'axios';
+import { ToastContainer,toast } from 'react-toastify';
 import Program_DB_Master from '../../assets/static/Program_DB_Master';
 const { Meta } = Card;
 
+
 const Program = () => {
+	const [name,setName]=useState();
+		const [email,setEmail]=useState();
+		const [phone,setPhone]=useState();
+	const ProgramFormSubmit=async()=>{
+		
+		if(!name && !email){
+			toast.error("Some parameter is missing");
+		}
+		else{
+		let body={
+
+		}
+		let response=await axios.post('',body)
+		if(response.data.Success===1){
+			toast.success("Form succesfully submitted")
+		}
+		else{
+			toast.error("Something went wrong into the server side")
+		}
+	}
+}
 	return (
 		<div className='container mt-3'>
+			  <ToastContainer/>
 			<div className='mb-5'>
 				<h2 className='admission_heading'>Features</h2>
 				<Row gutter={[20, 30]}>
@@ -113,7 +138,7 @@ const Program = () => {
 										{ required: true, message: 'Please input your Name!' },
 									]}
 								>
-									<Input placeholder='Name' />
+									<Input placeholder='Name' value={name} onChange={(e)=>setName(e.target.value)} />
 								</Form.Item>
 								<Form.Item
 									name='email'
@@ -121,7 +146,8 @@ const Program = () => {
 										{ required: true, message: 'Please input your email!' },
 									]}
 								>
-									<Input type='text' placeholder='Email Address ' />
+									<Input type='text'  value ={email} onChange={(e)=>setEmail(e.target.value)}
+									placeholder='Email Address ' />
 								</Form.Item>
 								<Form.Item
 									name='phonenumber'
@@ -132,7 +158,7 @@ const Program = () => {
 										},
 									]}
 								>
-									<Input type='number' placeholder='Phone Number ' />
+									<Input type='number' value={phone} onChange={(e)=>setPhone(e.target.value)} placeholder='Phone Number ' />
 								</Form.Item>
 								<Form.Item
 									name='date'
@@ -154,11 +180,12 @@ const Program = () => {
 										},
 									]}
 								>
-									<TimePicker format={'HH:mm'} />
+									<TimePicker  format={'HH:mm'} />
 								</Form.Item>
 								<Form.Item shouldUpdate>
 									{() => (
 										<Button
+										onClick={()=>ProgramFormSubmit()}
 											type='primary'
 											htmlType='submit'
 											// disabled={
