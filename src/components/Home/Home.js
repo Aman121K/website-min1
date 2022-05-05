@@ -25,6 +25,9 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import i1 from '../../assets/images/Home page Program Icons/DS for IT.png';
 import Program_DB_Master from '../../assets/static/Program_DB_Master';
+import TestimonialCarousel from './TestimonialCarousel';
+import HtmlHead from '../HtmlHead';
+import Review from '../programs/Review';
 
 const { Option } = Select;
 const Home = () => {
@@ -37,28 +40,7 @@ const Home = () => {
 	const [experience, setExperience] = useState();
 	const [HighestQualification, setHighestQualification] = useState();
 	const [registerFormCurrentStep, setRegisterFormCurrentStep] = useState(0);
-	const [apData, setApData] = useState([
-		{
-			image: images.mobileApp,
-			title: ' Application Launch',
-			text: 'Chocolate cake marshmallow bear claw sweet. Apple pie macaroon sesame snaps candy jelly pudding.',
-		},
-		{
-			image: images.mobileApp,
-			title: 'Performance Tweaks',
-			text: 'Cheesecake chocolate carrot cake pie lollipop lemon drops toffee lollipop.',
-		},
-		{
-			image: images.mobileApp,
-			title: 'Advanced Configuration',
-			text: 'Sweet roll apple pie tiramisu bonbon sugar plum muffin sesame snaps chocolate. Lollipop halvah powder.',
-		},
-		{
-			image: images.mobileApp,
-			title: 'Server Analytics',
-			text: 'Cake tart apple pie bear bonbon sugar plum muffin sesame snaps sweet roll gingerbread bonbon sugar.',
-		},
-	]);
+
 	const [statsData, setStatsData] = useState([
 		{
 			title: 'Total Placed',
@@ -127,77 +109,6 @@ const Home = () => {
 	]);
 	const [isRecentTestimonialsModalVisible, setIsRecentTestimonialsModalVisible] =
 		useState(false);
-	const next = () => {
-		setRegisterFormCurrentStep((prev) => prev + 1);
-	};
-
-	const prev = () => {
-		setRegisterFormCurrentStep((prev) => prev - 1);
-	};
-
-	const RegisterForm = () => {
-		switch (registerFormCurrentStep) {
-			case 0:
-				return (
-					<div>
-						<h4>What was your major interest</h4>
-						<Select
-							style={{ width: '100%', marginTop: 20 }}
-							defaultValue='lucy'
-							onChange={() => { }}
-						>
-							<Option value='jack'>Jack</Option>
-							<Option value='lucy'>Lucy</Option>
-						</Select>
-					</div>
-				);
-			case 1:
-				return (
-					<div>
-						<h4>What was your major interest</h4>
-						<Select
-							style={{ width: '100%', marginTop: 20 }}
-							defaultValue='lucy'
-							onChange={() => { }}
-						>
-							<Option value='jack'>Jack</Option>
-							<Option value='lucy'>Lucy</Option>
-						</Select>
-					</div>
-				);
-			case 2:
-				return (
-					<div>
-						<h4>What was your major interest</h4>
-						<Select
-							style={{ width: '100%', marginTop: 20 }}
-							defaultValue='lucy'
-							onChange={() => { }}
-						>
-							<Option value='jack'>Jack</Option>
-							<Option value='lucy'>Lucy</Option>
-						</Select>
-					</div>
-				);
-			case 3:
-				return (
-					<div>
-						<h4>What was your major interest</h4>
-						<Select
-							style={{ width: '100%', marginTop: 20 }}
-							defaultValue='lucy'
-							onChange={() => { }}
-						>
-							<Option value='jack'>Jack</Option>
-							<Option value='lucy'>Lucy</Option>
-						</Select>
-					</div>
-				);
-
-			default:
-				return <div></div>;
-		}
-	};
 
 	const RecentTestimonialsModal = () => {
 		return (
@@ -298,27 +209,28 @@ const Home = () => {
 	return (
 		<div className='mb-5'>
 			<ToastContainer />
-			<Helmet>
-				<meta charSet='utf-8' />
-				<title>Home</title>
-				<link rel='canonical' href='http://mysite.com/example' />
-			</Helmet>
+			<HtmlHead title='Excelsior' desc='My beautiful home page' />
 			<div className='container mt-4'>
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
 				<p className='mb-4 '>We don't just train, We make careers</p>
 			</div>
 			<div className='home__banner-left-content d-flex flex-column justify-content-center mb-5 container mx-auto'>
 				<div className='container pt-4 pl-4'>
-					<h2 className='text-white admission_heading'>Get the Boost</h2>
+					<h2
+						className='text-white admission_heading'
+						style={{ fontWeight: 'bold' }}
+					>
+						Get the Boost
+					</h2>
 					<div>
 						<Row>
 							<Col lg={12}>
-								<p className='mb-4 text-white'>
+								<h3 className='mb-4 text-white' style={{ lineHeight: '1.5' }}>
 									Excelsior is ideal for professionals who wants to master their
 									skill set and grow their career. With well-structured programs,
 									industry experts as mentors, tailored for every student with a
 									proven learning methodology.
-								</p>
+								</h3>
 							</Col>
 						</Row>
 						<Button type='primary' icon={<RightOutlined />}>
@@ -329,7 +241,9 @@ const Home = () => {
 			</div>
 			<div className='container'>
 				<div className='mb-5'>
-					<h2 className='admission_heading'>Stats</h2>
+					<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
+						Stats
+					</h2>
 					<Row gutter={[20, 30]} className='a'>
 						{statsData?.map((item, index) => (
 							<Col xs={24} sm={24} md={6} lg={4} key={index}>
@@ -343,24 +257,20 @@ const Home = () => {
 					</Row>
 				</div>
 				<div className='mb-5'>
-					<Row gutter={[20, 30]}>
+					<Row gutter={[10, 30]}>
 						<Col xs={24} sm={24} md={8} lg={8}>
-							<h2 className='admission_heading'>Help</h2>
-							<Card
-							// title="Know More About the Scholarships and Offers"
-							>
-								<Form
-									//   form={form}
-									name='horizontal_login'
-									layout='outline'
-								//   onFinish={onFinish}
-								>
+							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
+								Help
+							</h2>
+							<Card>
+								<Form name='horizontal_login' layout='outline'>
 									<Form.Item
 										name='name'
 										
 										rules={[
 											{ required: true, message: 'Please input your Name!' },
 										]}
+										className='mb-3'
 									>
 										<Input
 										value={name}
@@ -373,6 +283,7 @@ const Home = () => {
 										rules={[
 											{ required: true, message: 'Please input your email!' },
 										]}
+										className='mb-3'
 									>
 										<Input
 										value={email}
@@ -389,6 +300,7 @@ const Home = () => {
 												message: 'Please input your phone number!',
 											},
 										]}
+										className='mb-3'
 									>
 										<Input
 										value={phone}
@@ -405,6 +317,7 @@ const Home = () => {
 												message: 'Total Experience',
 											},
 										]}
+										className='mb-3'
 									>
 										<Input
 										value={experience}
@@ -421,6 +334,7 @@ const Home = () => {
 												message: ' Highest Qualification',
 											},
 										]}
+										className='mb-3'
 									>
 										<Input
 										value={HighestQualification}
@@ -431,25 +345,13 @@ const Home = () => {
 											}
 										/>
 									</Form.Item>
-									{/* <Form.Item>
-                    <Radio.Group
-                    // onChange={onChange}
-                    // value={value }
-                    >
-                      <Radio value={"Myself"}>Myself</Radio>
-                      <Radio value={"My Company"}>My Company</Radio>
-                    </Radio.Group>
-                  </Form.Item> */}
-									<Form.Item shouldUpdate>
+
+									<Form.Item shouldUpdate className='mt-4'>
 										{() => (
 											<Button
 												type='primary'
 												htmlType='submit'
 												onClick={() => homeSubmitApi()}
-											// disabled={
-											// //   !form.isFieldsTouched(true) ||
-											// //   !!form.getFieldsError().filter(({ errors }) => errors.length).length
-											// }
 											>
 												Submit
 											</Button>
@@ -459,8 +361,10 @@ const Home = () => {
 							</Card>
 						</Col>
 						<Col xs={24} sm={24} md={16} lg={16} className='d-flex flex-column'>
-							<h2 className='admission_heading'>Programs</h2>
-							<Row gutter={[20, 30]} style={{ flex: '1 1 100%' }}>
+							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
+								Programs
+							</h2>
+							<Row gutter={[20, 30]} style={{ flex: '1 1 100%', rowGap: '10px' }}>
 								{Program_DB_Master.map(({ nameOfProgram }, index) => (
 									<Col xs={24} sm={24} md={12} key={index} className='d-flex'>
 										<div
@@ -472,6 +376,7 @@ const Home = () => {
 											</div>
 											<div className='home__videos-item-right p-2'>
 												<h3>{nameOfProgram}</h3>
+												<p className='mt-2' style={{fontSize: '13px'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur</p>
 											</div>
 										</div>
 									</Col>
@@ -482,55 +387,46 @@ const Home = () => {
 				</div>
 				{/* <Admission /> */}
 
+				<div name='admission' id='admission'>
+					<Admission admissionProcedure={Program_DB_Master[0].admissionProcedure} />
+				</div>
+
 				<div className='mb-5'>
 					<Row gutter={[20, 30]}>
-						<Col xs={24} sm={24} md={24} lg={8} className='d-flex flex-column'>
-							<h2 className='admission_heading'>Latest News</h2>
+						<Col xs={24} sm={24} md={24} lg={12} className='d-flex flex-column'>
+							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
+								Latest News
+							</h2>
 							<Card className='home__app-info_latest-news'>
 								<div style={{ display: 'grid', gap: '1rem' }}>
 									{latestNewsData?.map((item, index) => (
 										<Row gutter={[20, 30]} key={index}>
-											<Col sm={4} lg={4}>
-												<BorderOutlined style={{ color: '#F35D5D' }} />
+											<Col sm={2}>
+												&#10146;
+												{/* <BorderOutlined style={{ color: '#F35D5D' }} /> */}
 											</Col>
-											<Col sm={16} lg={16}>
+											<Col sm={22}>
 												<h4 style={{ lineHeight: '1.3' }}>{item.title}</h4>
-											</Col>
-											<Col sm={4} lg={4}>
-												<small> {item.time}</small>
 											</Col>
 										</Row>
 									))}
 								</div>
 							</Card>
 						</Col>
-						<Col xs={24} sm={24} md={24} lg={8} className='d-flex flex-column'>
-							<h2 className='admission_heading'>Recent Testimonials</h2>
+						{/* <Col xs={24} sm={24} md={24} lg={8} className='d-flex flex-column'>
+							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
+								Recent Testimonials
+							</h2>
 							<Card className='test_admission'>
-								{recentTestimonialsData?.map((item, index) => (
-									<Row className='mb-3' key={index} gutter={[20, 30]}>
-										<Col xs={10} sm={10} md={10} lg={10}>
-											<img src={item.image} alt={item.title} />
-										</Col>
-										<Col xs={14} sm={14} md={14} lg={14}>
-											<h6>{item.title}</h6>
-											<Rate disabled defaultValue={item.rating} />
-										</Col>
-									</Row>
-								))}
-								<Row align='middle' justify='center'>
-									<Button
-										onClick={() => setIsRecentTestimonialsModalVisible(true)}
-										type='primary'
-										ghost
-									>
-										See More
-									</Button>
-								</Row>
+								<TestimonialCarousel
+									carouselData={Program_DB_Master[0].reviews}
+								/>
 							</Card>
-						</Col>
-						<Col xs={24} sm={24} md={24} lg={8} className='d-flex flex-column'>
-							<h2 className='admission_heading'>Recent Blogs</h2>
+						</Col> */}
+						<Col xs={24} sm={24} md={24} lg={12} className='d-flex flex-column'>
+							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
+								Recent Blogs
+							</h2>
 							<Card className='test_admission'>
 								{recentTestimonialsData?.map((item, index) => (
 									<Row className='mb-3' key={index} gutter={[20, 30]}>
@@ -558,10 +454,15 @@ const Home = () => {
 						</Col>
 					</Row>
 				</div>
+
+				<div className='mt-5' id='Review' name='Review'>
+					<Review reviews={Program_DB_Master[0].reviews} />
+				</div>
+
 				<h2 className='admission_heading'>Mail List</h2>
 				<Card>
 					<h3 className=' mb-3 text-center' style={{ color: '#f35d5d' }}>
-						Subscribe to our news letter
+						Subscribe to our newsletter
 					</h3>
 					<p className='mb-3 text-center'>
 						Stay updated with the latest news from the industry.

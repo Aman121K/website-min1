@@ -17,7 +17,7 @@ function NextArrow(props) {
 function Review({ reviews }) {
 	return (
 		<div className='container mb-4'>
-			<h3 className='admission_heading'> Reviews </h3>
+			<h2 className='admission_heading'>Reviews</h2>
 
 			<Carousel
 				className='d-lg-jsjs'
