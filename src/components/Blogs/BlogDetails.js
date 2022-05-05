@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Row, Col, Card, Avatar, Button } from 'antd';
 import {
 	LikeOutlined,
@@ -18,7 +18,8 @@ const { Meta } = Card;
 const BlogDetail = () => {
 	const {state} = useLocation();
 	const { blogId} = state; 
-	console.log("details is details sheet details",blogId);
+	const [details,setDetails]=useState();
+	console.log("details is details sheet details",blogId.id);
 	useEffect(()=>{
 		getParticularBlog()
 	},[])
@@ -29,19 +30,20 @@ const BlogDetail = () => {
 		let response=await axios.post('http://3.111.207.167:8000/api/blogdetail',body)
 		console.log("response data iss.",response.data);
 		if(response.data.data){
-			
+			setDetails(response.data.data)
 		}
 	}
 	return (
 		<>
-			{/* <div className='blog__details-container section-container'>
+			<div className='blog__details-container section-container'>
+				
 				<h2>Blog Detail</h2>
 				<Row gutter={[20, 30]} className='mt-20'>
 					<Col xs={24} sm={24} md={24} lg={18}>
 						<div className='blog__details-container'>
 							<img className='blog__details__image' src={images.food} alt='food' />
 							<div className='blog__details-content section'>
-								<h2>Carrot Cake Gingerbread</h2>
+								<h2>ABc</h2>
 								<p style={{ marginTop: 10 }}>
 									Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									Explicabo dolore minus, repellendus non ex earum assumenda
@@ -133,7 +135,8 @@ const BlogDetail = () => {
 						</div>
 					</Col>
 				</Row>
-			</div> */}
+			
+			</div>
 		</>
 	);
 };
