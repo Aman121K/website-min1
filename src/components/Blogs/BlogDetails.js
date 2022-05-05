@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Row, Col, Card, Avatar, Button } from 'antd';
 import {
 	LikeOutlined,
@@ -11,12 +11,30 @@ import images from '../../assets/images';
 import BlogCard from './components/BlogCard';
 import BlogMiniCard from './components/BlogMiniCard';
 
+import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 const { Meta } = Card;
 
 const BlogDetail = () => {
+	const {state} = useLocation();
+	const { blogId} = state; 
+	console.log("details is details sheet details",blogId);
+	useEffect(()=>{
+		getParticularBlog()
+	},[])
+	const getParticularBlog=async()=>{
+		let body={
+			"id":blogId.id
+			}
+		let response=await axios.post('http://3.111.207.167:8000/api/blogdetail',body)
+		console.log("response data iss.",response.data);
+		if(response.data.data){
+			
+		}
+	}
 	return (
 		<>
-			<div className='blog__details-container section-container'>
+			{/* <div className='blog__details-container section-container'>
 				<h2>Blog Detail</h2>
 				<Row gutter={[20, 30]} className='mt-20'>
 					<Col xs={24} sm={24} md={24} lg={18}>
@@ -115,7 +133,7 @@ const BlogDetail = () => {
 						</div>
 					</Col>
 				</Row>
-			</div>
+			</div> */}
 		</>
 	);
 };

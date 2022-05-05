@@ -1,47 +1,110 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import { HomeOutlined } from "@ant-design/icons";
-import { Button, Card } from "antd";
-import React, { useEffect,useState } from "react";
+import {Row, Col, Card, Form, Input, Upload , Button, Modal } from "antd";
+import React, { useEffect,useLayoutEffect,useState,useRef } from "react";
 import Question from "./Question";
+import { toast, ToastContainer } from "react-toastify";
 import {
-  // BrowserRouter as Router,
-  // Switch,
   useLocation
 } from "react-router-dom";
 import axios from "axios";
-// const
+ var array1=[];
 function Quiz() {
+  const [count, setCount] = useState(0);
+  const firstUpdate = useRef(true);
+  // useLayoutEffect(() => {
+  //   if (firstUpdate.current) {
+  //     firstUpdate.current = false;
+  //     return;
+  //   }
+  //   console.log("componentDidUpdateFunction");
+  // });
+  const [Quizname,setQuizName]=useState();
+  const [email,setEmail]=useState();
+  const [phone,setPhone]=useState();
   const [Data,setData]=useState([])
   const [qes,setQues]=useState([]);
+  const [newQues,setNewQuestion]=useState([]);
   const [name,setName]=useState();
   const [image,setImage]=useState(0);
   const [time,setTime]=useState();
-  const [isActive, setIsActive] = useState(false);
+  const [isActive,setIsActive] = useState(false);
   const [description,setDescription]=useState();
+  const [CheckItem,setCheckItme]=useState([]);
+  const [submittedArray,setSUbmittedArray]=useState([]);
   const [timeup,setTimeUp]=useState(false);
   const {state} = useLocation();
+  const [userForm,setUserForm]=useState(false);
+  const [checkedRadio,setCheckedRadio]=useState();
+  const [arr1,setArr1]=useState([]);
   const { id} = state; 
   console.log("QUiz id is",{ id});
   useEffect(()=>{
     getParticularQuizData()
+    // getUserForm()
+   
   },[])
+
+  // useEffect(()=>{
+  //   arrObj()
+  // },[qes])
+  useEffect(()=>{
+    window.localStorage.clear()
+  },[window.onload])
+  const getUserForm=()=>{
+    var user_id=localStorage.getItem('user_Data');
+    if(user_id){
+      setUserForm(false);
+    }
+    else{
+      setUserForm(true)
+    }
+  }
+  const handleCancel=()=>{
+    setUserForm(false)
+  }
+  const JoinFormSubmit=async()=>{
+    if(!name && !email && !phone){
+      toast.error("Some parameter is missing");
+    }
+    else{
+    let body={
+      "name": name,
+      "email": email,
+      "phone_number": phone,
+      "quiz": 1,
+      "session_id": 1}
+    let response=await axios.post('http://3.111.207.167:8000/api/session',body);
+    console.log("response..",response.data.data)
+    if(response.data.Success===1){
+      localStorage.setItem("user_Data",response.data.data)
+      toast.success("Your quiz form sucesssfully submited")
+      setUserForm(false);
+    }
+  }
+}
   const getParticularQuizData=async()=>{
     let response=await axios.get(`http://3.111.207.167:8000/api/quizquestion?quiz_id=${id}`)
     console.log("Quiz .......",response.data);
+    array1 = [];
     if(response.data.data.question.length>0){
-      // setData(response.data.data.quiz);
       setName(response.data.data.quiz.name);
       setDescription(response.data.data.quiz.descritpion)
       setImage(response.data.data.quiz.image);
       setTime(response.data.data.quiz.time)
       setQues(response.data.data.question)
-    }
+      console.log("pGE REJHSGFJ", response.data.data.question);
+      response.data.data.question.map((Q)=>{
+        let responce = {Question:Q.id,Answer:""};
+        array1.push(responce);
+      });
+        console.log("min...",array1);
   }
+}
+
   useEffect(() => {
     let timer = null;
     if(isActive){
-
       if(time<1){
         setTimeUp(true)
       }
@@ -54,9 +117,54 @@ function Quiz() {
     };
   });
   const answerArray=[];
-  // conso
+  const abc1=(e,item)=>{
+    console.log("item,,,,,gfhgf",item)
+    console.log(e.target.checked,e.target.value);
+    var updatedList = [...CheckItem];
+    if (e.target.checked) {
+      updatedList = [...CheckItem,{id:item+1,value:e.target.value}];
+    } else {
+      updatedList.splice(CheckItem.indexOf(e.target.value), 1);
+    }
+    setCheckItme(updatedList);
+    console.log("vikas final outout is...",CheckItem);
+  }
+  const arrObj = () => {
+    console.log("Page chala");
+    {qes.map((Q)=>{
+      let responce = {Question:Q.id,Answer:""}
+      setArr1((arr1) => [...arr1,responce] );
+    })}
+    // console.log("final res.vvikas",arr1)
+  }
+  const setabc1=(a,item)=>{
+    console.log("item",item)
+    console.log("array1",array1)
+    var index = array1.findIndex(p => p.Question == item.id);
+    array1[index] = {Question: item.id ,Answer : a};
+    console.log("index",index)
+    console.log("changearray",array1)
+  }
+  const resultCancel=()=>{
+    setTimeUp(false)
+    setIsActive(false)
+  }
+  const finalFormSubmit=async()=>{
+    let body={
+      "name": "minakshi",
+      "email": "ddsfdf",
+      "phone_number": "98867678878",
+      "quiz": 1,
+      "session_id": 1,
+      "answer": array1
+      }
+      console.log("bodyyy..",body)
+      let responce=await axios.post('http://3.111.207.167:8000/api/submitanswer',body);
+      console.log(responce.data);
+  }
   return (
     <div className="container mt-5 mb-5">
+      <ToastContainer/>
       <div className="d-lg-flex d-sm-block  justify-content-between">
         <h3 className="admission_heading"> Quiz Details </h3>
         {isActive?
@@ -67,8 +175,6 @@ function Quiz() {
           <Button>Start</Button>
           </div>
           }
-          
-        
       </div>
       <div className="row">
         <div className="col-lg-4 col-md-4 col-sm-12">
@@ -110,90 +216,60 @@ function Quiz() {
                   </div>
                 </div>
               </div>
-             
             </div>
           </Card>
         </div>
         <div className="col-lg-8 col-md-8 col-sm-12">
-          {timeup?<div>Sorry Time Over</div>:
+          {timeup? <Modal title="Time Up" visible={timeup}  onCancel={resultCancel}>
+      <Card className="blogs__mail-list">
+        <div>Koi GIF laga dia ya logo</div>
+        <div>Your Result:-</div>
+           <div>Correct Anser:- 8/10 </div>
+           <div>Wrong Anser:-  2/10</div>
+          </Card>
+      </Modal>:null}
           <div>
           <h6 className="text-muted mb-3"> Question</h6>
-          {qes && qes.map((item,index)=>(
-          <Card className="mb-3">
-    <div className="d-flex flex-row align-content-center align-items-center mb-5">
-      <div className="sw-5 me-4">
-        <div className="sw-5 sh-5 text-primary d-flex justify-content-center align-items-center">
-         {index+1}
-        </div>
-      </div>
-      <div className="heading mb-0">
-       {item.title}
-      </div>
-    </div>
-    <div className="d-flex flex-row align-content-center align-items-center position-relative mb-3">
-        <div className="sw-5 me-4 d-flex justify-content-center flex-grow-0 flex-shrink-0">
-          <div className="d-flex justify-content-center align-items-center">
-            <input type={"radio"}  value="A" className="btn-check" id="answer_1" name="radioOutline1"  />
-            <label for="answer_1" className="btn btn-foreground hover-outline sw-4 sh-4 p-0 rounded-xl d-flex justify-content-center align-items-center stretched-link">
-                A
-            </label>
-
+          {newQues && qes.map((item,index)=>(
+        //  {ques.map((item,i)=>(
+          <div key={index}>
+          <h3>{item.title}</h3>
+          <label>{item.option1}</label>
+          <input type="radio" name={item.id} value="A" onChange={()=>setabc1('A',item)} />
+          <label>{item.option2}</label>
+          <input type="radio" name={item.id} value="B" onChange={()=>setabc1('B',item)} />
+          <label>{item.option3}</label>
+        <input type="radio" name={item.id} value="C" onChange={()=>setabc1('C',item)} />
+        <label>{item.option4}</label>
+        <input type="radio" name={item.id} value="D" onChange={()=>setabc1('D',item)} />
           </div>
-        </div>
-        <div className="mb-0 text-alternate">
-      {item.option1}
-        </div>
-    </div>
-    <div className="d-flex flex-row align-content-center align-items-center position-relative mb-3">
-        <div className="sw-5 me-4 d-flex justify-content-center flex-grow-0 flex-shrink-0">
-          <div className="d-flex justify-content-center align-items-center">
-            <input type={"radio"}  value="B"  className="btn-check" id="answer_2" name="radioOutline1" />
-            <label for="answer_2" className="btn btn-foreground hover-outline sw-4 sh-4 p-0 rounded-xl d-flex justify-content-center align-items-center stretched-link">
-                B
-            </label>
-          </div>
-        </div>
-        <div className="mb-0 text-alternate">
-        {item.option2}
-        </div>
-    </div>
-    <div className="d-flex flex-row align-content-center align-items-center position-relative mb-3">
-        <div className="sw-5 me-4 d-flex justify-content-center flex-grow-0 flex-shrink-0">
-          <div className="d-flex justify-content-center align-items-center">
-            <input type={"radio"}  value="C"  className="btn-check" id="answer_3" name="radioOutline1" />
-            <label for="answer_3" className="btn btn-foreground hover-outline sw-4 sh-4 p-0 rounded-xl d-flex justify-content-center align-items-center stretched-link">
-                C
-            </label>
-          </div>
-        </div>
-        <div className="mb-0 text-alternate">
-        {item.option3}
- 
-        </div>
-    </div>
-    <div className="d-flex flex-row align-content-center align-items-center position-relative mb-3">
-        <div className="sw-5 me-4 d-flex justify-content-center flex-grow-0 flex-shrink-0">
-          <div className="d-flex justify-content-center align-items-center">
-            <input type={"radio"}  value="D"  className="btn-check" id="answer_4" name="radioOutline1" />
-            <label for="answer_4" className="btn btn-foreground hover-outline sw-4 sh-4 p-0 rounded-xl d-flex justify-content-center align-items-center stretched-link">
-                D
-            </label>
-          </div>
-        </div>
-        <div className="mb-0 text-alternate">
-        {item.option4}
- 
-        </div>
-    </div>
-  </Card>
+        // ))}
      ))}
-     </div>}
+     </div>
+     <div onClick={()=>finalFormSubmit()}>
+       submit
+     </div>
           {/* <Question />
           <Question />
           <Question />
           <Question /> */}
-
         </div>
+        <Modal title="Quiz Form" visible={userForm} onOk={JoinFormSubmit} onCancel={handleCancel}>
+      <Card className="blogs__mail-list">
+            <Form layout="vertical">
+              <Form.Item>
+                <Input placeholder="Name" type="name"  onChange={(text)=>setName(text.target.value)
+                }/>
+              </Form.Item>
+              <Form.Item>
+                <Input placeholder="E-mail" type="email" onChange={(e)=>setEmail(e.target.value)} />
+              </Form.Item>
+              <Form.Item>
+                <Input placeholder="Phone" type="number" onChange={(e)=>setPhone(e.target.value)} />
+              </Form.Item>
+            </Form>
+          </Card>
+      </Modal>
       </div>
     </div>
   );
