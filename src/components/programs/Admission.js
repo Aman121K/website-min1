@@ -14,7 +14,7 @@ function Admission({ admissionProcedure }) {
 
 	return (
 		<div className='mt-5 mb-5'>
-			<h3 className='admission_heading'> Admission Procedure</h3>
+			<h2 className='admission_heading'>Admission Procedure</h2>
 			<p className=' mb-3 admission_text'>{admissionProcedure.description}</p>
 			<Card>
 				<Steps className='mb-3' current={current}>
