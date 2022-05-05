@@ -346,7 +346,7 @@ const Home = () => {
 										/>
 									</Form.Item>
 
-									<Form.Item shouldUpdate>
+									<Form.Item shouldUpdate className='mt-4'>
 										{() => (
 											<Button
 												type='primary'
@@ -364,7 +364,7 @@ const Home = () => {
 							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
 								Programs
 							</h2>
-							<Row gutter={[20, 30]} style={{ flex: '1 1 100%', rowGap: '1rem' }}>
+							<Row gutter={[20, 30]} style={{ flex: '1 1 100%', rowGap: '10px' }}>
 								{Program_DB_Master.map(({ nameOfProgram }, index) => (
 									<Col xs={24} sm={24} md={12} key={index} className='d-flex'>
 										<div
@@ -376,6 +376,7 @@ const Home = () => {
 											</div>
 											<div className='home__videos-item-right p-2'>
 												<h3>{nameOfProgram}</h3>
+												<p className='mt-2' style={{fontSize: '13px'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur</p>
 											</div>
 										</div>
 									</Col>

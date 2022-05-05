@@ -15,7 +15,7 @@ function Admission({ admissionProcedure }) {
 	return (
 		<div className='mt-5 mb-5'>
 			<h2 className='admission_heading'>Admission Procedure</h2>
-			<p className=' mb-3 admission_text'>{admissionProcedure.description}</p>
+			<h3 className='mb-3 admission_text'>{admissionProcedure.description}</h3>
 			<Card>
 				<Steps className='mb-3' current={current}>
 					{admissionProcedure.admissionStepForm.map((item) => (
