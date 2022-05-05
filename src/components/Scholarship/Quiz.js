@@ -29,7 +29,7 @@ function Quiz() {
   const [newQues,setNewQuestion]=useState([]);
   const [name,setName]=useState();
   const [image,setImage]=useState(0);
-  const [time,setTime]=useState();
+  const [time,setTime]=useState(999);
   const [isActive,setIsActive] = useState(true);
   const [description,setDescription]=useState();
   const [CheckItem,setCheckItme]=useState([]);
@@ -94,7 +94,7 @@ function Quiz() {
       setName(response.data.data.quiz.name);
       setDescription(response.data.data.quiz.descritpion)
       setImage(response.data.data.quiz.image);
-      setTime(response.data.data.quiz.time)
+      //setTime(response.data.data.quiz.time)
       setQues(response.data.data.question)
       // console.log("pGE REJHSGFJ", response.data.data.question);
       response.data.data.question.map((Q)=>{
@@ -119,6 +119,7 @@ function Quiz() {
       clearInterval(timer);
     };
   });
+  const prfix = "prefix";
   const answerArray=[];
   const abc1=(e,item)=>{
     // console.log("item,,,,,gfhgf",item)
@@ -231,7 +232,7 @@ function Quiz() {
         <div className="col-lg-8 col-md-8 col-sm-12">
           {timeup ? <Modal title="Time Up" visible={timeup}  onCancel={resultCancel  }>
       <Card className="blogs__mail-list">
-        <div>Koi GIF laga dia ya logo</div>
+        <i className="fa fa-spinner fa-spinner"></i>
         <div>Your Result:-</div>
         {totalWrong?
         <>
@@ -246,22 +247,38 @@ function Quiz() {
           <h6 className="text-muted mb-3"> Question</h6>
           {newQues && qes.map((item,index)=>(
         //  {ques.map((item,i)=>(
-          <div key={index}>
+          <div key={index} className="quizQuestion">
           <h3>{item.title}</h3>
-          <label>{item.option1}</label>
-          <input type="radio" name={item.id} value="A" onChange={()=>setabc1('A',item)} />
-          <label>{item.option2}</label>
-          <input type="radio" name={item.id} value="B" onChange={()=>setabc1('B',item)} />
-          <label>{item.option3}</label>
-        <input type="radio" name={item.id} value="C" onChange={()=>setabc1('C',item)} />
-        <label>{item.option4}</label>
-        <input type="radio" name={item.id} value="D" onChange={()=>setabc1('D',item)} />
+          <div class="form-check">
+            <input type="radio" name={item.id} id={"1" + item.id} value="A" onChange={()=>setabc1('A',item)}/>
+            <label className="form-check-label" for={"1" + item.id}>
+            {item.option1}
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name={item.id} id={"2" + item.id} value="B" onChange={()=>setabc1('B',item)}/>
+            <label className="form-check-label" for={"2" + item.id}>
+            {item.option2}
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name={item.id} id={"3" + item.id} value="C" onChange={()=>setabc1('C',item)}/>
+            <label className="form-check-label" for={"3" + item.id}>
+            {item.option3}
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name={item.id} id={"4" + item.id} value="D" onChange={()=>setabc1('D',item)}/>
+            <label className="form-check-label" for={"4" + item.id}>
+            {item.option4}
+            </label>
+          </div>
           </div>
         // ))}
      ))}
      </div>:<>Question Finished ...</>}
-     <div onClick={()=>finalFormSubmit()}>
-       submit
+     <div className="btn btn-primary" onClick={()=>finalFormSubmit()}>
+       Done
      </div>
           {/* <Question />
           <Question />
