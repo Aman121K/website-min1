@@ -292,7 +292,7 @@ const Home = () => {
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
 				<p className='mb-4 '>We don't just train, We make careers</p>
 			</div>
-			<div className='home__banner-left-content d-flex flex-column justify-content-center mb-5'>
+			<div className='home__banner-left-content d-flex flex-column justify-content-center mb-5 container mx-auto'>
 				<div className='container pt-4'>
 					<h2 className='text-white admission_heading'>Get the Edge</h2>
 					<div>

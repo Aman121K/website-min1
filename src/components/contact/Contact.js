@@ -4,35 +4,33 @@ import Helmet from 'react-helmet';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 function Contact() {
-	const [name,setName]=useState();
-	const [company,setCompany]=useState();
-	const [email,setEmail]=useState();
-	const [phone,setPhone]=useState();
-	const [comment,setComment]=useState();
-	const [chooseProgram,setChooseProgram]=useState();
-	const contactUs=async()=>{
-let body=
-{
-	"name": name,
-	"company_name":company,
-	"email":email,
-	"phone_number":phone,
-	"program": chooseProgram,
-	"comments": comment
-}
-let response=await axios.post('http://3.111.207.167:8000/api/contact_us',body)
-console.log('contact us',response.data.Success);
-	if(response.data.Success===1){
-toast.success("Form Successfully submitted");
-	}
-	else{
-		toast.warning("Form not  submitted");
-	}
-	}
+	const [name, setName] = useState();
+	const [company, setCompany] = useState();
+	const [email, setEmail] = useState();
+	const [phone, setPhone] = useState();
+	const [comment, setComment] = useState();
+	const [chooseProgram, setChooseProgram] = useState();
+	const contactUs = async () => {
+		let body = {
+			name: name,
+			company_name: company,
+			email: email,
+			phone_number: phone,
+			program: chooseProgram,
+			comments: comment,
+		};
+		let response = await axios.post('http://3.111.207.167:8000/api/contact_us', body);
+		console.log('contact us', response.data.Success);
+		if (response.data.Success === 1) {
+			toast.success('Form Successfully submitted');
+		} else {
+			toast.warning('Form not  submitted');
+		}
+	};
 
 	return (
 		<>
-		 <ToastContainer />
+			<ToastContainer />
 			<Helmet>
 				<meta charSet='utf-8' />
 				<title>Home</title>
@@ -43,7 +41,7 @@ toast.success("Form Successfully submitted");
 				<p className='mb-4 '>Excelsior is ideal for professionals who wants to</p>
 			</div>
 			<div className='mb-3'>
-				<div id='contact_section'>
+				<div id='contact_section' className='container'>
 					<h2 className='container text-center text-white  mb-3'>
 						<b>Contact US</b>
 					</h2>
@@ -66,9 +64,7 @@ toast.success("Form Successfully submitted");
 								>
 									Are you getting enough practical learning?
 								</Divider>
-								<p className='text-muted pl-3'>
-								Ask us about the projects
-								</p>
+								<p className='text-muted pl-3'>Ask us about the projects</p>
 							</div>
 							<div className='mb-4'>
 								<Divider
@@ -79,7 +75,7 @@ toast.success("Form Successfully submitted");
 									Are you stuck in your career?
 								</Divider>
 								<p className='text-muted pl-3'>
-								Ask us how our course can help you with career growth
+									Ask us how our course can help you with career growth
 								</p>
 							</div>
 							<div className='mb-4'>
@@ -91,7 +87,7 @@ toast.success("Form Successfully submitted");
 									Are you able to learn in big batches?
 								</Divider>
 								<p className='text-muted pl-3'>
-								Ask us how we give you personalized learning experience
+									Ask us how we give you personalized learning experience
 								</p>
 							</div>
 							<div className='mt-5'>
@@ -101,8 +97,11 @@ toast.success("Form Successfully submitted");
 									</h3>
 									<div className='mb-4'>
 										<div className='d-flex mb-3'>
-											<h6> D612, 7th Cross Road, 3rd Block, Koramangala, Bengaluru 560034 </h6>
-
+											<h6>
+												{' '}
+												D612, 7th Cross Road, 3rd Block, Koramangala,
+												Bengaluru 560034{' '}
+											</h6>
 										</div>
 										{/* <div className='mb-3'>
 											<p className='text-muted'>
@@ -146,9 +145,7 @@ toast.success("Form Successfully submitted");
 										<h6> US </h6>
 									</div>
 									<div className='mb-3'>
-										<p className='text-muted'>
-											C2 Sector 1, Noida, 201301
-										</p>
+										<p className='text-muted'>C2 Sector 1, Noida, 201301</p>
 									</div>
 								</div>
 							</div>
@@ -169,7 +166,14 @@ toast.success("Form Successfully submitted");
 									<Form.Item name='Email'>Comments</Form.Item>
 									<Input className='p-2 mb-3' />
 								</Form>
-								<Button onClick={()=>contactUs()} className='text-center' text color='default'>Submit</Button>
+								<Button
+									onClick={() => contactUs()}
+									className='text-center'
+									text
+									color='default'
+								>
+									Submit
+								</Button>
 							</div>
 						</Col>
 					</Row>
