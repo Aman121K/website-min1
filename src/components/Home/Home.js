@@ -449,8 +449,8 @@ const Home = () => {
 											<div className='home__videos-item-left'>
 												{/* <img src={i1} alt="abc" /> */}
 											</div>
-											<div className='home__videos-item-right'>
-												<h2>{nameOfProgram}</h2>
+											<div className='home__videos-item-right p-2'>
+												<h3>{nameOfProgram}</h3>
 											</div>
 										</div>
 									</Col>
@@ -466,14 +466,14 @@ const Home = () => {
 						<Col xs={24} sm={24} md={24} lg={8} className='d-flex flex-column'>
 							<h2 className='admission_heading'>Latest News</h2>
 							<Card className='home__app-info_latest-news'>
-								<div style={{display: 'grid', gap: '1rem'}}>
+								<div style={{ display: 'grid', gap: '1rem' }}>
 									{latestNewsData?.map((item, index) => (
 										<Row gutter={[20, 30]} key={index}>
 											<Col sm={4} lg={4}>
 												<BorderOutlined style={{ color: '#F35D5D' }} />
 											</Col>
 											<Col sm={16} lg={16}>
-												<h6>{item.title}</h6>
+												<p style={{ lineHeight: '1.3' }}>{item.title}</p>
 											</Col>
 											<Col sm={4} lg={4}>
 												<small> {item.time}</small>
@@ -543,7 +543,7 @@ const Home = () => {
 				</div>
 				<h2 className='admission_heading'>Mail List</h2>
 				<Card>
-					<h5 className=' mb-3 text-primary text-center'>
+					<h5 className=' mb-3 text-center' style={{ color: '#f35d5d' }}>
 						Subscribe to our news letter
 					</h5>
 					<p className='mb-3 text-center'>
