@@ -32,15 +32,16 @@ h6 {
 }
 
 h1 {
-	font-size: 32px !important;
+	font-size: 32px;
 }
 
 h2 {
-	font-size: 24px !important;
+	font-size: 24px;
 }
 
-p {
-	font-size: 16px !important;
+p,
+h3 {
+	font-size: 16px;
 }
 
 // UTILITY STYLES
@@ -322,14 +323,16 @@ p {
 
 .home__stats-item {
 	background-color: $white;
-	height: 150px;
+	// height: 150px;
 	display: flex;
+	gap: 5px;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	border-radius: $borderRadius;
 	box-shadow: $boxShadow;
 	cursor: pointer;
+	padding: 1rem;
 	transition: transform 0.5s;
 
 	&:hover {
@@ -354,11 +357,11 @@ p {
 
 .home__app-info_latest-news {
 	padding: 12px 24px;
-	height: 300px;
 	overflow: auto;
 	background-color: $white;
 	border-radius: $borderRadius;
 	box-shadow: $boxShadow;
+	flex: 1;
 	@include customScrollbar();
 }
 
@@ -382,6 +385,14 @@ p {
 	box-shadow: $boxShadow;
 	@include customScrollbar();
 }
+
+.test_admission {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .test_admission img {
 	object-fit: contain;
 	max-width: 100px;
@@ -420,7 +431,7 @@ p {
 }
 
 .home__videos-item {
-	height: 92px;
+	// height: 92px;
 	display: flex;
 	gap: 12px;
 	background-color: $white;

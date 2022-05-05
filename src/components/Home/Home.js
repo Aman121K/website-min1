@@ -24,6 +24,7 @@ import { ScrollElement } from 'react-scroll/modules';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import i1 from '../../assets/images/Home page Program Icons/DS for IT.png';
+import Program_DB_Master from '../../assets/static/Program_DB_Master';
 
 const { Option } = Select;
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
 	const [name, setName] = useState();
 	const [email, setEmail] = useState();
 	const [subscribeEmail, setSubscribeEmail] = useState();
+	const [subscribeName, setSubscribeName] = useState();
 	const [phone, setPhone] = useState();
 	const [experience, setExperience] = useState();
 	const [HighestQualification, setHighestQualification] = useState();
@@ -313,13 +315,13 @@ const Home = () => {
 			<div className='container'>
 				<div className='mb-5'>
 					<h2 className='admission_heading'>Stats</h2>
-					<Row gutter={[20, 30]}>
+					<Row gutter={[20, 30]} className='a'>
 						{statsData?.map((item, index) => (
 							<Col xs={24} sm={24} md={6} lg={4} key={index}>
-								<div className='home__stats-item'>
-									<Avatar size={42} />
-									<p>{item.title}</p>
-									<h3 className='text-primary'>{item.text}</h3>
+								<div className='home__stats-item text-center h-100'>
+									<Avatar size={40} />
+									<p style={{ fontSize: '12px' }}>{item.title}</p>
+									<h3 style={{ color: '#f35d5d' }}>{item.text}</h3>
 								</div>
 							</Col>
 						))}
@@ -435,18 +437,20 @@ const Home = () => {
 								</Form>
 							</Card>
 						</Col>
-						<Col xs={24} sm={24} md={16} lg={16}>
+						<Col xs={24} sm={24} md={16} lg={16} className='d-flex flex-column'>
 							<h2 className='admission_heading'>Programs</h2>
-							<Row gutter={[20, 30]}>
-								{[1, 2, 3, 4, 5, 6].map((item, index) => (
-									<Col xs={24} sm={24} md={12} key={index}>
-										<div className='home__videos-item'>
+							<Row gutter={[20, 30]} style={{ flex: '1 1 100%' }}>
+								{Program_DB_Master.map(({ nameOfProgram }, index) => (
+									<Col xs={24} sm={24} md={12} key={index} className='d-flex'>
+										<div
+											className='home__videos-item'
+											style={{ flex: '1 1 100%' }}
+										>
 											<div className='home__videos-item-left'>
 												{/* <img src={i1} alt="abc" /> */}
 											</div>
 											<div className='home__videos-item-right'>
-												<h3>Data Science for Finance</h3>
-												<p>Lorem ipsum dolor sit amet consectetur</p>
+												<h2>{nameOfProgram}</h2>
 											</div>
 										</div>
 									</Col>
@@ -459,27 +463,27 @@ const Home = () => {
 
 				<div className='mb-5'>
 					<Row gutter={[20, 30]}>
-						<Col xs={24} sm={24} md={24} lg={8}>
+						<Col xs={24} sm={24} md={24} lg={8} className='d-flex flex-column'>
 							<h2 className='admission_heading'>Latest News</h2>
 							<Card className='home__app-info_latest-news'>
-								{latestNewsData?.map((item, index) => (
-									<Row gutter={[20, 30]} key={index}>
-										<Col sm={4} lg={4}>
-											<BorderOutlined style={{ color: '#F35D5D' }} />
-										</Col>
-										<Col sm={16} lg={16}>
-											<h6>
-												<b> {item.title}</b>
-											</h6>
-										</Col>
-										<Col sm={4} lg={4}>
-											<small> {item.time}</small>
-										</Col>
-									</Row>
-								))}
+								<div style={{display: 'grid', gap: '1rem'}}>
+									{latestNewsData?.map((item, index) => (
+										<Row gutter={[20, 30]} key={index}>
+											<Col sm={4} lg={4}>
+												<BorderOutlined style={{ color: '#F35D5D' }} />
+											</Col>
+											<Col sm={16} lg={16}>
+												<h6>{item.title}</h6>
+											</Col>
+											<Col sm={4} lg={4}>
+												<small> {item.time}</small>
+											</Col>
+										</Row>
+									))}
+								</div>
 							</Card>
 						</Col>
-						<Col xs={24} sm={24} md={24} lg={8}>
+						<Col xs={24} sm={24} md={24} lg={8} className='d-flex flex-column'>
 							<h2 className='admission_heading'>Recent Testimonials</h2>
 							<Card className='test_admission'>
 								{recentTestimonialsData?.map((item, index) => (
@@ -507,7 +511,7 @@ const Home = () => {
 								</Row>
 							</Card>
 						</Col>
-						<Col xs={24} sm={24} md={24} lg={8}>
+						<Col xs={24} sm={24} md={24} lg={8} className='d-flex flex-column'>
 							<h2 className='admission_heading'>Recent Blogs</h2>
 							<Card className='test_admission'>
 								{recentTestimonialsData?.map((item, index) => (
@@ -545,22 +549,43 @@ const Home = () => {
 					<p className='mb-3 text-center'>
 						Stay updated with the latest news from the industry.
 					</p>
-					<Form layout='horizontal'>
-						<Form.Item
-							label='Email'
-							rules={[
-								{
-									required: true,
-									message: 'Email is Required!',
-								},
-							]}
-						>
-							<Input
-								type='email'
-								value={subscribeEmail}
-								onChange={(text) => setSubscribeEmail(text.target.value)}
-							/>
-						</Form.Item>
+					<Form layout='vertical'>
+						<div className='d-flex'>
+							<Form.Item
+								className='mr-4 w-100'
+								rules={[
+									{
+										required: true,
+										message: 'Name is Required!',
+									},
+								]}
+							>
+								<Input
+									type='text'
+									value={subscribeName}
+									placeholder='Name'
+									className='p-2'
+									onChange={(e) => setSubscribeName(e.target.value)}
+								/>
+							</Form.Item>
+							<Form.Item
+								rules={[
+									{
+										required: true,
+										message: 'Email is Required!',
+									},
+								]}
+								className='w-100'
+							>
+								<Input
+									type='email'
+									value={subscribeEmail}
+									placeholder='Email Address'
+									className='p-2'
+									onChange={(text) => setSubscribeEmail(text.target.value)}
+								/>
+							</Form.Item>
+						</div>
 						<Form.Item className='text-center'>
 							<Button
 								onClick={() => subScribeApi()}
