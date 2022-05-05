@@ -41,7 +41,7 @@ function Contact() {
 				<p className='mb-4 '>Excelsior is ideal for professionals who wants to</p>
 			</div>
 			<div className='mb-3'>
-				<div id='contact_section' className='container'>
+				<div id='contact_section' className='container pl-4'>
 					<h2 className='container text-center text-white  mb-3'>
 						<b>Contact US</b>
 					</h2>

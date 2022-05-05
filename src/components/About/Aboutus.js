@@ -26,7 +26,7 @@ function Aboutus() {
 			</div>
 			<div>
 				<div className='banner mb-3 container'>
-					<div className='container'>
+					<div className='container pl-4'>
 						<h1 className='admission_heading mb-3' style={{ color: '#fff' }}>
 							About US
 						</h1>

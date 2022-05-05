@@ -293,8 +293,8 @@ const Home = () => {
 				<p className='mb-4 '>We don't just train, We make careers</p>
 			</div>
 			<div className='home__banner-left-content d-flex flex-column justify-content-center mb-5 container mx-auto'>
-				<div className='container pt-4'>
-					<h2 className='text-white admission_heading'>Get the Edge</h2>
+				<div className='container pt-4 pl-4'>
+					<h2 className='text-white admission_heading'>Get the Boost</h2>
 					<div>
 						<Row>
 							<Col lg={12}>
@@ -473,7 +473,7 @@ const Home = () => {
 												<BorderOutlined style={{ color: '#F35D5D' }} />
 											</Col>
 											<Col sm={16} lg={16}>
-												<p style={{ lineHeight: '1.3' }}>{item.title}</p>
+												<h4 style={{ lineHeight: '1.3' }}>{item.title}</h4>
 											</Col>
 											<Col sm={4} lg={4}>
 												<small> {item.time}</small>
@@ -492,10 +492,7 @@ const Home = () => {
 											<img src={item.image} alt={item.title} />
 										</Col>
 										<Col xs={14} sm={14} md={14} lg={14}>
-											<h6>
-												{' '}
-												<b>{item.title} </b>
-											</h6>
+											<h6>{item.title}</h6>
 											<Rate disabled defaultValue={item.rating} />
 										</Col>
 									</Row>
@@ -521,7 +518,6 @@ const Home = () => {
 										</Col>
 										<Col xs={14} sm={14} md={14} lg={14}>
 											<h6>
-												{' '}
 												<b>{item.title} </b>
 											</h6>
 											<Rate disabled defaultValue={item.rating} />
@@ -543,9 +539,9 @@ const Home = () => {
 				</div>
 				<h2 className='admission_heading'>Mail List</h2>
 				<Card>
-					<h5 className=' mb-3 text-center' style={{ color: '#f35d5d' }}>
+					<h3 className=' mb-3 text-center' style={{ color: '#f35d5d' }}>
 						Subscribe to our news letter
-					</h5>
+					</h3>
 					<p className='mb-3 text-center'>
 						Stay updated with the latest news from the industry.
 					</p>

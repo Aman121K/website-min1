@@ -15,7 +15,7 @@ function FAQ({ faqData }) {
 						<Collapse accordion>
 							{content.map(({ question, answer }) => (
 								<Panel header={question} key={question}>
-									<p>{answer}</p>
+									<h4 style={{lineHeight: '1.5'}}>{answer}</h4>
 								</Panel>
 							))}
 						</Collapse>

@@ -47,7 +47,7 @@ const ProgramDetails = ({ programData }) => {
 					<>
 						<ProgramHeader programData={programData} />
 						<KeyHighlights highlight={programData.highlight} />
-						<div className='program_details'>
+						<div className='program_details container'>
 							<div className='program_details_navbar ' id='myHeader'>
 								<ScrollLink
 									className='program_details_navbar_link'
