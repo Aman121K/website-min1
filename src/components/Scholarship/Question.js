@@ -4,7 +4,7 @@ import React from 'react'
 function Question({props}) {
   return (
     <div>
-      
+
     <Card className="mb-3">
     <div className="d-flex flex-row align-content-center align-items-center mb-5">
       <div className="sw-5 me-4">

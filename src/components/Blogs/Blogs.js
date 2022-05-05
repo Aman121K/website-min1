@@ -4,6 +4,7 @@ import { RightOutlined, UploadOutlined } from "@ant-design/icons";
 import BlogCard from "./components/BlogCard";
 import BlogMiniCard from "./components/BlogMiniCard";
 import axios from "axios";
+import { ToastContainer,toast } from "react-toastify";
 const { Meta } = Card;
 const Blogs = () => {
   const [data, setData] = useState([
@@ -20,7 +21,7 @@ const Blogs = () => {
   },[])
   const getBlogs=async()=>{
     let response=await axios.get('http://3.111.207.167:8000/api/bloglist');
-    // console.log(response.data.data.length>0);
+    console.log(response.data.data);
     if(response.data.data.length>0){
       setData(response.data.data)
     }
@@ -51,10 +52,17 @@ const Blogs = () => {
 
     console.log("form data..",formData);
     let response=await axios.post('http://3.111.207.167:8000/api/blogupload',formData);
-    console.log("Res...",response);
+    console.log("Res...",response.data.Success);
+    if(response.data.Success===1){
+      toast.success("Form Submitt successfully")
+    }
+    else{
+      toast.error("Something went wrong on server")
+    }
   }
   return (
     <div className="blogs__container mt-3 container">
+       <ToastContainer/>
       <h2 className="admission_heading">Blogs</h2>
       <Row
         gutter={[20, 30]}
@@ -67,7 +75,7 @@ const Blogs = () => {
             {data &&
               data.map((item, index) => (
                 <Col xs={24} sm={24} md={12} lg={8} key={index}>
-                  <BlogCard title={item.title} description={item.short_desc} />
+                  <BlogCard item={item}/>
                 </Col>
               ))}
           </Row>
@@ -85,7 +93,6 @@ const Blogs = () => {
               <Form.Item>
                 <Input placeholder="Upload File" onChange={(e)=>setFile(e.target.files[0])} type="file"/>
               </Form.Item>
-
               {/* <Upload  onChange={(e)=>setFile(e.target.files[0])}>
                 <Button  type="primary" icon={<UploadOutlined />}>Click to Upload</Button>
               </Upload> */}

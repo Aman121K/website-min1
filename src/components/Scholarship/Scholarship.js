@@ -1,28 +1,29 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { HomeOutlined } from "@ant-design/icons";
-import { Button, Card, Col, Row } from "antd";
+import {Row, Col, Card, Form, Input, Upload , Button, Modal } from "antd";
+import { RightOutlined, UploadOutlined } from "@ant-design/icons";
 import axios from "axios";
 import React, { useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 function Scholarship() {
   const [quiz,setQuiz]=useState([]);
   const navigate = useNavigate();
+ 
+  // const []
   const onButtonClick = (item) => {
     console.log("set time id is ..",item.id)
     // item.preventDefault();
     navigate("/scholarship/quiz",{ state:{ id: item.id}});
   };
-  
-
   useEffect(()=>{
 getAllQuiz()
   },[])
-
   const getAllQuiz=async()=>{
     let response= await axios.get('http://3.111.207.167:8000/api/quiz')
-    console.log(response.data);
+    console.log("vikas",response.data);
     if(response.data.data.length>0){
       setQuiz(response.data.data);
     }
@@ -30,7 +31,9 @@ getAllQuiz()
   return (
     <div className="container mt-3 mb-5">
       <h3 className="admission_heading"> Quiz </h3>
+      {/* <ToastContainer/> */}
     
+
 
       <Row gutter={[20, 30]}>
       {quiz.map((item,inde)=>(
@@ -127,6 +130,7 @@ getAllQuiz()
         </Col>
        ))}
       </Row>
+     
        
     </div>
   );
