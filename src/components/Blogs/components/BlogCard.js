@@ -8,7 +8,7 @@ const { Meta } = Card;
 
 const BlogCard = (item) => {
     
-    console.log("Blog details on detail sheet..",item.item)
+    // console.log("Blog details on detail sheet..",item.item)
     const navigate = useNavigate();
 
     const detailPage=(item)=>{
