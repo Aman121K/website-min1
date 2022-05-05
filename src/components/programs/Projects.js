@@ -16,7 +16,7 @@ function NextArrow(props) {
 function Projects({ projectsData }) {
 	return (
 		<div className='container mb-5'>
-			<h3 className='admission_heading'>Projects</h3>
+			<h2 className='admission_heading'>Projects</h2>
 			<Carousel
 				className='d-lg-jsjs'
 				dots={false}
@@ -36,13 +36,13 @@ function Projects({ projectsData }) {
 											style={{ backgroundColor: 'rgb(243 93 93 / 90%)' }}
 										>
 											<header className='text-center'>
-												<p style={{ fontWeight: 'bold', color: '#fff' }}>
-													{e.firstRow.title}
-												</p>
+												<h3 style={{ color: '#fff' }}>{e.firstRow.title}</h3>
 											</header>
 										</div>
-										<div className='order-lg-2 p-2'>
-											<p>{e.firstRow.description}</p>
+										<div className='order-lg-2 p-2 mt-2'>
+											<p style={{ lineHeight: '1.5' }}>
+												{e.firstRow.description}
+											</p>
 										</div>
 									</div>
 								</Card>
@@ -55,13 +55,13 @@ function Projects({ projectsData }) {
 											style={{ backgroundColor: 'rgb(243 93 93 / 90%)' }}
 										>
 											<header className='text-center'>
-												<p style={{ fontWeight: 'bold', color: '#fff' }}>
-													{e.secondRow.title}
-												</p>
+												<h3 style={{ color: '#fff' }}>{e.secondRow.title}</h3>
 											</header>
 										</div>
-										<div className='order-lg-2 p-2'>
-											<p>{e.secondRow.description}</p>
+										<div className='order-lg-2 p-2 mt-2'>
+											<p style={{ lineHeight: '1.5' }}>
+												{e.secondRow.description}
+											</p>
 										</div>
 									</div>
 								</Card>

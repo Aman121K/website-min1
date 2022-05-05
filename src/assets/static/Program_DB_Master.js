@@ -279,20 +279,60 @@ const Program_DB_Master = [
 		],
 		learningExperience: [
 			{
-				title: 'Class Notifications',
-				body: 'Class Notifications Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Profile Building',
+				body: (
+					<>
+						Excelsior’s industry experts are the ultimate resource for anyone
+						looking to build their profile
+						<ul className='pl-4 mt-2'>
+							<li style={{width: 'max-content'}}>Resume Building</li>
+							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
+							<li style={{width: 'max-content'}}>Github Building</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Hackathons',
-				body: 'Hackathons Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Expert Sessions',
+				body: (
+					<>
+						Excelsior offer expert advice on softskills and HR topics
+						<ul className='pl-4 mt-2'>
+							<li style={{width: 'max-content'}}>Counselling Sessions with Real Data Science experts</li>
+							<li style={{width: 'max-content'}}>Prepare for HR Interviews</li>
+							<li style={{width: 'max-content'}}>Learn Interviewers Psychology</li>
+							<li style={{width: 'max-content'}}>Develop Soft-Skills</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Career Services',
-				body: 'Career Services Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Profile Building',
+				body: (
+					<>
+						Excelsior’s industry experts are the ultimate resource for anyone
+						looking to build their profile
+						<ul className='pl-4 mt-2'>
+							<li style={{width: 'max-content'}}>Resume Building</li>
+							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
+							<li style={{width: 'max-content'}}>Github Building</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Major Announcements',
-				body: 'Major Announcements Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Profile Building',
+				body: (
+					<>
+						Excelsior’s industry experts are the ultimate resource for anyone
+						looking to build their profile
+						<ul className='pl-4 mt-2'>
+							<li style={{width: 'max-content'}}>Resume Building</li>
+							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
+							<li style={{width: 'max-content'}}>Github Building</li>
+						</ul>
+					</>
+				),
 			},
 		],
 		projects: [

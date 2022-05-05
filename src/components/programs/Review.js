@@ -22,8 +22,8 @@ function Review({ reviews }) {
 			<Carousel
 				className='d-lg-jsjs'
 				dots={false}
-				autoplay={false}
-				arrows={true}
+				autoplay
+				arrows
 				prevArrow={<PrevArrow />}
 				nextArrow={<NextArrow />}
 			>

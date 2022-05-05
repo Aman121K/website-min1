@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 function Pricing({ pricing }) {
 	return (
 		<div className='mt-5 mb-5'>
-			<h3 className='fee_heading'>Fee</h3>
+			<h2 className='fee_heading'>Fee</h2>
 			<div className='row-cols-1 row-cols-lg-3 g-2 row'>
 				{pricing.map((e, i) => (
 					<div className='col' key={i}>
@@ -12,17 +12,13 @@ function Pricing({ pricing }) {
 							<div className='pb-0 card-body'>
 								<div className='d-flex flex-column align-items-center mb-4'>
 									<div className='cta-4 text-primary text-center mb-1'>
-										<h5>
-											<b>{e.typeOfPayment}</b>
-										</h5>
+										<h2>{e.typeOfPayment}</h2>
 									</div>
 								</div>
 								{e.question.map((a, index) => (
 									<Fragment key={index}>
-										<h6>
-											<b>{a.name}</b>
-										</h6>
-										<p className='text-alternate mb-4'> {a.answer}</p>
+										<h3 className='custom-text-primary'>{a.name}</h3>
+										<p className='text-alternate mb-4'>{a.answer}</p>
 									</Fragment>
 								))}
 							</div>
