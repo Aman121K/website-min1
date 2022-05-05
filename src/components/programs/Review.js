@@ -1,19 +1,39 @@
 import { Card, Carousel, Col, Rate, Row } from 'antd';
 import React from 'react';
+import { FiChevronLeft } from 'react-icons/fi';
+import { FiChevronRight } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa';
+
+function PrevArrow(props) {
+	const { className, style, onClick } = props;
+	return <FiChevronLeft className={className} style={{ ...style }} onClick={onClick} />;
+}
+
+function NextArrow(props) {
+	const { className, style, onClick } = props;
+	return <FiChevronRight className={className} style={{ ...style }} onClick={onClick} />;
+}
 
 function Review({ reviews }) {
 	return (
 		<div className='container mb-4'>
 			<h3 className='admission_heading'> Reviews </h3>
 
-			<Carousel className='d-lg-jsjs' dotPosition='bottom'>
+			<Carousel
+				className='d-lg-jsjs'
+				dots={false}
+				autoplay={false}
+				arrows={true}
+				prevArrow={<PrevArrow />}
+				nextArrow={<NextArrow />}
+			>
 				{reviews.map(({ firstRow, secondRow }, index) => {
 					return (
 						<div key={index}>
 							<Row gutter={[20, 30]}>
-								<Col lg={12}>
+								<Col lg={12} className='d-flex'>
 									<Card>
-										<Row gutter={[20, 30]}>
+										<Row gutter={[20, 30]} className='align-items-center mb-2'>
 											<Col lg={4}>
 												<img
 													className='img-fluid rounded-xl'
@@ -22,11 +42,11 @@ function Review({ reviews }) {
 												/>
 											</Col>
 											<Col lg={16}>
-												<div className='d-flex flex-column justify-content-around'>
-													<div>{firstRow.name}</div>
-													<div>
-														<Rate disabled defaultValue={firstRow.rating} />
-													</div>
+												<div className='d-flex align-items-center'>
+													<p className='mr-1'>{firstRow.name}</p>
+													<a href='/' className='d-flex'>
+														<FaLinkedin color='#0A66C2' size='28' />
+													</a>
 												</div>
 											</Col>
 										</Row>
@@ -35,9 +55,9 @@ function Review({ reviews }) {
 										</div>
 									</Card>
 								</Col>
-								<Col lg={12}>
+								<Col lg={12} className='d-flex'>
 									<Card>
-										<Row gutter={[20, 30]}>
+										<Row gutter={[20, 30]} className='align-items-center mb-2'>
 											<Col lg={4}>
 												<img
 													className='img-fluid rounded-xl'
@@ -46,14 +66,11 @@ function Review({ reviews }) {
 												/>
 											</Col>
 											<Col lg={16}>
-												<div className='d-flex flex-column justify-content-around'>
-													<div>{secondRow.name}</div>
-													<div>
-														<Rate
-															disabled
-															defaultValue={secondRow.rating}
-														/>
-													</div>
+												<div className='d-flex align-items-center'>
+													<p className='mr-1'>{secondRow.name}</p>
+													<a href='/' className='d-flex'>
+														<FaLinkedin color='#0A66C2' size='28' />
+													</a>
 												</div>
 											</Col>
 										</Row>

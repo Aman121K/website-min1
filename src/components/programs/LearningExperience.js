@@ -1,5 +1,5 @@
 import { BugFilled, BulbFilled, CloudFilled, CodeFilled } from '@ant-design/icons';
-import { Menu } from 'antd';
+import { Menu, Col } from 'antd';
 import React, { useState } from 'react';
 
 function LearningExperience({ learningExperience }) {
@@ -13,8 +13,8 @@ function LearningExperience({ learningExperience }) {
 				build their profile Resume Building LinkedIn Profile Building Github Building
 			</p>
 			<div className='LearningExperience mt-3'>
-				<div className='row m-0'>
-					<div className='col col-lg-4 col-sm-12 px-0'>
+				<div className='row m-0 p-1'>
+					<Col md={8} className='px-0 w-100'>
 						<Menu
 							className='back d-flex flex-column justify-space-evenly h-100'
 							onSelect={({ selectedKeys }) => {
@@ -34,10 +34,11 @@ function LearningExperience({ learningExperience }) {
 								Major Announcements
 							</Menu.Item>
 						</Menu>
-					</div>
-					<div
-						className='col col-lg-8 col-sm-12 d-flex p-0'
-						style={{ border: '10px solid #f35d5d' }}
+					</Col>
+					<Col
+						md={16}
+						className='d-flex px-0 py-2'
+						style={{ borderLeft: '1px solid #ececec' }}
 					>
 						{learningExperience.map(
 							({ body }, index) =>
@@ -51,7 +52,7 @@ function LearningExperience({ learningExperience }) {
 									</p>
 								)
 						)}
-					</div>
+					</Col>
 				</div>
 			</div>
 		</div>

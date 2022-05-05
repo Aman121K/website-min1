@@ -4,6 +4,7 @@ import {
 	StockOutlined,
 	MessageOutlined,
 	MenuUnfoldOutlined,
+	DownOutlined,
 	UserOutlined,
 	HomeOutlined,
 } from '@ant-design/icons';
@@ -11,6 +12,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import images from '../../assets/images/logonew.png';
 import SidebarMenu from './SidebarMenu';
+import Program_DB_Master from '../../assets/static/Program_DB_Master';
 
 const Navbar = () => {
 	const isSmallerDevice = useMediaQuery({ query: '(max-width: 940px)' });
@@ -59,7 +61,25 @@ const Navbar = () => {
 				>
 					<div>
 						<UserOutlined />
-						Programs
+						Programs <DownOutlined />
+					</div>
+					<div className='nav-dropdown-wrapper'>
+						<div className='nav-dropdown'>
+							{Program_DB_Master.map(({ pathname, nameOfProgram }, index) => {
+								return (
+									<Link
+										to={pathname}
+										onClick={(e) => e.stopPropagation()}
+										key={index}
+									>
+										{nameOfProgram}
+									</Link>
+								);
+							})}
+							{/* <a href='/a' onClick={(e) => e.stopPropagation()}>ABCF</a>
+							<a href='/b' onClick={(e) => e.stopPropagation()}>JKBC</a>
+							<a href='/c' onClick={(e) => e.stopPropagation()}>KDYN</a> */}
+						</div>
 					</div>
 				</NavLink>
 				<NavLink

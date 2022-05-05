@@ -13,6 +13,7 @@ import Mentors from './Mentors';
 import Review from './Review';
 import Blogs from './Blogs';
 import SpeakWithExpert from './SpeakWithExpert';
+import FAQ from './FAQ';
 
 const ProgramDetails = ({ programData }) => {
 	useEffect(() => {
@@ -170,9 +171,9 @@ const ProgramDetails = ({ programData }) => {
 							<div className='mt-5' id='Blogs' name='Blogs'>
 								<Blogs />
 							</div>
-							{/* <div className="mt-5" id="FAQ" name="FAQ">
-          <FAQ />
-        </div> */}
+							<div className='mt-5' id='FAQ' name='FAQ'>
+								<FAQ faqData={programData.faq} />
+							</div>
 						</div>
 					</>
 				) : null}

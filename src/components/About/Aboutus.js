@@ -25,9 +25,11 @@ function Aboutus() {
 				<p className='mb-4 '>Excelsior is ideal for professionals who wants to</p>
 			</div>
 			<div>
-				<div className='banner mb-3'>
+				<div className='banner mb-3 container'>
 					<div className='container'>
-						<h1 className='admission_heading mb-3'> About US</h1>
+						<h1 className='admission_heading mb-3' style={{ color: '#fff' }}>
+							About US
+						</h1>
 					</div>
 				</div>
 				<div className='container'>
