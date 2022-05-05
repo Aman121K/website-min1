@@ -144,7 +144,7 @@ const Home = () => {
 						<Select
 							style={{ width: '100%', marginTop: 20 }}
 							defaultValue='lucy'
-							onChange={() => {}}
+							onChange={() => { }}
 						>
 							<Option value='jack'>Jack</Option>
 							<Option value='lucy'>Lucy</Option>
@@ -158,7 +158,7 @@ const Home = () => {
 						<Select
 							style={{ width: '100%', marginTop: 20 }}
 							defaultValue='lucy'
-							onChange={() => {}}
+							onChange={() => { }}
 						>
 							<Option value='jack'>Jack</Option>
 							<Option value='lucy'>Lucy</Option>
@@ -172,7 +172,7 @@ const Home = () => {
 						<Select
 							style={{ width: '100%', marginTop: 20 }}
 							defaultValue='lucy'
-							onChange={() => {}}
+							onChange={() => { }}
 						>
 							<Option value='jack'>Jack</Option>
 							<Option value='lucy'>Lucy</Option>
@@ -186,7 +186,7 @@ const Home = () => {
 						<Select
 							style={{ width: '100%', marginTop: 20 }}
 							defaultValue='lucy'
-							onChange={() => {}}
+							onChange={() => { }}
 						>
 							<Option value='jack'>Jack</Option>
 							<Option value='lucy'>Lucy</Option>
@@ -249,23 +249,37 @@ const Home = () => {
 		);
 	};
 	const homeSubmitApi = async () => {
-		let body = {
-			name: name,
-			email: email,
-			phone_number: phone,
-			experience: experience,
-			qualification: HighestQualification,
-		};
-		console.log('home body is..', body);
-		let response = await axios.post('http://3.111.207.167:8000/api/help', body);
-		if (response.data) {
-			toast.success('Your Form is succefully submit');
+		if (!name && !email && !phone && !experience && !HighestQualification) {
+			toast.error("Some Parameter is missing..")
 		} else {
-			toast.warning('Your Form is not succefully submit');
-		}
-		console.log('home api is...///...', response.data);
-	};
+
+
+			let body = {
+				name: name,
+				email: email,
+				phone_number: phone,
+				experience: experience,
+				qualification: HighestQualification,
+			};
+			console.log('home body is..', body);
+			let response = await axios.post('http://3.111.207.167:8000/api/help', body);
+			if (response.data.Success === 1) {
+				setName('');
+				setEmail('');
+				setPhone('');
+				setExperience('');
+				setHighestQualification('');
+				toast.success('Your Form is succefully submit');
+			} else {
+				toast.error('Your Form is not succefully submit');
+			}
+			console.log('home api is...///...', response.data);
+		};
+	}
 	const subScribeApi = async () => {
+		if(!subscribeEmail){
+			toast.error("Some parameter is missing")
+		}else{
 		let body = {
 			email: subscribeEmail,
 		};
@@ -277,8 +291,9 @@ const Home = () => {
 			toast('Your Email is successfully subscribe');
 			setSubscribeEmail('');
 		} else {
-			toast.warning('Your Email not subscribe');
+			toast.error('Your Email not subscribe');
 		}
+	}
 	};
 	return (
 		<div className='mb-5'>
@@ -338,15 +353,17 @@ const Home = () => {
 									//   form={form}
 									name='horizontal_login'
 									layout='outline'
-									//   onFinish={onFinish}
+								//   onFinish={onFinish}
 								>
 									<Form.Item
 										name='name'
+										
 										rules={[
 											{ required: true, message: 'Please input your Name!' },
 										]}
 									>
 										<Input
+										value={name}
 											placeholder='Name'
 											onChange={(text) => setName(text.target.value)}
 										/>
@@ -358,6 +375,7 @@ const Home = () => {
 										]}
 									>
 										<Input
+										value={email}
 											type='text'
 											placeholder='Email Address '
 											onChange={(text) => setEmail(text.target.value)}
@@ -373,6 +391,7 @@ const Home = () => {
 										]}
 									>
 										<Input
+										value={phone}
 											type='number'
 											placeholder='Phone Number '
 											onChange={(text) => setPhone(text.target.value)}
@@ -388,6 +407,7 @@ const Home = () => {
 										]}
 									>
 										<Input
+										value={experience}
 											type='number'
 											placeholder='Experience'
 											onChange={(text) => setExperience(text.target.value)}
@@ -403,6 +423,7 @@ const Home = () => {
 										]}
 									>
 										<Input
+										value={HighestQualification}
 											type='text'
 											placeholder=' Highest Qualification'
 											onChange={(text) =>
@@ -425,10 +446,10 @@ const Home = () => {
 												type='primary'
 												htmlType='submit'
 												onClick={() => homeSubmitApi()}
-												// disabled={
-												// //   !form.isFieldsTouched(true) ||
-												// //   !!form.getFieldsError().filter(({ errors }) => errors.length).length
-												// }
+											// disabled={
+											// //   !form.isFieldsTouched(true) ||
+											// //   !!form.getFieldsError().filter(({ errors }) => errors.length).length
+											// }
 											>
 												Submit
 											</Button>

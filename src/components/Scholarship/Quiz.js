@@ -10,6 +10,8 @@ import {
 import axios from "axios";
  var array1=[];
 function Quiz() {
+  const [totalcorrect,setTotalCorrect]=useState();
+  const [totalWrong,setTotalWrong]=useState();
   const [count, setCount] = useState(0);
   const firstUpdate = useRef(true);
   // useLayoutEffect(() => {
@@ -28,7 +30,7 @@ function Quiz() {
   const [name,setName]=useState();
   const [image,setImage]=useState(0);
   const [time,setTime]=useState();
-  const [isActive,setIsActive] = useState(false);
+  const [isActive,setIsActive] = useState(true);
   const [description,setDescription]=useState();
   const [CheckItem,setCheckItme]=useState([]);
   const [submittedArray,setSUbmittedArray]=useState([]);
@@ -36,9 +38,10 @@ function Quiz() {
   const {state} = useLocation();
   const [userForm,setUserForm]=useState(false);
   const [checkedRadio,setCheckedRadio]=useState();
+  const [loader,setLoader]=useState(false);
   const [arr1,setArr1]=useState([]);
   const { id} = state; 
-  console.log("QUiz id is",{ id});
+  // console.log("QUiz id is",{ id});
   useEffect(()=>{
     getParticularQuizData()
     // getUserForm()
@@ -75,7 +78,7 @@ function Quiz() {
       "quiz": 1,
       "session_id": 1}
     let response=await axios.post('http://3.111.207.167:8000/api/session',body);
-    console.log("response..",response.data.data)
+    // console.log("response..",response.data.data)
     if(response.data.Success===1){
       localStorage.setItem("user_Data",response.data.data)
       toast.success("Your quiz form sucesssfully submited")
@@ -85,7 +88,7 @@ function Quiz() {
 }
   const getParticularQuizData=async()=>{
     let response=await axios.get(`http://3.111.207.167:8000/api/quizquestion?quiz_id=${id}`)
-    console.log("Quiz .......",response.data);
+    // console.log("Quiz .......",response.data);
     array1 = [];
     if(response.data.data.question.length>0){
       setName(response.data.data.quiz.name);
@@ -93,19 +96,19 @@ function Quiz() {
       setImage(response.data.data.quiz.image);
       setTime(response.data.data.quiz.time)
       setQues(response.data.data.question)
-      console.log("pGE REJHSGFJ", response.data.data.question);
+      // console.log("pGE REJHSGFJ", response.data.data.question);
       response.data.data.question.map((Q)=>{
-        let responce = {Question:Q.id,Answer:""};
+        let responce = {question:Q.id,answer:""};
         array1.push(responce);
       });
-        console.log("min...",array1);
+        // console.log("min...",array1);
   }
 }
-
   useEffect(() => {
     let timer = null;
     if(isActive){
       if(time<1){
+        finalFormSubmit()
         setTimeUp(true)
       }
       timer = setInterval(() => {
@@ -118,8 +121,8 @@ function Quiz() {
   });
   const answerArray=[];
   const abc1=(e,item)=>{
-    console.log("item,,,,,gfhgf",item)
-    console.log(e.target.checked,e.target.value);
+    // console.log("item,,,,,gfhgf",item)
+    // console.log(e.target.checked,e.target.value);
     var updatedList = [...CheckItem];
     if (e.target.checked) {
       updatedList = [...CheckItem,{id:item+1,value:e.target.value}];
@@ -127,10 +130,10 @@ function Quiz() {
       updatedList.splice(CheckItem.indexOf(e.target.value), 1);
     }
     setCheckItme(updatedList);
-    console.log("vikas final outout is...",CheckItem);
+    // console.log("vikas final outout is...",CheckItem);
   }
   const arrObj = () => {
-    console.log("Page chala");
+    // console.log("Page chala");
     {qes.map((Q)=>{
       let responce = {Question:Q.id,Answer:""}
       setArr1((arr1) => [...arr1,responce] );
@@ -138,29 +141,35 @@ function Quiz() {
     // console.log("final res.vvikas",arr1)
   }
   const setabc1=(a,item)=>{
-    console.log("item",item)
-    console.log("array1",array1)
+    // console.log("item",item)
+    // console.log("array1",array1)
     var index = array1.findIndex(p => p.Question == item.id);
-    array1[index] = {Question: item.id ,Answer : a};
-    console.log("index",index)
-    console.log("changearray",array1)
+    array1[index] = {question: item.id ,answer : a};
+    // console.log("index",index)
+    // console.log("changearray",array1)
   }
   const resultCancel=()=>{
     setTimeUp(false)
     setIsActive(false)
   }
   const finalFormSubmit=async()=>{
+    setTimeUp(true)
     let body={
       "name": "minakshi",
       "email": "ddsfdf",
       "phone_number": "98867678878",
-      "quiz": 1,
+      "quiz": 2100,
       "session_id": 1,
       "answer": array1
       }
-      console.log("bodyyy..",body)
+      // console.log("bodyyy..",body)
+      setLoader(true);
       let responce=await axios.post('http://3.111.207.167:8000/api/submitanswer',body);
-      console.log(responce.data);
+      // console.log("rfinal array is..",responce.data);
+      setTotalCorrect(responce.data.totalcorrect);
+      setTotalWrong(responce.data.totalwrong)
+      setLoader(false);
+      // if()
   }
   return (
     <div className="container mt-5 mb-5">
@@ -170,10 +179,10 @@ function Quiz() {
         {isActive?
         <div className="text-center" onClick={()=>setIsActive(true)} >
           time : {time}
-          </div>:
-        <div className="text-center" onClick={()=>setIsActive(true)} >
-          <Button>Start</Button>
-          </div>
+          </div>:null
+        // <div className="text-center" onClick={()=>setIsActive(true)} >
+        //   <Button>Start</Button>
+        //   </div>
           }
       </div>
       <div className="row">
@@ -220,14 +229,19 @@ function Quiz() {
           </Card>
         </div>
         <div className="col-lg-8 col-md-8 col-sm-12">
-          {timeup? <Modal title="Time Up" visible={timeup}  onCancel={resultCancel}>
+          {timeup ? <Modal title="Time Up" visible={timeup}  onCancel={resultCancel  }>
       <Card className="blogs__mail-list">
         <div>Koi GIF laga dia ya logo</div>
         <div>Your Result:-</div>
-           <div>Correct Anser:- 8/10 </div>
-           <div>Wrong Anser:-  2/10</div>
+        {totalWrong?
+        <>
+           <div>Correct Anser:- {totalcorrect}/10 </div>
+           <div>Wrong Anser:- {totalWrong}/10</div>
+           </>:<>Loading..Result Please wait.</>}
           </Card>
       </Modal>:null}
+
+          {isActive?
           <div>
           <h6 className="text-muted mb-3"> Question</h6>
           {newQues && qes.map((item,index)=>(
@@ -245,7 +259,7 @@ function Quiz() {
           </div>
         // ))}
      ))}
-     </div>
+     </div>:<>Question Finished ...</>}
      <div onClick={()=>finalFormSubmit()}>
        submit
      </div>
