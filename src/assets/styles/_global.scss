@@ -392,6 +392,7 @@ h3 {
 	height: 300px;
 	overflow-y: scroll;
 	@include customScrollbar();
+	box-shadow: $boxShadow;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -1235,4 +1236,10 @@ h3 {
 .nav-dropdown > a:hover {
 	color: $primaryColor;
 	transform: translateX(8px);
+}
+
+@media only screen and (min-width: 1400px) {
+	.container {
+		max-width: 1350px;
+	}
 }

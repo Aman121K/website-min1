@@ -61,7 +61,7 @@ const Home = () => {
 	]);
 	const [statsData, setStatsData] = useState([
 		{
-			title: 'Total Students Placed',
+			title: 'Total Placed',
 			text: '6600+ students',
 		},
 		{
@@ -293,7 +293,7 @@ const Home = () => {
 				<p className='mb-4 '>We don't just train, We make careers</p>
 			</div>
 			<div className='home__banner-left-content d-flex flex-column justify-content-center mb-5'>
-				<div className='container  pt-4'>
+				<div className='container pt-4'>
 					<h2 className='text-white admission_heading'>Get the Edge</h2>
 					<div>
 						<Row>
