@@ -49,9 +49,11 @@ const BlogDetail = () => {
 							<img className='blog__details__image' src={blogId.fullimage} alt='food' />
 							<div className='blog__details-content section'>
 								<h2>{blogId.title}</h2>
-								<p style={{ marginTop: 10 }}>
+
+								<cite><article dangerouslySetInnerHTML={{ __html: blogId.description }} ></article></cite>
+								{/* <p style={{ marginTop: 10 }}>
 									{blogId.description} 
-								</p>
+								</p> */}
 							</div>
 						</div>
 						{details?
