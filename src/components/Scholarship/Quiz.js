@@ -162,7 +162,7 @@ function Quiz() {
       "session_id": 1,
       "answer": array1
       }
-      // console.log("bodyyy..",body)
+      console.log("bodyyy..",body)
       setLoader(true);
       let responce=await axios.post('http://3.111.207.167:8000/api/submitanswer',body);
       // console.log("rfinal array is..",responce.data);

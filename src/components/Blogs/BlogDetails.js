@@ -17,9 +17,10 @@ const { Meta } = Card;
 
 const BlogDetail = () => {
 	const {state} = useLocation();
-	const { blogId} = state; 
+	const { blogId,allArray} = state; 
 	const [details,setDetails]=useState();
 	console.log("blog detail min..",blogId);
+	console.log("all array..",allArray);
 	useEffect(()=>{
 		getParticularBlog()
 	},[])
@@ -69,7 +70,7 @@ const BlogDetail = () => {
 						<div className='blog__details-also-like section'>
 							<h4 className='text-primary'>You May Also Like</h4>
 							<Row gutter={[20, 30]} className='mt-10'>
-								{[1, 2, 3].map((item, index) => (
+								{[1,2,3].map((item, index) => (
 									<Col xs={24} sm={24} md={8} lg={8} key={index}>
 										<BlogCard item={item} />
 									</Col>
@@ -78,8 +79,8 @@ const BlogDetail = () => {
 						</div>
 					</Col>
 					<Col xs={24} sm={24} md={24} lg={6}>
-						{[1, 2, 3, 4].map((item, index) => (
-							<BlogMiniCard key={index} />
+						{[1,2,3,4].map((item, index) => (
+							<BlogMiniCard key={index}  />
 						))}
 						<div className='blogs__details-advertise-blogs'>
 							<Card className='blogs__details-advertise-blog'>

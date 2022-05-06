@@ -75,7 +75,7 @@ const Blogs = () => {
             {data &&
               data.map((item, index) => (
                 <Col xs={24} sm={24} md={12} lg={8} key={index}>
-                  <BlogCard item={item}/>
+                  <BlogCard item={item} allArray={data}/>
                 </Col>
               ))}
           </Row>

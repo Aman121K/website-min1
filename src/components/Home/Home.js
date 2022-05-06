@@ -12,8 +12,11 @@ import {
 	Select,
 	Modal,
 	Radio,
+	Menu, Dropdown,  message, Space, Tooltip 
 } from 'antd';
-import { RightOutlined, BorderOutlined, SearchOutlined } from '@ant-design/icons';
+
+
+import { RightOutlined,DownOutlined, UserOutlined , BorderOutlined, SearchOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -59,6 +62,28 @@ const Home = () => {
 			text: 'Cake tart apple pie bear bonbon sugar plum muffin sesame snaps sweet roll gingerbread bonbon sugar.',
 		},
 	]);
+	const menu = (
+		<Menu
+		  onClick={handleMenuClick}
+		  items={[
+			{
+			  label: '1st menu item',
+			  key: '1',
+			  icon: <UserOutlined />,
+			},
+			{
+			  label: '2nd menu item',
+			  key: '2',
+			  icon: <UserOutlined />,
+			},
+			{
+			  label: '3rd menu item',
+			  key: '3',
+			  icon: <UserOutlined />,
+			},
+		  ]}
+		/>
+	  );
 	const [statsData, setStatsData] = useState([
 		{
 			title: 'Total Placed',
@@ -85,6 +110,15 @@ const Home = () => {
 			text: '160+',
 		},
 	]);
+	function handleButtonClick(e) {
+		message.info('Click on left button.');
+		console.log('click left button', e);
+	  }
+	  
+	  function handleMenuClick(e) {
+		message.info('Click on menu item.');
+		console.log('click', e);
+	  }
 	const [latestNewsData, setLatestNewsData] = useState([
 		{
 			title: 'New Initiative: Free Counselling Session with Real Data Scientist before enrolling',
@@ -413,24 +447,11 @@ const Home = () => {
 											onChange={(text) => setExperience(text.target.value)}
 										/>
 									</Form.Item>
-									<Form.Item
-										name=' Highest Qualification'
-										rules={[
-											{
-												required: true,
-												message: ' Highest Qualification',
-											},
-										]}
-									>
-										<Input
-										value={HighestQualification}
-											type='text'
-											placeholder=' Highest Qualification'
-											onChange={(text) =>
-												setHighestQualification(text.target.value)
-											}
-										/>
-									</Form.Item>
+									<Space wrap>
+    <Dropdown.Button onClick={handleButtonClick} overlay={menu}>
+      Dropdown
+    </Dropdown.Button>
+  </Space>
 									{/* <Form.Item>
                     <Radio.Group
                     // onChange={onChange}
@@ -570,7 +591,7 @@ const Home = () => {
 					<p className='mb-3 text-center'>
 						Stay updated with the latest news from the industry.
 					</p>
-					<Form layout='vertical'>
+					            <Form layout='vertical'>
 						<div className='d-flex'>
 							<Form.Item
 								className='mr-4 w-100'
