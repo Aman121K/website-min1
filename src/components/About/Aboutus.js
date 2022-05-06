@@ -4,22 +4,15 @@ import Helmet from 'react-helmet';
 import Chart from './Chart';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import HtmlHead from '../HtmlHead';
 
 function Aboutus() {
-	const data = [
-		{ type: 'Maths', value: 27 },
-		{ type: 'Chemistry', value: 30 },
-		{ type: 'Phtysis', value: 40 },
-		{ type: 'Zoo', value: 3 },
-	];
 
 	return (
 		<>
-			<Helmet>
-				<meta charSet='utf-8' />
-				<title>Home</title>
-				<link rel='canonical' href='http://mysite.com/example' />
-			</Helmet>
+<HtmlHead title='About Excelsior |Best Online Education Platform for Data Science' desc='Students can enrol in online courses on topics such as Data Analytics,
+Marketing Analytics, and Artificial Intelligence. Get in touch with us at
++91-9289470444, or email us at info@getexcelsior.com.' />
 			<div className='container mt-4'>
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
 				<p className='mb-4'>Excelsior is ideal for professionals who wants to</p>
@@ -27,9 +20,20 @@ function Aboutus() {
 			<div>
 				<div className='banner mb-3 container'>
 					<div className='container pl-4'>
-						<h1 className='admission_heading mb-3' style={{ color: '#fff' }}>
+						<h1 className='admission_heading mb-2' style={{ color: '#fff' }}>
 							About US
 						</h1>
+
+						<Row>
+							<Col lg={12}>
+								<h3 className='mb-4 text-white' style={{ lineHeight: '1.8' }}>
+								Is acquiring a new skill sufficient?  Is it possible to start a new career in a different field?  Will employers hire you once you complete a certification course? Excelsior was founded in 2017 by three co-founders from IIT Kharagpur and IIT Delhi, who saw a need in the field of skill acquisition and decided to fill it. Excelsior is more than simply an Ed-tech platform; it's a one-stop solution for career guidance, learning, and placement to help students reach their goals.
+To develop high-quality online learning experiences that enhance learner success, we use the newest technology, best teaching techniques, and collaborations with exceptional industry leaders.
+We're the industry's premier source of software-technology training, with live lectures given by industry leaders and subject matter experts. 
+Our intensive programs combine a modern curriculum with hands-on experience using cutting-edge technology.
+								</h3>
+							</Col>
+						</Row>
 					</div>
 				</div>
 				<div className='container'>
