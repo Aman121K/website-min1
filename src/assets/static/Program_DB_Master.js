@@ -1078,7 +1078,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -1706,7 +1706,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -2321,7 +2321,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -2905,7 +2905,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -3411,7 +3411,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
