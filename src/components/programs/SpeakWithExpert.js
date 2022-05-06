@@ -17,7 +17,7 @@ function SpeakWithExpert() {
 						<Row className='text-white'>
 							<Col lg={20}></Col>
 							<Col lg={4}>
-							<Button><a href="https://calendly.com/datasciencecounselling-excelsior" target="_blank">View</a></Button>
+							<Button><a href="https://calendly.com/datasciencecounselling-excelsior" target="_blank" rel="noreferrer">View</a></Button>
 							</Col>
 						</Row>
 					</Card>
@@ -33,7 +33,7 @@ function SpeakWithExpert() {
 						<Row className='text-white'>
 							<Col lg={20}></Col>
 							<Col lg={4}>
-								<Button><a href="https://calendly.com/akash-excelsior" target="_blank">View</a></Button>
+								<Button><a href="https://calendly.com/akash-excelsior" target="_blank" rel="noreferrer">View</a></Button>
 							</Col>
 						</Row>
 					</Card>
