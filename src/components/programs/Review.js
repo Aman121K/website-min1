@@ -1,4 +1,4 @@
-import { Card, Carousel, Col, Rate, Row } from 'antd';
+import { Card, Carousel, Col, Row } from 'antd';
 import React from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 import { FiChevronRight } from 'react-icons/fi';

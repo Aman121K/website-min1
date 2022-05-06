@@ -1,12 +1,13 @@
 import React from "react";
 import images from "../../../assets/images";
 
-const BlogMiniCard = () => {
+const BlogMiniCard = (item) => {
+    console.log("blog mini card",item);
     return (
         <div className="blogs__must-read-card">
-            <img src={images.food} alt="food" />
+            <img src={item.item.fullimage} alt="food" />
             <div className="blogs__must-read-card_content">
-                <p>A Complete Guide to Mix Dough for Cake</p>
+                <p>{item.item.title}</p>
             </div>
         </div>
     );

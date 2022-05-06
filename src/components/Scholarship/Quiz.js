@@ -5,11 +5,13 @@ import React, { useEffect,useLayoutEffect,useState,useRef } from "react";
 import Question from "./Question";
 import { toast, ToastContainer } from "react-toastify";
 import {
+  useNavigate,
   useLocation
 } from "react-router-dom";
 import axios from "axios";
  var array1=[];
 function Quiz() {
+  const navigate = useNavigate();
   const [totalcorrect,setTotalCorrect]=useState();
   const [totalWrong,setTotalWrong]=useState();
   const [count, setCount] = useState(0);
@@ -27,9 +29,10 @@ function Quiz() {
   const [Data,setData]=useState([])
   const [qes,setQues]=useState([]);
   const [newQues,setNewQuestion]=useState([]);
+  const [quizPlayerUserName,setQuizPlayerUsername]=useState();
   const [name,setName]=useState();
   const [image,setImage]=useState(0);
-  const [time,setTime]=useState(999);
+  const [time,setTime]=useState(0);
   const [isActive,setIsActive] = useState(true);
   const [description,setDescription]=useState();
   const [CheckItem,setCheckItme]=useState([]);
@@ -40,23 +43,17 @@ function Quiz() {
   const [checkedRadio,setCheckedRadio]=useState();
   const [loader,setLoader]=useState(false);
   const [arr1,setArr1]=useState([]);
+  const [cardTime,setCardTime]=useState();
   const { id} = state; 
   // console.log("QUiz id is",{ id});
   useEffect(()=>{
     getParticularQuizData()
-    // getUserForm()
-   
+    getUserForm()
   },[])
-
-  // useEffect(()=>{
-  //   arrObj()
-  // },[qes])
-  useEffect(()=>{
-    window.localStorage.clear()
-  },[window.onload])
+  
   const getUserForm=()=>{
-    var user_id=localStorage.getItem('user_Data');
-    if(user_id){
+    // var user_id=localStorage.getItem('user_Data');
+    if(localStorage.getItem('user_Data')){
       setUserForm(false);
     }
     else{
@@ -67,34 +64,43 @@ function Quiz() {
     setUserForm(false)
   }
   const JoinFormSubmit=async()=>{
-    if(!name && !email && !phone){
-      toast.error("Some parameter is missing");
+    if(!quizPlayerUserName && !email && !phone){
+      toast.error("All Fileds are required");
     }
     else{
     let body={
-      "name": name,
+      "name": quizPlayerUserName,
       "email": email,
       "phone_number": phone,
-      "quiz": 1,
-      "session_id": 1}
+      "quiz": id,
+      "session_id": ""}
     let response=await axios.post('http://3.111.207.167:8000/api/session',body);
     // console.log("response..",response.data.data)
     if(response.data.Success===1){
-      localStorage.setItem("user_Data",response.data.data)
-      toast.success("Your quiz form sucesssfully submited")
+      localStorage.setItem("user_Data",JSON.stringify(response.data.data));
+      setTime(parseInt(cardTime)*60)
+      toast.success("Your Form Sucesssfully Submited")
       setUserForm(false);
     }
   }
 }
   const getParticularQuizData=async()=>{
+    var ele = document.getElementsByClassName("unchecek");
+   for(var i=0;i<ele.length;i++)
+      ele[i].checked = false;
+
     let response=await axios.get(`http://3.111.207.167:8000/api/quizquestion?quiz_id=${id}`)
     // console.log("Quiz .......",response.data);
     array1 = [];
     if(response.data.data.question.length>0){
       setName(response.data.data.quiz.name);
       setDescription(response.data.data.quiz.descritpion)
+      console.log("Quiz image is/....",response.data.data.quiz.image)
       setImage(response.data.data.quiz.image);
-      //setTime(response.data.data.quiz.time)
+      setCardTime(response.data.data.quiz.time);
+      if(localStorage.getItem('user_Data')){
+        setTime(parseInt(response.data.data.quiz.time)*60)
+      }
       setQues(response.data.data.question)
       // console.log("pGE REJHSGFJ", response.data.data.question);
       response.data.data.question.map((Q)=>{
@@ -107,44 +113,27 @@ function Quiz() {
   useEffect(() => {
     let timer = null;
     if(isActive){
-      if(time<1){
+      if(time==1 && localStorage.getItem('user_Data')){
         finalFormSubmit()
         setTimeUp(true)
       }
       timer = setInterval(() => {
+        if(time>0){
         setTime((time) => time - 1);
+        }
       }, 1000);
     }
     return () => {
       clearInterval(timer);
     };
   });
-  const prfix = "prefix";
-  const answerArray=[];
-  const abc1=(e,item)=>{
-    // console.log("item,,,,,gfhgf",item)
-    // console.log(e.target.checked,e.target.value);
-    var updatedList = [...CheckItem];
-    if (e.target.checked) {
-      updatedList = [...CheckItem,{id:item+1,value:e.target.value}];
-    } else {
-      updatedList.splice(CheckItem.indexOf(e.target.value), 1);
-    }
-    setCheckItme(updatedList);
-    // console.log("vikas final outout is...",CheckItem);
-  }
-  const arrObj = () => {
-    // console.log("Page chala");
-    {qes.map((Q)=>{
-      let responce = {Question:Q.id,Answer:""}
-      setArr1((arr1) => [...arr1,responce] );
-    })}
-    // console.log("final res.vvikas",arr1)
-  }
+  // const prfix = "prefix";
+  // const answerArray=[];
+
   const setabc1=(a,item)=>{
     // console.log("item",item)
     // console.log("array1",array1)
-    var index = array1.findIndex(p => p.Question == item.id);
+    var index = array1.findIndex(p => p.question == item.id);
     array1[index] = {question: item.id ,answer : a};
     // console.log("index",index)
     // console.log("changearray",array1)
@@ -152,18 +141,21 @@ function Quiz() {
   const resultCancel=()=>{
     setTimeUp(false)
     setIsActive(false)
+    navigate('/scholarship')
   }
   const finalFormSubmit=async()=>{
+    var user_recors=JSON.parse(localStorage.getItem('user_Data'))
+    console.log("mam ..",user_recors);
     setTimeUp(true)
     let body={
-      "name": "minakshi",
-      "email": "ddsfdf",
-      "phone_number": "98867678878",
-      "quiz": 2100,
-      "session_id": 1,
+      "name": user_recors.name,
+      "email": user_recors.email,
+      "phone_number": user_recors.phone_number,
+      "quiz": id,
+      "session_id": user_recors.a_id,
       "answer": array1
       }
-      // console.log("bodyyy..",body)
+      console.log("bodyyy..",body)
       setLoader(true);
       let responce=await axios.post('http://3.111.207.167:8000/api/submitanswer',body);
       // console.log("rfinal array is..",responce.data);
@@ -172,6 +164,11 @@ function Quiz() {
       setLoader(false);
       // if()
   }
+  const restryQuiz=()=>{
+    setTimeUp(false)
+    setIsActive(true)
+    getParticularQuizData()
+  }
   return (
     <div className="container mt-5 mb-5">
       <ToastContainer/>
@@ -179,8 +176,9 @@ function Quiz() {
         <h3 className="admission_heading"> Quiz Details </h3>
         {isActive?
         <div className="text-center" onClick={()=>setIsActive(true)} >
-          time : {time}
+          time : {time} 
           </div>:null
+
         // <div className="text-center" onClick={()=>setIsActive(true)} >
         //   <Button>Start</Button>
         //   </div>
@@ -192,16 +190,16 @@ function Quiz() {
           <Card className="quizz_list">
             <img
               className="card-img-top sh-25"
-              src={image}
+              src={`http://3.111.207.167:8000/uploads/quiz/${image}`}
               alt="card-image"
             />
             <div className="p-4">
-              <a
+              {/* <a
                 className="body-link d-block sh-6 mb-2 h5 heading lh-1-5"
                 href="#"
-              >
+              > */}
                {name}
-              </a>
+              {/* </a> */}
               <span className="clamp mb-3 text-muted sh-8 quizz-eww">
                 {description}
               </span>
@@ -220,7 +218,7 @@ function Quiz() {
                     </div>
                     <div className="col-auto">
                       <div className="sh-4 d-flex align-items-center text-alternate">
-                       {time} mints
+                       {cardTime} mints
                       </div>
                     </div>
                   </div>
@@ -230,7 +228,14 @@ function Quiz() {
           </Card>
         </div>
         <div className="col-lg-8 col-md-8 col-sm-12">
-          {timeup ? <Modal title="Time Up" visible={timeup}  onCancel={resultCancel  }>
+          {timeup ? <Modal title="Time Up" maskClosable = {false} keyboard={false} closable={false} visible={timeup}  onCancel={resultCancel  } onOk={restryQuiz}  okButtonProps={{
+        children: "Custom OK"
+      }}
+      cancelButtonProps={{
+        children: "Custom cancel"
+      }}
+      okText="Re attempt"
+      cancelText="Home">
       <Card className="blogs__mail-list">
         <i className="fa fa-spinner fa-spinner"></i>
         <div>Your Result:-</div>
@@ -241,42 +246,44 @@ function Quiz() {
            </>:<>Loading..Result Please wait.</>}
           </Card>
       </Modal>:null}
-
           {isActive?
           <div>
           <h6 className="text-muted mb-3"> Question</h6>
-          {newQues && qes.map((item,index)=>(
+          {qes.map((item,index)=>(
         //  {ques.map((item,i)=>(
           <div key={index} className="quizQuestion">
           <h3>{item.title}</h3>
           <div class="form-check">
-            <input type="radio" name={item.id} id={"1" + item.id} value="A" onChange={()=>setabc1('A',item)}/>
+            <input type="radio" className="unchecek" name={item.id} id={"1" + item.id} value="A" onChange={()=>setabc1('A',item)}/>
             <label className="form-check-label" for={"1" + item.id}>
             {item.option1}
             </label>
           </div>
           <div class="form-check">
-            <input type="radio" name={item.id} id={"2" + item.id} value="B" onChange={()=>setabc1('B',item)}/>
+            <input type="radio" className="unchecek" name={item.id} id={"2" + item.id} value="B" onChange={()=>setabc1('B',item)}/>
             <label className="form-check-label" for={"2" + item.id}>
             {item.option2}
             </label>
           </div>
+          {/* {item} */}
+          {item.option3?
           <div class="form-check">
-            <input type="radio" name={item.id} id={"3" + item.id} value="C" onChange={()=>setabc1('C',item)}/>
+            <input type="radio" className="unchecek" name={item.id} id={"3" + item.id} value="C" onChange={()=>setabc1('C',item)}/>
             <label className="form-check-label" for={"3" + item.id}>
             {item.option3}
             </label>
-          </div>
+          </div>:null}
+          {item.option4?
           <div class="form-check">
-            <input type="radio" name={item.id} id={"4" + item.id} value="D" onChange={()=>setabc1('D',item)}/>
+            <input type="radio" className="unchecek" name={item.id} id={"4" + item.id} value="D" onChange={()=>setabc1('D',item)}/>
             <label className="form-check-label" for={"4" + item.id}>
             {item.option4}
             </label>
-          </div>
+          </div>:null}
           </div>
         // ))}
      ))}
-     </div>:<>Question Finished ...</>}
+     </div>:null}
      <div className="btn btn-primary" onClick={()=>finalFormSubmit()}>
        Done
      </div>
@@ -285,11 +292,11 @@ function Quiz() {
           <Question />
           <Question /> */}
         </div>
-        <Modal title="Quiz Form" visible={userForm} onOk={JoinFormSubmit} onCancel={handleCancel}>
+        <Modal cancelButtonProps={{ style: { display: 'none' } }} title="Quiz Form" maskClosable = {false} keyboard={false} closable={false} visible={userForm} onOk={JoinFormSubmit} >
       <Card className="blogs__mail-list">
             <Form layout="vertical">
               <Form.Item>
-                <Input placeholder="Name" type="name"  onChange={(text)=>setName(text.target.value)
+                <Input placeholder="Name" type="name"  onChange={(text)=>setQuizPlayerUsername(text.target.value)
                 }/>
               </Form.Item>
               <Form.Item>

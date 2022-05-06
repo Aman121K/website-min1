@@ -44,12 +44,14 @@ const Blogs = () => {
   const [email,setEmail]=useState();
   const [file,setFile]=useState();
   const JoinFormSubmit=async()=>{
+    if(!file && !name && !email){
+      toast.error("All Fields are Required");
+    }
+    else{
     var formData=new FormData();
-    // file , name , email
     formData.append('name', name);
     formData.append('email', email);
     formData.append('file', file);
-
     console.log("form data..",formData);
     let response=await axios.post('http://3.111.207.167:8000/api/blogupload',formData);
     console.log("Res...",response.data.Success);
@@ -60,6 +62,7 @@ const Blogs = () => {
       toast.error("Something went wrong on server")
     }
   }
+}
   return (
     <div className="blogs__container mt-3 container">
        <ToastContainer/>
@@ -74,8 +77,9 @@ const Blogs = () => {
           <Row gutter={[20, 30]}>
             {data &&
               data.map((item, index) => (
+                // console.log("Array wala dat..",data)
                 <Col xs={24} sm={24} md={12} lg={8} key={index}>
-                  <BlogCard item={item}/>
+                  <BlogCard item={item} allArray={data}/>
                 </Col>
               ))}
           </Row>

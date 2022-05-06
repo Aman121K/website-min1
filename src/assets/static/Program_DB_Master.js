@@ -21,7 +21,7 @@ const Program_DB_Master = [
 		pathname: '/programs/specialization-in-data-science-for-it',
 		nameOfProgram: 'Specialization in Data Science for IT',
 		durationInWeeks: '52',
-		rating: 4.5,
+		rating: 4.8,
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DSforIT,
@@ -49,7 +49,7 @@ const Program_DB_Master = [
 				'A complete program that caters to learning complete Data Science along with the complete domain knowledge of IT industry including product management and complete product life cycle. This is an end-to-end IT training program that gives you all the knowledge required to start and grow your career in Data Science. It covers everything from basic statistics and modelling techniques up to advanced machine learning, deep learning, artificial intelligence, NLP (Natural Language Processing), computer vision and other areas of AI.',
 			dropdownQuestion: [
 				{
-					question: 'What does a Data Scientist do in an Finance product companies?',
+					question: 'What does a Data Scientist do in an IT product companies?',
 					answer: (
 						<>
 							There are lots of exciting career prospects for Data Science in IT
@@ -88,8 +88,44 @@ const Program_DB_Master = [
 				},
 				{
 					question: 'What will you learn from this course?',
-					answer:
-						'This course is Designed by the GetExcelsior to equip yourself with the Industry Demanded Skills in 2022. This program will give you practical data analytics and data science knowledge needed to succeed in the IT sector. Learn the concepts of data science and IT. Gain transferable skills in user research, user design, prototyping, building artefacts, product analytics, digital transformation, fundamental procedures and structures. You will also learn Reconciliation And Introduction To Isda, Product Marketing And Gtm Strategy, Product Planning And Development, Tech 101 For Pms, Data Science For Product Management and Growth Product Management. This program is designed by Excelsior covers the latest analytics, Visualization and machine learning concepts. These include topics like data science essentials, big data ecosystem, where data has its origins, the role of databases in storing and retrieving data at scale, statistical analysis basics, and designing experiments. Upon completion of this program you will be prepared to take the roles of Business Analyst and Data Scientist. Tools covered: Python Programming R Programming Tableau Kera Spark Microsoft Power BI (Business Intelligence), Machine Learning, Deep Learning, NLP, Computer Vision and Other Areas of AI',
+					answer: (
+						<>
+							This program will give you practical data analytics and data science
+							knowledge needed to succeed in the IT sector. Learn the concepts of
+							data science and IT. Gain transferable skills in user research, user
+							design, prototyping, building artefacts, product analytics, digital
+							transformation, fundamental procedures and structures. You will also
+							learn Reconciliation And Introduction To Isda, Product Marketing And
+							Gtm Strategy, Product Planning And Development, Tech 101 For Pms,
+							Data Science For Product Management and Growth Product Management.
+							This program is designed by Excelsior covers the latest analytics,
+							Visualization and machine learning concepts. These include topics
+							like data science essentials, big data ecosystem, where data has its
+							origins, the role of databases in storing and retrieving data at
+							scale, statistical analysis basics, and designing experiments. Upon
+							completion of this program you will be prepared to take the roles of
+							Business Analyst and Data Scientist.
+							<br />
+							Tools Covered
+							<ul className='px-4'>
+								<li>Python Programming</li>
+								<li>Tableau</li>
+								<li>Keras</li>
+								<li>Numpy</li>
+								<li>Pandas</li>
+								<li>Spark</li>
+								<li>Hadoop</li>
+								<li>Microsoft Power BI</li>
+								<li>Alteryx</li>
+								<li>Matplotlib</li>
+								<li>NLP</li>
+								<li>Computer Vision</li>
+								<li>SVM</li>
+								<li>Neural Networks</li>
+								<li>Advance Excel</li>
+							</ul>
+						</>
+					),
 				},
 				{
 					question: 'What’s the scope after this course?',
@@ -99,7 +135,8 @@ const Program_DB_Master = [
 			],
 		},
 		curriculum: {
-			description: 'Arav',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -325,29 +362,37 @@ const Program_DB_Master = [
 				),
 			},
 			{
-				title: 'Profile Building',
+				title: 'Mock Interviews',
 				body: (
 					<>
-						Excelsior’s industry experts are the ultimate resource for anyone
-						looking to build their profile
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
 						<ul className='pl-4 mt-2'>
-							<li style={{ width: 'max-content' }}>Resume Building</li>
-							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
-							<li style={{ width: 'max-content' }}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
 						</ul>
 					</>
 				),
 			},
 			{
-				title: 'Profile Building',
+				title: 'Project Guidance',
 				body: (
 					<>
-						Excelsior’s industry experts are the ultimate resource for anyone
-						looking to build their profile
+						Work on unlimited live projects with the help of industry experts
 						<ul className='pl-4 mt-2'>
-							<li style={{ width: 'max-content' }}>Resume Building</li>
-							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
-							<li style={{ width: 'max-content' }}>Github Building</li>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
 						</ul>
 					</>
 				),
@@ -420,56 +465,56 @@ const Program_DB_Master = [
 		reviews: [
 			{
 				firstRow: {
-					name: 'Rohini Jain',
+					name: 'Shashank Sinha(Data Scientist- Paytm)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdamit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I have been to many well-known Data Science / Machine Learning courses in Bangalore. But I could not find the right course which could help me to land my first job in this field. Then, I found Excelsior. Our mentor Mr. Sachin was so helpful and so knowledgeable in this field that he could guide me throughout the course and they helped me to get placed in a Top MNC through his their extensive placement program.',
 				},
 				secondRow: {
-					name: 'Rohini Jain',
+					name: 'Suresh Goel(Data Scientist-Amazon)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I took Excelsior’s course to learn how to do Data Science from a theoretical perspective, and I was not disappointed. The course is accessible to a wide range of students, and the materials are top notch. The professor is a real Data Scientist who knows his stuff and explains it well. The assignments are varied and thought provoking. The placement process was excellent and very transparent.',
 				},
 			},
 			{
 				firstRow: {
-					name: 'Rohini Jain',
+					name: 'Hemanth Reddy(Data Scientist-Airtel)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I am writing this review to thank Excelsior for making Data Science online course. I have recently completed this course and it was the best decision I have made in my life. The course is well designed with details, examples, exercises, lectures and assignments. The mentors are really helpful, and they helped me to clear all my doubts regarding the program. They always replied to my emails on time, and I also got a job through Brilliant Data Science.',
 				},
 				secondRow: {
-					name: 'Rohini Jain',
+					name: 'T Pavan Kumar(Data Scientist-IBM)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'My experience with the course and support team has been very positive. The Excelsior team is friendly and always available to answer questions, and they provide a good mix of reading material and videos. It was a challenging course with a steep learning curve, but it is also very rewarding. I would recommend the Excelsior to anyone who is willing to learn with hands on experience.',
 				},
 			},
 			{
 				firstRow: {
-					name: 'Rohini Jain',
+					name: 'Rahul Yadav (Data Scientist- Adobe)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'Being a non-programmer, it was very hard for me to decide which course to take for Data Science. After doing some research, I found Excelsior course on data science and that was the best decision I could have taken! The course is really good, and their placement team helped me get a job right after the course.',
 				},
 				secondRow: {
-					name: 'Rohini Jain',
+					name: 'Neelam Gupta(Data Scientist-AWS)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I just wanted to thank you all. I finished Excelsior Data Science for IT program recently and it was great. The materials were clear and simple, so it didn’t take me much time to finish the program. And now I have got a job at my dream Company',
 				},
 			},
 		],
@@ -659,13 +704,13 @@ const Program_DB_Master = [
 		pathname: '/programs/specialization-in-data-science-for-finance',
 		nameOfProgram: 'Data Science for Finance',
 		durationInWeeks: '52',
-		rating: 4.5,
-		completedBy: 907,
+		rating: 4.9,
+		completedBy: 1102,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DSforFinance,
 		icon: i2,
 		description:
-			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+			'A unique program, an innovative course that will give you a holistic understanding of how Data Science is used in the Finance & Banking industry. It iss not just limited to Bankers or Bankers-to-be, but it can help anyone who aspires to work in this field.',
 		shortDescription:
 			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
@@ -684,60 +729,70 @@ const Program_DB_Master = [
 		},
 		overview: {
 			description:
-				'A complete program that caters to learning complete Data Science along with the complete domain knowledge of IT industry including product management and complete product life cycle. This is an end-to-end IT training program that gives you all the knowledge required to start and grow your career in Data Science. It covers everything from basic statistics and modelling techniques up to advanced machine learning, deep learning, artificial intelligence, NLP (Natural Language Processing), computer vision and other areas of AI.',
+				'A complete program that caters to learning complete Data Science along with the complete domain knowledge of Banking and Finance industry including Investment Banking, Derivative Markets, Risk Analysis. This course is designed to provide the knowledge and skills needed to solve practical financial problems using Python. It will also help you explore various concepts of Data Science & get familiar with the basic and advanced tools and terminologies in this field.',
 			dropdownQuestion: [
 				{
 					question: 'What does a Data Scientist do in an Finance product companies?',
+					answer:
+						'Data scientists in the financial industry have a real opportunity to push the customer experience in an exciting direction. By monitoring and analyzing some of the more advanced aspects of customer transactions, it is possible to not only improve their security but also detect any suspicious or malicious activities. Data science is really making data-driven trading systems and pricing models a reality for banks. For customers, AI in banking drives services such as credit management which save you stress and hassle if you need money RIGHT NOW ! The natural language processing (NLP) algorithm allows for even more automated customer service through voice-response systems that respond to you by name - no matter how diverse your customer base is.',
+				},
+				{
+					question: 'Who can enroll for this course and what are the prerequisites?',
+					answer:
+						'At Excelsior, we designed the course as Beginner friendly and also for the Professionals who want to narrow the data Science into Finance Sector. This career requires experience in technical skills, including math, statistics, or computers. Every class you take with Excelsior will be taught by an instructor who has been a great asset in this field.Our experienced instructors have decades of experience helping clients around the world accelerate their business and careers, and will share first-hand knowledge to ensure your success.',
+				},
+				{
+					question: 'What will you learn from this course?',
 					answer: (
 						<>
-							There are lots of exciting career prospects for Data Science in IT
-							product companies. As a data scientist, you're often expected to
-							effectively analyze problems, predict behavior, and develop
-							solutions. Since IT products are often used for a variety of
-							purposes, there's always a need for innovators in the field. While
-							you'll be able to use your Data Science skills to benefit the
-							company, you'll also have the opportunity to contribute to solving a
-							lot of problems in the world. Data scientists in IT companies perform
-							a range of different tasks that involve collecting, analyzing and
-							interpreting large amounts of data.
+							This course is Designed by Excelsior to equip Yourself with the
+							Industry Demanded Skills in 2022.This program will give you practical
+							data analytics and data science knowledge needed to succeed in the
+							world of finance. The courses cover the methods analysts use to
+							extract information from data, build models, and make predictions
+							based on those models.
 							<br />
-							These tasks include:
-							<ul className='px-4'>
-								<li>Self-Service Data Analysis</li>
-								<li>Data Visualization</li>
-								<li>Data integration</li>
-								<li>Reporting</li>
-								<li>Modeling</li>
-								<li>Predictive Analytics</li>
-								<li>Big data management</li>
-								<li>Data Quality</li>
-								<li>Business Intelligence</li>
-								<li>Data warehousing</li>
-								<li>Data Integration</li>
-								<li>Data Mining</li>
+							Domain Knowledge covered
+							<ul className='px-2'>
+								<li>Introduction to Investment Banking</li>
+								<li>Cash Equities and Fixed income</li>
+								<li>Corporate Actions</li>
+								<li>Stock Borrow Lending</li>
+								<li>Trade Life Cycle </li>
+								<li>Risk Management and Regulatory Environment</li>
+							</ul>
+							<br />
+							Tools Covered
+							<ul className='px-2'>
+								<li>Python Programming</li>
+								<li>Tableau</li>
+								<li>Keras</li>
+								<li>Numpy</li>
+								<li>Pandas</li>
+								<li>Spark</li>
+								<li>Hadoop</li>
+								<li>Microsoft Power BI</li>
+								<li>Alteryx</li>
+								<li>Matplotlib</li>
+								<li>NLP</li>
+								<li>Computer Vision</li>
+								<li>SVM</li>
+								<li>Neural Networks</li>
+								<li>Advance Excel</li>
 							</ul>
 						</>
 					),
 				},
 				{
-					question: 'Who can enroll for this course and what are the prerequisites?',
-					answer:
-						'This course is ideal for anyone looking to make a career in the IT industry. We at Excelsior have designed the course as beginner friendly and also for the professionals who want to narrow the data Science into the IT Sector. Every class you take with Excelsior will be taught by an instructor who has been a great asset in this field. Our experienced instructors have decades of experience helping clients around the world accelerate their business and careers, and will share first-hand knowledge to ensure your success.',
-				},
-				{
-					question: 'What will you learn from this course?',
-					answer:
-						'This course is Designed by the GetExcelsior to equip yourself with the Industry Demanded Skills in 2022. This program will give you practical data analytics and data science knowledge needed to succeed in the IT sector. Learn the concepts of data science and IT. Gain transferable skills in user research, user design, prototyping, building artefacts, product analytics, digital transformation, fundamental procedures and structures. You will also learn Reconciliation And Introduction To Isda, Product Marketing And Gtm Strategy, Product Planning And Development, Tech 101 For Pms, Data Science For Product Management and Growth Product Management. This program is designed by Excelsior covers the latest analytics, Visualization and machine learning concepts. These include topics like data science essentials, big data ecosystem, where data has its origins, the role of databases in storing and retrieving data at scale, statistical analysis basics, and designing experiments. Upon completion of this program you will be prepared to take the roles of Business Analyst and Data Scientist. Tools covered: Python Programming R Programming Tableau Kera Spark Microsoft Power BI (Business Intelligence), Machine Learning, Deep Learning, NLP, Computer Vision and Other Areas of AI',
-				},
-				{
 					question: 'What’s the scope after this course?',
 					answer:
-						'The scope of Data Science professionals in the IT product based companies in India in 2022 will only increase. This is because top companies like Google, Amazon, Microsoft are all hiring Data Science professionals. India has exploded on the global data science landscape. Data Science is a new but vibrant field in the market. The number of people employed in this field cannot even be estimated. The data science market is growing rapidly as the more data is used in business and other fields, the more data scientists will be needed. The average salary after this course ranges from ₹14,50,000 to ₹16,00,000 for freshers',
+						'Data Science has revolutionized the finance industry across the globe.  It has provided an array of solutions to combat fraud, prevent identification theft and improve customer relations. The scope of Data Scientists in the finance industry is limited only by the imagination of the professionals, and the technology they use. With more and more companies and organizations using big data in their systems, the scope and demand for a Data Scientist in finance is increasing by the day. And the scope will definitely increase.  The skills of a Data Scientist are in demand in all sectors.  This means a Data Scientist will be able to get a significantly higher salary in financial sector than in other sectors. The average salary after this course ranges from ₹14,80,000 to ₹16,10,000 for freshers',
 				},
 			],
 		},
 		curriculum: {
-			description: 'Arav',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -837,23 +892,21 @@ const Program_DB_Master = [
 					],
 				},
 				{
-					title: 'Specialization in IT Product Lifecycle',
+					title: 'Specialization in Finance Domain',
 					data: [
-						'Market Research For A 0-1 Product For A B2C Product',
-						'User Research For A 0-1 Product',
-						'Create Product Artefacts For 0-1 Product',
-						'User Design For A 1-N Product',
-						'Prototyping',
-						'Mvp + Usability Testing',
-						'Product Analytics',
-						'Growth, Engagement & Monetisation',
-						'Product Marketing And Gtm Strategy',
-						'Product Planning And Development',
-						'Tech 101 For Pms',
-						'Data Science For Product Management',
-						'Growth Product Management',
-						'Data Science For Product Management',
-						'Digital Transformation',
+						'Introduction To Investment Banking',
+						'Cash Equities And Fixed Income',
+						'Foreign Exchange And Money Markets',
+						'Derivatives Markets',
+						'Reference Data Management',
+						'Corporate Actions',
+						'Asset Management',
+						'Reconciliation And Introduction To ISDA',
+						'Stock Borrow Lending',
+						'Collateral Management',
+						'Trade Life Cycle',
+						'Risk Management And Regulatory Environment',
+						'Anti-Money Laundering And Know Your Customers',
 					],
 				},
 			],
@@ -931,45 +984,97 @@ const Program_DB_Master = [
 		],
 		learningExperience: [
 			{
-				title: 'Class Notifications',
-				body: 'Class Notifications Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Profile Building',
+				body: (
+					<>
+						Excelsior’s industry experts are the ultimate resource for anyone
+						looking to build their profile
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Hackathons',
-				body: 'Hackathons Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Expert Sessions',
+				body: (
+					<>
+						Excelsior offer expert advice on softskills and HR topics
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Career Services',
-				body: 'Career Services Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Mock Interviews',
+				body: (
+					<>
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Major Announcements',
-				body: 'Major Announcements Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Project Guidance',
+				body: (
+					<>
+						Work on unlimited live projects with the help of industry experts
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
+						</ul>
+					</>
+				),
 			},
 		],
 		projects: [
 			{
 				firstRow: {
-					title: 'Fake news detection',
+					title: 'Revenue Forecasting',
 					description:
-						'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
+						'Revenue is the amount of money that a company receives from its normal business activities, usually from the sale of goods and services to customers. For this project, you will be using publicly available data with the help of open sources such as Bloomberg (for regions, sectors, securities), Yahoo Finance (for financial and operational metrics) and others and performing Multivariate Statistical analysis on the revenue data. Build a regression model for a set of periods taking into consideration all of the factors affecting the revenue of the company. This is a time series regression problem and the goal is to accurately predict future revenue of a company.',
 				},
 				secondRow: {
-					title: 'Influence of global warming on food chain supply',
+					title: 'Portfolio Optimization Problem',
 					description:
-						'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
+						' A portfolio optimization problem deals with the determination of different weights you should assign to assets in a portfolio, how much assets you should fold from different asset classes. You have 1000 listed stocks, how would you find out the most listed and profitable stocks? In this project, you would be using an operation research algorithm to find out the optimal weight and best set of 20 stocks out of 1000. If you are interested in finance, portfolio management and investment consultancy, then this is the right project for you.',
 				},
 			},
 			{
 				firstRow: {
-					title: 'Segmentation of customer groups',
+					title: 'Stock price forecasting model',
 					description:
-						'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
+						'Due to a dynamic nature and liability to quick changes in the stock price, prediction of stock prices becomes a challenging task. In this project, you will be using the traditional statistical models such as exponential smoothing and ARIMA to predict the stock prices using the financial dataset from Bloomberg, NSE, Reliance etc. In the end, using innovative methods for forecasting the stock prices, you will be able to make highly informed business decisions.',
 				},
 				secondRow: {
-					title: 'Diabetic Retinopathy',
+					title: 'Build a credit Scorecard model',
 					description:
-						'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
+						'In the past few decades banks have gathered plenty of information describing the default behavior of their customers. The goal of credit scoring is to quantify this relationship as precisely as possible to assist credit decisions, monitoring, and management. Hence, scorecards are widely used in the financial industry to make decisions on grating credit, monitoring portfolio and calculating loss etc. In this project, you will be working on the practical aspect of using scorecard models at banks. You will be assessing the credit worthiness of customers using a German loan dataset by building a classification model using logistic regression, Random forest and Boosting to classify good or bad customers and score new customers in future.',
 				},
 			},
 		],
@@ -1014,56 +1119,56 @@ const Program_DB_Master = [
 		reviews: [
 			{
 				firstRow: {
-					name: 'A',
+					name: 'Nishant Singh (Data Scientist- RBS)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'Excelsior is a very good institute to learn Business Intelligence & Analytics because they have a very good team of faculties who are experts in their field. They really helped me a lot when I was stuck and guided me towards the right direction. I recommend Excelsior to anyone who wants to learn Business Intelligence or Analytics.',
 				},
 				secondRow: {
-					name: 'B',
+					name: 'Suresh Gupta (Associate Data Scientist- Oracle)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I have always been interested in Learning Data Science, but never had the time to study for it. When I found out about Excelsior and their online, accelerated course, I was instantly intrigued. The course is well organized with a good mix of Live Classes, reading material and videos. It also provides a great way to learn through hands on experiences while working on real world projects and learning what we have to use.',
 				},
 			},
 			{
 				firstRow: {
-					name: 'C',
+					name: 'Vikram (Data Scientist-Axis)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I liked the class, it was easy to follow and understand. I have a good understanding of Python and Data Science now. Overall I really liked the class and feel like I learned a lot.',
 				},
 				secondRow: {
-					name: 'D',
+					name: 'Nishant Gupta(Data Scientist-HDFC)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'Excelsior is the best Data Science institute in Bangalore. They offer a wide range of courses to learn Data Science. Moreover, they have one of the best placement program which helps the students to get placed in top companies. Big thanks to Mr. Ekansh and the entire Excelsior team for helping me to get my dream job in Data Science field.',
 				},
 			},
 			{
 				firstRow: {
-					name: 'E',
+					name: 'Neelam Singhal (Data Scientist - Goldman Sachs)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I highly recommend Excelsior Data Science Courses. The best part is that they have a placement team that will help you get a job after the course which absolutely rocks! I loved their 1-on-1 classes where I learnt from someone who has been in the field for quite a while!',
 				},
 				secondRow: {
-					name: 'F',
+					name: 'Harshita (Data Scientist-Mondelez International)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I was a fresher in Analytics industry, and I wanted to start my career in Data Science. I needed guidance from an expert for this. Excelsior’s Team is very supportive and helped me a lot to get started with in this field. They provided me with in-depth curriculum and detailed teaching which helped me in achieving my goals in the right direction.',
 				},
 			},
 		],
@@ -1074,7 +1179,7 @@ const Program_DB_Master = [
 					{
 						question: 'Who is the program intended for?',
 						answer:
-							'If you want to master Data Science in the IT industry, this program is for you. Whether you are a recent graduate or want to change your domain, you can join the program. We believe that you have the right to choose your career path.',
+							'This programme is for you if you want to master Data Science in the Finance industry. You can participate in the programme whether you are a recent graduate or want to change your domain. We think you have the freedom to select your own route in life.',
 					},
 					{
 						question: 'Does Excelsior help me to get a job?',
@@ -1252,20 +1357,20 @@ const Program_DB_Master = [
 	{
 		pathname: '/programs/deep-learning',
 		nameOfProgram: 'Deep Learning',
-		durationInWeeks: '52',
-		rating: 4.5,
-		completedBy: 907,
+		durationInWeeks: '40',
+		rating: 4.4,
+		completedBy: 1030,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DeepLearning,
 		icon: i3,
 		description:
-			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+			'A deep dive into the most interesting branch of artificial intelligence. In this specialization, you will learn how to build and train neural networks using the latest techniques in modern AI research.',
 		shortDescription:
 			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
-				'200+ hours of live sessions',
-				'100+ Projects & Exercises',
+				'150+ hours of live sessions',
+				'80+ Projects & Exercises',
 				'Personalized Project feedback from Expert Professionals',
 				'Flexible learning Schedule',
 			],
@@ -1278,60 +1383,62 @@ const Program_DB_Master = [
 		},
 		overview: {
 			description:
-				'A complete program that caters to learning complete Data Science along with the complete domain knowledge of IT industry including product management and complete product life cycle. This is an end-to-end IT training program that gives you all the knowledge required to start and grow your career in Data Science. It covers everything from basic statistics and modelling techniques up to advanced machine learning, deep learning, artificial intelligence, NLP (Natural Language Processing), computer vision and other areas of AI.',
+				'A program that covers all the major areas of AI including python, machine learning and deep learning. It also includes additional advanced topics such as reinforcement learning, Bayesian methods and neural networks. This specialization will cover the latest research in deep learning, transfer learning and other methods that are transforming AI research. We will look at how to build these complex, state-of-the-art networks that are transforming AI research and how they can be used for applications such as computer vision, speech recognition, natural language processing, audio processing, robotic control, and many others.',
 			dropdownQuestion: [
 				{
 					question: 'What does a Data Scientist do in an Finance product companies?',
+					answer:
+						'A Data Scientist has a very vast area of work. But a Data Scientist who has expertise in AI, deep learning, and machine learning is already in high demand. And the demand will keep rising. Here is the typical hiring profile of a Data Scientist: 1) A Data Scientist should be able to efficiently use Python libraries like Scikit Learn, PyTorch, Tensor Flow, and NumPy. 2)A Data Scientist should be able to build predictive models like Random Forest, Gradient Boosting, Neural Networks etc. 3) A Data Scientist should be able to communicate his/her ideas and results to Management, Technical people, and Business people. 4) A Data Scientist should be able to extract insights from data, create results, and present them to others. Here are some of the popular job postings for AI, deep learning and machine learning engineers: Google, Amazon, Microsoft, Airbnb, Facebook and many more.',
+				},
+				{
+					question: 'Who can enroll for this course and what are the prerequisites?',
+					answer:
+						'At Excelsior Deep Learning course is second-to-none, providing you with the opportunity to learn this important skill in the most optimal way possible: through hands-on exercises. We have already gone to great lengths to ensure the material is high quality and engaging, but it is our classes that give you the fully immersive experience. Each lesson is taught by instructors who are not only well versed in the topic, but experienced developers within their field as well. You will also be learning from an Expert.The program has no pre-requisites and anyone willing to learna and devote time to the program can learn and excel in the field of Data Science.',
+				},
+				{
+					question: 'What will you learn from this course?',
 					answer: (
 						<>
-							There are lots of exciting career prospects for Data Science in IT
-							product companies. As a data scientist, you're often expected to
-							effectively analyze problems, predict behavior, and develop
-							solutions. Since IT products are often used for a variety of
-							purposes, there's always a need for innovators in the field. While
-							you'll be able to use your Data Science skills to benefit the
-							company, you'll also have the opportunity to contribute to solving a
-							lot of problems in the world. Data scientists in IT companies perform
-							a range of different tasks that involve collecting, analyzing and
-							interpreting large amounts of data.
+							If you’re looking to learn more about deep learning, but you’re a
+							beginner and don’t know where to start, this course will take you
+							from zero to hero in no time! Excelsior’s cutting-edge curriculum,
+							blended learning model, and thoughtful instructors combine to make an
+							immersive, transformative experience. This course will equip you with
+							all the skills you need to become a deep learning expert. Image
+							classification, data science, natural language processing, computer
+							vision - you name it, you’ll be able to do it after this program.
 							<br />
-							These tasks include:
+							Tools covered
 							<ul className='px-4'>
-								<li>Self-Service Data Analysis</li>
-								<li>Data Visualization</li>
-								<li>Data integration</li>
-								<li>Reporting</li>
-								<li>Modeling</li>
-								<li>Predictive Analytics</li>
-								<li>Big data management</li>
-								<li>Data Quality</li>
-								<li>Business Intelligence</li>
-								<li>Data warehousing</li>
-								<li>Data Integration</li>
-								<li>Data Mining</li>
+								<li>Python Programming</li>
+								<li>Tableau</li>
+								<li>Keras</li>
+								<li>Numpy</li>
+								<li>Pandas</li>
+								<li>Spark</li>
+								<li>Hadoop</li>
+								<li>Microsoft Power BI</li>
+								<li>Alteryx</li>
+								<li>Matplotlib</li>
+								<li>NLP</li>
+								<li>Computer Vision</li>
+								<li>SVM</li>
+								<li>Neural Networks</li>
+								<li>Advance Excel</li>
 							</ul>
 						</>
 					),
 				},
 				{
-					question: 'Who can enroll for this course and what are the prerequisites?',
-					answer:
-						'This course is ideal for anyone looking to make a career in the IT industry. We at Excelsior have designed the course as beginner friendly and also for the professionals who want to narrow the data Science into the IT Sector. Every class you take with Excelsior will be taught by an instructor who has been a great asset in this field. Our experienced instructors have decades of experience helping clients around the world accelerate their business and careers, and will share first-hand knowledge to ensure your success.',
-				},
-				{
-					question: 'What will you learn from this course?',
-					answer:
-						'This course is Designed by the GetExcelsior to equip yourself with the Industry Demanded Skills in 2022. This program will give you practical data analytics and data science knowledge needed to succeed in the IT sector. Learn the concepts of data science and IT. Gain transferable skills in user research, user design, prototyping, building artefacts, product analytics, digital transformation, fundamental procedures and structures. You will also learn Reconciliation And Introduction To Isda, Product Marketing And Gtm Strategy, Product Planning And Development, Tech 101 For Pms, Data Science For Product Management and Growth Product Management. This program is designed by Excelsior covers the latest analytics, Visualization and machine learning concepts. These include topics like data science essentials, big data ecosystem, where data has its origins, the role of databases in storing and retrieving data at scale, statistical analysis basics, and designing experiments. Upon completion of this program you will be prepared to take the roles of Business Analyst and Data Scientist. Tools covered: Python Programming R Programming Tableau Kera Spark Microsoft Power BI (Business Intelligence), Machine Learning, Deep Learning, NLP, Computer Vision and Other Areas of AI',
-				},
-				{
 					question: 'What’s the scope after this course?',
 					answer:
-						'The scope of Data Science professionals in the IT product based companies in India in 2022 will only increase. This is because top companies like Google, Amazon, Microsoft are all hiring Data Science professionals. India has exploded on the global data science landscape. Data Science is a new but vibrant field in the market. The number of people employed in this field cannot even be estimated. The data science market is growing rapidly as the more data is used in business and other fields, the more data scientists will be needed. The average salary after this course ranges from ₹14,50,000 to ₹16,00,000 for freshers',
+						'Data Science is a growing career field in India. The demand in the job market is also on a higher side. According to a report "India needs over two lakh data science professionals by 2023". Average salary of a fresher in this field is 8.5 LPA. Experienced people in Data Science are getting salaries between 15-28 LPA. It is also dependent upon the company and location. For instance in Bangalore, an experienced Data Scientist can get a package of 20 LPA. It is a great time to get into Data Science.',
 				},
 			],
 		},
 		curriculum: {
-			description: 'Arav',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -1430,26 +1537,6 @@ const Program_DB_Master = [
 						'Reinforcement Learning',
 					],
 				},
-				{
-					title: 'Specialization in IT Product Lifecycle',
-					data: [
-						'Market Research For A 0-1 Product For A B2C Product',
-						'User Research For A 0-1 Product',
-						'Create Product Artefacts For 0-1 Product',
-						'User Design For A 1-N Product',
-						'Prototyping',
-						'Mvp + Usability Testing',
-						'Product Analytics',
-						'Growth, Engagement & Monetisation',
-						'Product Marketing And Gtm Strategy',
-						'Product Planning And Development',
-						'Tech 101 For Pms',
-						'Data Science For Product Management',
-						'Growth Product Management',
-						'Data Science For Product Management',
-						'Digital Transformation',
-					],
-				},
 			],
 		},
 		admissionProcedure: {
@@ -1483,7 +1570,7 @@ const Program_DB_Master = [
 				question: [
 					{
 						name: 'Fee of the program',
-						answer: 'The fee for this program is ₹129999 inclusive of taxes',
+						answer: 'The fee for this program is ₹99,999 inclusive of taxes',
 					},
 					{
 						name: 'Scholarship Options/Discounts',
@@ -1525,45 +1612,97 @@ const Program_DB_Master = [
 		],
 		learningExperience: [
 			{
-				title: 'Class Notifications',
-				body: 'Class Notifications Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Profile Building',
+				body: (
+					<>
+						Excelsior’s industry experts are the ultimate resource for anyone
+						looking to build their profile
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Hackathons',
-				body: 'Hackathons Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Expert Sessions',
+				body: (
+					<>
+						Excelsior offer expert advice on softskills and HR topics
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Career Services',
-				body: 'Career Services Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Mock Interviews',
+				body: (
+					<>
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Major Announcements',
-				body: 'Major Announcements Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Project Guidance',
+				body: (
+					<>
+						Work on unlimited live projects with the help of industry experts
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
+						</ul>
+					</>
+				),
 			},
 		],
 		projects: [
 			{
 				firstRow: {
-					title: 'Fake news detection',
+					title: 'Skin cancer detection',
 					description:
-						'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
+						'The power of machine learning lies in its practical applicability — whether you’re interested in medicine or not, this hands-on project will teach computer vision and AI skills that are in demand worldwide. Deep learning, nowadays,  is becoming a versatile, powerful tool for deriving valuable insights in areas of medicine that were previously inaccessible. Training a computer to analyse skin cancer images with improved accuracy can help in early detection of skin cancer. In this project, you will build a neural network using Python’s Numpy to classify dermal cell images and detect skin cancer.',
 				},
 				secondRow: {
-					title: 'Influence of global warming on food chain supply',
+					title: 'Car price prediction',
 					description:
-						'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
+						'When buying and selling cars, it can be a challenge to assign the correct price of cars. Understanding how car prices vary with different criteria can help us in negotiating a good deal. In this project, you will predict the price of a given car and get an accurate prediction. This project provides some insights into the pricing trends of used vehicles and suggests variables to pay attention to when browsing the listings.',
 				},
 			},
 			{
 				firstRow: {
-					title: 'Segmentation of customer groups',
+					title: 'Handwritten Digit Recognition',
 					description:
-						'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
+						'The objective of the project is to build a model that could classify which digit is drawn by the user. In this project, you will build and train a Convolutional Neural Network (CNN) in Keras from scratch to recognize MNIST digits. At the end of this project, you will be able to build, compile, fit and evaluate a convolutional neural network trained on MNIST data set for handwritten digit recognition and then use it for real-time predictions using your own handwritten digits using computer vision.',
 				},
 				secondRow: {
-					title: 'Diabetic Retinopathy',
+					title: ' Image Caption Generator Project',
 					description:
-						'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
+						' Image caption generator is one of the very interesting projects for deep learning and a computer vision enthusiast. Build a deep learning model that converts the image into well formed sentences. In this project, you will generate image captions from a set of images. Investigate social media activity on Instagram for hiking and climbing. Recommend remote, beautiful climbing and hiking locations based on real-time posting data from Instagram users.',
 				},
 			},
 		],
@@ -1608,56 +1747,56 @@ const Program_DB_Master = [
 		reviews: [
 			{
 				firstRow: {
-					name: 'A',
+					name: 'Suresh Gupta (Associate Data Scientist- Oracle)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I have always been interested in Learning Data Science, but never had the time to study for it. When I found out about Excelsior and their online, accelerated course, I was instantly intrigued. The course is well organized with a good mix of Live Classes, reading material and videos. It also provides a great way to learn through hands on experiences while working on real world projects and learning what we have to use.',
 				},
 				secondRow: {
-					name: 'B',
+					name: 'Neelam Singhal (Data Scientist - Goldman Sachs)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I highly recommend Excelsior Data Science Courses. The best part is that they have a placement team that will help you get a job after the course which absolutely rocks! I loved their 1-on-1 classes where I learnt from someone who has been in the field for quite a while!',
 				},
 			},
 			{
 				firstRow: {
-					name: 'C',
+					name: 'Suresh Goel(Data Scientist-Amazon)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I took Excelsior’s course to learn how to do Data Science from a theoretical perspective, and I was not disappointed. The course is accessible to a wide range of students, and the materials are top notch. The professor is a real Data Scientist who knows his stuff and explains it well. The assignments are varied and thought provoking. The placement process was excellent and very transparent.',
 				},
 				secondRow: {
-					name: 'D',
+					name: 'Shashank Sinha(Data Scientist- Paytm)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I have been to many well-known Data Science / Machine Learning courses in Bangalore. But I could not find the right course which could help me to land my first job in this field. Then, I found Excelsior. Excelsior mentor Mr. Sachin was so helpful and so knowledgeable in this field that he could guide me throughout the course and they helped me to get placed in a Top MNC through his their extensive placement program.',
 				},
 			},
 			{
 				firstRow: {
-					name: 'E',
+					name: 'Harshita (Data Scientist-Mondelez International)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I was a fresher in Analytics industry, and I wanted to start my career in Data Science. I needed guidance from an expert for this. Excelsior’s Team is very supportive and helped me a lot to get started with in this field. They provided me with in-depth curriculum and detailed teaching which helped me in achieving my goals in the right direction.',
 				},
 				secondRow: {
-					name: 'F',
+					name: 'Hemanth Reddy(Data Scientist-Airtel)',
 					imageURL:
 						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
+					rating: 5,
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+						'I am writing this review to thank Excelsior for making Data Science online course. I have recently completed this course and it was the best decision I have made in my life. The course is well designed with details, examples, exercises, lectures and assignments. The mentors are really helpful, and they helped me to clear all my doubts regarding the program. They always replied to my emails on time, and I also got a job through Brilliant Data Science. I am really thankful to them for helping me build my profile and gain the head start I needed.',
 				},
 			},
 		],
@@ -1668,7 +1807,7 @@ const Program_DB_Master = [
 					{
 						question: 'Who is the program intended for?',
 						answer:
-							'If you want to master Data Science in the IT industry, this program is for you. Whether you are a recent graduate or want to change your domain, you can join the program. We believe that you have the right to choose your career path.',
+							'This programme is for you if you wish to work as a Deep Learning and AI developer. You can participate in the programme whether you are a recent graduate or want to change your domain. We think you have the freedom to select your own route in life.',
 					},
 					{
 						question: 'Does Excelsior help me to get a job?',
@@ -1925,7 +2064,8 @@ const Program_DB_Master = [
 			],
 		},
 		curriculum: {
-			description: 'Arav',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -2012,38 +2152,6 @@ const Program_DB_Master = [
 						'Packaging And Deployment Of Spark Applications',
 					],
 				},
-				{
-					title: 'Deep Learning and Artificial Intelligence',
-					data: [
-						'Neural Network Basics',
-						'Computer Vision',
-						'Statistical Natural Language Processing',
-						'Sequential Natural Language Processing',
-						'Advanced Computer Vision',
-						'Generative Adversarial Networks',
-						'Reinforcement Learning',
-					],
-				},
-				{
-					title: 'Specialization in IT Product Lifecycle',
-					data: [
-						'Market Research For A 0-1 Product For A B2C Product',
-						'User Research For A 0-1 Product',
-						'Create Product Artefacts For 0-1 Product',
-						'User Design For A 1-N Product',
-						'Prototyping',
-						'Mvp + Usability Testing',
-						'Product Analytics',
-						'Growth, Engagement & Monetisation',
-						'Product Marketing And Gtm Strategy',
-						'Product Planning And Development',
-						'Tech 101 For Pms',
-						'Data Science For Product Management',
-						'Growth Product Management',
-						'Data Science For Product Management',
-						'Digital Transformation',
-					],
-				},
 			],
 		},
 		admissionProcedure: {
@@ -2119,20 +2227,72 @@ const Program_DB_Master = [
 		],
 		learningExperience: [
 			{
-				title: 'Class Notifications',
-				body: 'Class Notifications Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Profile Building',
+				body: (
+					<>
+						Excelsior’s industry experts are the ultimate resource for anyone
+						looking to build their profile
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Hackathons',
-				body: 'Hackathons Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Expert Sessions',
+				body: (
+					<>
+						Excelsior offer expert advice on softskills and HR topics
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Career Services',
-				body: 'Career Services Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Mock Interviews',
+				body: (
+					<>
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Major Announcements',
-				body: 'Major Announcements Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Project Guidance',
+				body: (
+					<>
+						Work on unlimited live projects with the help of industry experts
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
+						</ul>
+					</>
+				),
 			},
 		],
 		projects: [
@@ -2519,7 +2679,8 @@ const Program_DB_Master = [
 			],
 		},
 		curriculum: {
-			description: 'Arav',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -2573,69 +2734,6 @@ const Program_DB_Master = [
 						'Understanding Visualizations',
 						'Power BI',
 						'Alteryx',
-					],
-				},
-				{
-					title: 'Machine Learning',
-					data: [
-						'Linear Models For Classification And Regression',
-						'Pre-Proposing Of Machine Learning',
-						'Decision Trees',
-						'Naives Bayes',
-						'Composite Estimators Using Pipelines',
-						'Model Selection & Evaluation',
-						'Feature Selection & Dimensionality Reduction',
-						'Nearest Neighbours',
-						'Clustering Techniques',
-						'Anomaly Detection',
-						'Support Vector Machines',
-						'Dealing With Imbalanced Classes',
-						'Ensemble Methods',
-						'Recommendation Engine',
-						'Time Series Modelling',
-						'Packaging & Deployment',
-					],
-				},
-				{
-					title: 'Big Data',
-					data: [
-						'Introduction To Big Data',
-						'Internal Details Of Spark',
-						'Foundation Of Spark Using Rdd',
-						'Data Wrangling Using Dataframes',
-						'Packaging And Deployment Of Spark Applications',
-					],
-				},
-				{
-					title: 'Deep Learning and Artificial Intelligence',
-					data: [
-						'Neural Network Basics',
-						'Computer Vision',
-						'Statistical Natural Language Processing',
-						'Sequential Natural Language Processing',
-						'Advanced Computer Vision',
-						'Generative Adversarial Networks',
-						'Reinforcement Learning',
-					],
-				},
-				{
-					title: 'Specialization in IT Product Lifecycle',
-					data: [
-						'Market Research For A 0-1 Product For A B2C Product',
-						'User Research For A 0-1 Product',
-						'Create Product Artefacts For 0-1 Product',
-						'User Design For A 1-N Product',
-						'Prototyping',
-						'Mvp + Usability Testing',
-						'Product Analytics',
-						'Growth, Engagement & Monetisation',
-						'Product Marketing And Gtm Strategy',
-						'Product Planning And Development',
-						'Tech 101 For Pms',
-						'Data Science For Product Management',
-						'Growth Product Management',
-						'Data Science For Product Management',
-						'Digital Transformation',
 					],
 				},
 			],
@@ -2713,20 +2811,72 @@ const Program_DB_Master = [
 		],
 		learningExperience: [
 			{
-				title: 'Class Notifications',
-				body: 'Class Notifications Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Profile Building',
+				body: (
+					<>
+						Excelsior’s industry experts are the ultimate resource for anyone
+						looking to build their profile
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Hackathons',
-				body: 'Hackathons Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Expert Sessions',
+				body: (
+					<>
+						Excelsior offer expert advice on softskills and HR topics
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Career Services',
-				body: 'Career Services Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Mock Interviews',
+				body: (
+					<>
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
+						</ul>
+					</>
+				),
 			},
 			{
-				title: 'Major Announcements',
-				body: 'Major Announcements Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus consequuntur ex mollitia pariatur enim non at, aliquid itaque quis repellat repellendus nulla qui sint et ut. Nisi, dolorem animi.',
+				title: 'Project Guidance',
+				body: (
+					<>
+						Work on unlimited live projects with the help of industry experts
+						<ul className='pl-4 mt-2'>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
+						</ul>
+					</>
+				),
 			},
 		],
 		projects: [
@@ -3113,7 +3263,8 @@ const Program_DB_Master = [
 			],
 		},
 		curriculum: {
-			description: 'Arav',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -3141,95 +3292,6 @@ const Program_DB_Master = [
 						'Regular Expression',
 						'Essential Packages',
 						'Testing',
-					],
-				},
-				{
-					title: 'Statistical and Mathematical Fundamentals',
-					data: [
-						'Statistics Concepts',
-						'Linear Algebra',
-						'Matrix Operations',
-						'Calculus',
-						'Probability',
-						'Sampling Techniques',
-						'Understanding Distributions',
-					],
-				},
-				{
-					title: 'Data Wrangling',
-					data: [
-						'Black Box Introduction To Machine Learning',
-						'Microsoft Excel',
-						'Sql',
-						'Tableau',
-						'Essential Numpy',
-						'Pandas For Machine Learning',
-						'Understanding Visualizations',
-						'Power BI',
-						'Alteryx',
-					],
-				},
-				{
-					title: 'Machine Learning',
-					data: [
-						'Linear Models For Classification And Regression',
-						'Pre-Proposing Of Machine Learning',
-						'Decision Trees',
-						'Naives Bayes',
-						'Composite Estimators Using Pipelines',
-						'Model Selection & Evaluation',
-						'Feature Selection & Dimensionality Reduction',
-						'Nearest Neighbours',
-						'Clustering Techniques',
-						'Anomaly Detection',
-						'Support Vector Machines',
-						'Dealing With Imbalanced Classes',
-						'Ensemble Methods',
-						'Recommendation Engine',
-						'Time Series Modelling',
-						'Packaging & Deployment',
-					],
-				},
-				{
-					title: 'Big Data',
-					data: [
-						'Introduction To Big Data',
-						'Internal Details Of Spark',
-						'Foundation Of Spark Using Rdd',
-						'Data Wrangling Using Dataframes',
-						'Packaging And Deployment Of Spark Applications',
-					],
-				},
-				{
-					title: 'Deep Learning and Artificial Intelligence',
-					data: [
-						'Neural Network Basics',
-						'Computer Vision',
-						'Statistical Natural Language Processing',
-						'Sequential Natural Language Processing',
-						'Advanced Computer Vision',
-						'Generative Adversarial Networks',
-						'Reinforcement Learning',
-					],
-				},
-				{
-					title: 'Specialization in IT Product Lifecycle',
-					data: [
-						'Market Research For A 0-1 Product For A B2C Product',
-						'User Research For A 0-1 Product',
-						'Create Product Artefacts For 0-1 Product',
-						'User Design For A 1-N Product',
-						'Prototyping',
-						'Mvp + Usability Testing',
-						'Product Analytics',
-						'Growth, Engagement & Monetisation',
-						'Product Marketing And Gtm Strategy',
-						'Product Planning And Development',
-						'Tech 101 For Pms',
-						'Data Science For Product Management',
-						'Growth Product Management',
-						'Data Science For Product Management',
-						'Digital Transformation',
 					],
 				},
 			],

@@ -16,7 +16,7 @@ function NextArrow(props) {
 function Projects({ projectsData }) {
 	return (
 		<div className='container mb-5'>
-			<h2 className='admission_heading'>Projects</h2>
+			<h2 className='admission_heading'>Sample Projects</h2>
 			<Carousel
 				className='d-lg-jsjs'
 				dots={false}

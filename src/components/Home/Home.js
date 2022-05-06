@@ -12,8 +12,11 @@ import {
 	Select,
 	Modal,
 	Radio,
+	Menu, Dropdown, message, Space, Tooltip
 } from 'antd';
-import { RightOutlined, BorderOutlined, SearchOutlined } from '@ant-design/icons';
+
+
+import { RightOutlined, DownOutlined, UserOutlined, BorderOutlined, SearchOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -41,7 +44,6 @@ const Home = () => {
 	const [experience, setExperience] = useState();
 	const [HighestQualification, setHighestQualification] = useState();
 	const [registerFormCurrentStep, setRegisterFormCurrentStep] = useState(0);
-
 	const [statsData, setStatsData] = useState([
 		{
 			title: 'Total Placed',
@@ -116,6 +118,15 @@ const Home = () => {
 			),
 		},
 	]);
+	function handleButtonClick(e) {
+		message.info('Click on left button.');
+		console.log('click left button', e);
+	}
+
+	function handleMenuClick(e) {
+		message.info('Click on menu item.');
+		console.log('click', e);
+	}
 	const [latestNewsData, setLatestNewsData] = useState([
 		{
 			title: 'New Initiative: Free Counselling Session with Real Data Scientist before enrolling',
@@ -234,6 +245,27 @@ const Home = () => {
 			console.log('home api is...///...', response.data);
 		}
 	};
+	const menu = (
+		<Menu
+			items={[
+				{
+					label: <a href="https://www.antgroup.com">1st menu item</a>,
+					key: '0',
+				},
+				{
+					label: <a href="https://www.aliyun.com">2nd menu item</a>,
+					key: '1',
+				},
+				{
+					type: 'divider',
+				},
+				{
+					label: '3rd menu item',
+					key: '3',
+				},
+			]}
+		/>
+	);
 	const subScribeApi = async () => {
 		if (!subscribeEmail) {
 			toast.error('Some parameter is missing');
@@ -256,7 +288,7 @@ const Home = () => {
 	return (
 		<div className='mb-5'>
 			<ToastContainer />
-			<HtmlHead title='Excelsior' desc='My beautiful home page' />
+			<HtmlHead title='Excelsior | Online Education Platform | Data Science and Cloud technologies' desc='We keep it simple- we focus on the things that really produce results. Keeping this in mind, we encourage you to AIM HIGHER. Excelsior is the best online Data Science institute in Delhi and best online Data Science institute in Bengaluru. Contact- Info@getexcelsior.Com' />
 			<div className='container mt-4'>
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
 				<h3 className='mb-4 '>We don't just train, We make careers</h3>
@@ -376,27 +408,24 @@ const Home = () => {
 											onChange={(text) => setExperience(text.target.value)}
 										/>
 									</Form.Item>
-									<Form.Item
-										name=' Highest Qualification'
-										rules={[
-											{
-												required: true,
-												message: ' Highest Qualification',
-											},
-										]}
-										className='mb-3'
-									>
-										<Input
-											value={HighestQualification}
-											type='text'
-											placeholder=' Highest Qualification'
-											onChange={(text) =>
-												setHighestQualification(text.target.value)
-											}
-										/>
-									</Form.Item>
+										<Form.Item>
+									<select name="cars" id="cars">
+										<option value="volvo">Experience</option>
+										<option value="saab">Saab</option>
+										<option value="opel">Opel</option>
+										<option value="audi">Audi</option>
 
-									<Form.Item shouldUpdate className='mt-4'>
+									</select>
+									</Form.Item>
+									<Form.Item>
+									<select name="cars" id="cars">
+										<option value="volvo">Highest Qualification</option>
+										<option value="saab">Saab</option>
+										<option value="opel">Opel</option>
+										<option value="audi">Audi</option>
+									</select>
+									</Form.Item>
+									<Form.Item shouldUpdate>
 										{() => (
 											<Button
 												type='primary'

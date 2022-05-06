@@ -7,8 +7,15 @@ import FixedPlugin from './layout/navbar/FixedPlugin';
 import { AppRoutes } from './routes';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from './utils/ScrollToTop';
-
 const App = () => {
+	if (window.performance) {
+		if (performance.navigation.type == 1) {
+		//   alert( "This page is reloaded" );
+		window.localStorage.clear();
+		} else {
+		//   alert( "This page is not reloaded");
+		}
+	  }
 	return (
 		<StrictMode>
 			<Router>
