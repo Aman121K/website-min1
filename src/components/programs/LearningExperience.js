@@ -59,7 +59,7 @@ function LearningExperience({ learningExperience }) {
 						{learningExperience.map(
 							({ body }, index) =>
 								activeKey === index + 1 && (
-									<p
+									<div
 										className='p-3 w-100'
 										style={{
 											backgroundColor: 'white',
@@ -69,7 +69,7 @@ function LearningExperience({ learningExperience }) {
 										key={index}
 									>
 										{body}
-									</p>
+									</div>
 								)
 						)}
 					</Col>

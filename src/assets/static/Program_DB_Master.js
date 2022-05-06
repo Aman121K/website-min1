@@ -1,9 +1,20 @@
 import DSforIT from '../images/DSforIT.png';
+import i1 from '../images/Home page Program Icons/DS for IT.png';
+
 import DSforFinance from '../images/DS for Finance.png';
+import i2 from '../images/Home page Program Icons/DS for Finance.png';
+
 import DeepLearning from '../images/Deep Learning.png';
+import i3 from '../images/Home page Program Icons/Deep Learning.png';
+
 import ML from '../images/Machine Learning with Python.png';
+import i4 from '../images/Home page Program Icons/Machine Learning with Python.png';
+
 import DataAnalytics from '../images/Data Analytics.png';
+import i5 from '../images/Home page Program Icons/Data Analytics.png';
+
 import PythonBootcamp from '../images/Python Bootcamp.png';
+import i6 from '../images/Home page Program Icons/Python Bootcamp.png';
 
 const Program_DB_Master = [
 	{
@@ -14,8 +25,11 @@ const Program_DB_Master = [
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DSforIT,
+		icon: i1,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -74,31 +88,45 @@ const Program_DB_Master = [
 				},
 				{
 					question: 'What will you learn from this course?',
-					answer:(
+					answer: (
 						<>
-						This program will give you practical data analytics and data science knowledge needed to succeed in the IT sector. Learn the concepts of data science and IT. Gain transferable skills in user research, user design, prototyping, building artefacts, product analytics, digital transformation, fundamental procedures and structures. You will also learn Reconciliation And Introduction To Isda, Product Marketing And Gtm Strategy, Product Planning And Development, Tech 101 For Pms, Data Science For Product Management and Growth Product Management. This program is designed by Excelsior covers the latest analytics, Visualization and machine learning concepts. These include topics like data science essentials, big data ecosystem, where data has its origins, the role of databases in storing and retrieving data at scale, statistical analysis basics, and designing experiments. Upon completion of this program you will be prepared to take the roles of Business Analyst and Data Scientist.
-						<br />
-						Tools Covered
-						<ul className='px-4'>
-							<li>Python Programming</li>
-							<li>Tableau</li>
-							<li>Keras</li>
-							<li>Numpy</li>
-							<li>Pandas</li>
-							<li>Spark</li>
-							<li>Hadoop</li>
-							<li>Microsoft Power BI</li>
-							<li>Alteryx</li>
-							<li>Matplotlib</li>
-							<li>NLP</li>
-							<li>Computer Vision</li>
-							<li>SVM</li>
-							<li>Neural Networks</li>
-							<li>Advance Excel</li>
+							This program will give you practical data analytics and data science
+							knowledge needed to succeed in the IT sector. Learn the concepts of
+							data science and IT. Gain transferable skills in user research, user
+							design, prototyping, building artefacts, product analytics, digital
+							transformation, fundamental procedures and structures. You will also
+							learn Reconciliation And Introduction To Isda, Product Marketing And
+							Gtm Strategy, Product Planning And Development, Tech 101 For Pms,
+							Data Science For Product Management and Growth Product Management.
+							This program is designed by Excelsior covers the latest analytics,
+							Visualization and machine learning concepts. These include topics
+							like data science essentials, big data ecosystem, where data has its
+							origins, the role of databases in storing and retrieving data at
+							scale, statistical analysis basics, and designing experiments. Upon
+							completion of this program you will be prepared to take the roles of
+							Business Analyst and Data Scientist.
+							<br />
+							Tools Covered
+							<ul className='px-4'>
+								<li>Python Programming</li>
+								<li>Tableau</li>
+								<li>Keras</li>
+								<li>Numpy</li>
+								<li>Pandas</li>
+								<li>Spark</li>
+								<li>Hadoop</li>
+								<li>Microsoft Power BI</li>
+								<li>Alteryx</li>
+								<li>Matplotlib</li>
+								<li>NLP</li>
+								<li>Computer Vision</li>
+								<li>SVM</li>
+								<li>Neural Networks</li>
+								<li>Advance Excel</li>
 							</ul>
-							</>
-							),
-					},
+						</>
+					),
+				},
 				{
 					question: 'What’s the scope after this course?',
 					answer:
@@ -107,7 +135,8 @@ const Program_DB_Master = [
 			],
 		},
 		curriculum: {
-			description: 'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -307,9 +336,9 @@ const Program_DB_Master = [
 						Excelsior’s industry experts are the ultimate resource for anyone
 						looking to build their profile
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Resume Building</li>
-							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
-							<li style={{width: 'max-content'}}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
 						</ul>
 					</>
 				),
@@ -320,10 +349,14 @@ const Program_DB_Master = [
 					<>
 						Excelsior offer expert advice on softskills and HR topics
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Counselling Sessions with Real Data Science experts</li>
-							<li style={{width: 'max-content'}}>Prepare for HR Interviews</li>
-							<li style={{width: 'max-content'}}>Learn Interviewers Psychology</li>
-							<li style={{width: 'max-content'}}>Develop Soft-Skills</li>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
 						</ul>
 					</>
 				),
@@ -332,11 +365,14 @@ const Program_DB_Master = [
 				title: 'Mock Interviews',
 				body: (
 					<>
-						Get an upper hand in a data science job interview? Prepare for high pressure interview scenarios
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Live Interview Simulations</li>
-							<li style={{width: 'max-content'}}>Expert Feedbacks</li>
-							<li style={{width: 'max-content'}}>Prepare for real high pressure scenarios</li>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
 						</ul>
 					</>
 				),
@@ -347,9 +383,16 @@ const Program_DB_Master = [
 					<>
 						Work on unlimited live projects with the help of industry experts
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Work on Live Projects from your dream company</li>
-							<li style={{width: 'max-content'}}>Practice the core skills by applying on real Life scenarios</li>
-							<li style={{width: 'max-content'}}>Get feedback from experts to improve your knowledge and build your portfolio</li>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
 						</ul>
 					</>
 				),
@@ -381,7 +424,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -665,8 +708,11 @@ const Program_DB_Master = [
 		completedBy: 1102,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DSforFinance,
+		icon: i2,
 		description:
-			' A unique program, an innovative course that will give you a holistic understanding of how Data Science is used in the Finance & Banking industry. It iss not just limited to Bankers or Bankers-to-be, but it can help anyone who aspires to work in this field.',
+			'A unique program, an innovative course that will give you a holistic understanding of how Data Science is used in the Finance & Banking industry. It iss not just limited to Bankers or Bankers-to-be, but it can help anyone who aspires to work in this field.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -687,7 +733,8 @@ const Program_DB_Master = [
 			dropdownQuestion: [
 				{
 					question: 'What does a Data Scientist do in an Finance product companies?',
-					answer: 'Data scientists in the financial industry have a real opportunity to push the customer experience in an exciting direction. By monitoring and analyzing some of the more advanced aspects of customer transactions, it is possible to not only improve their security but also detect any suspicious or malicious activities. Data science is really making data-driven trading systems and pricing models a reality for banks. For customers, AI in banking drives services such as credit management which save you stress and hassle if you need money RIGHT NOW ! The natural language processing (NLP) algorithm allows for even more automated customer service through voice-response systems that respond to you by name - no matter how diverse your customer base is.',
+					answer:
+						'Data scientists in the financial industry have a real opportunity to push the customer experience in an exciting direction. By monitoring and analyzing some of the more advanced aspects of customer transactions, it is possible to not only improve their security but also detect any suspicious or malicious activities. Data science is really making data-driven trading systems and pricing models a reality for banks. For customers, AI in banking drives services such as credit management which save you stress and hassle if you need money RIGHT NOW ! The natural language processing (NLP) algorithm allows for even more automated customer service through voice-response systems that respond to you by name - no matter how diverse your customer base is.',
 				},
 				{
 					question: 'Who can enroll for this course and what are the prerequisites?',
@@ -696,19 +743,23 @@ const Program_DB_Master = [
 				},
 				{
 					question: 'What will you learn from this course?',
-					answer:
-					(
+					answer: (
 						<>
-					This course is Designed by Excelsior to equip Yourself with the Industry Demanded Skills in 2022.This program will give you practical data analytics and data science knowledge needed to succeed in the world of finance. The courses cover the methods analysts use to extract information from data, build models, and make predictions based on those models.
-						<br />
-						Domain Knowledge covered
-						<ul className='px-2'>
-							<li>Introduction to Investment Banking</li>
-							<li>Cash Equities and Fixed income</li>
-							<li>Corporate Actions</li>
-							<li>Stock Borrow Lending</li>
-							<li>Trade Life Cycle </li>
-							<li>Risk Management and Regulatory Environment</li>
+							This course is Designed by Excelsior to equip Yourself with the
+							Industry Demanded Skills in 2022.This program will give you practical
+							data analytics and data science knowledge needed to succeed in the
+							world of finance. The courses cover the methods analysts use to
+							extract information from data, build models, and make predictions
+							based on those models.
+							<br />
+							Domain Knowledge covered
+							<ul className='px-2'>
+								<li>Introduction to Investment Banking</li>
+								<li>Cash Equities and Fixed income</li>
+								<li>Corporate Actions</li>
+								<li>Stock Borrow Lending</li>
+								<li>Trade Life Cycle </li>
+								<li>Risk Management and Regulatory Environment</li>
 							</ul>
 							<br />
 							Tools Covered
@@ -728,9 +779,9 @@ const Program_DB_Master = [
 								<li>SVM</li>
 								<li>Neural Networks</li>
 								<li>Advance Excel</li>
-								</ul>
-								</>
-							),
+							</ul>
+						</>
+					),
 				},
 				{
 					question: 'What’s the scope after this course?',
@@ -740,7 +791,8 @@ const Program_DB_Master = [
 			],
 		},
 		curriculum: {
-			description: 'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -938,9 +990,9 @@ const Program_DB_Master = [
 						Excelsior’s industry experts are the ultimate resource for anyone
 						looking to build their profile
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Resume Building</li>
-							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
-							<li style={{width: 'max-content'}}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
 						</ul>
 					</>
 				),
@@ -951,10 +1003,14 @@ const Program_DB_Master = [
 					<>
 						Excelsior offer expert advice on softskills and HR topics
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Counselling Sessions with Real Data Science experts</li>
-							<li style={{width: 'max-content'}}>Prepare for HR Interviews</li>
-							<li style={{width: 'max-content'}}>Learn Interviewers Psychology</li>
-							<li style={{width: 'max-content'}}>Develop Soft-Skills</li>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
 						</ul>
 					</>
 				),
@@ -963,11 +1019,14 @@ const Program_DB_Master = [
 				title: 'Mock Interviews',
 				body: (
 					<>
-						Get an upper hand in a data science job interview? Prepare for high pressure interview scenarios
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Live Interview Simulations</li>
-							<li style={{width: 'max-content'}}>Expert Feedbacks</li>
-							<li style={{width: 'max-content'}}>Prepare for real high pressure scenarios</li>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
 						</ul>
 					</>
 				),
@@ -978,9 +1037,16 @@ const Program_DB_Master = [
 					<>
 						Work on unlimited live projects with the help of industry experts
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Work on Live Projects from your dream company</li>
-							<li style={{width: 'max-content'}}>Practice the core skills by applying on real Life scenarios</li>
-							<li style={{width: 'max-content'}}>Get feedback from experts to improve your knowledge and build your portfolio</li>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
 						</ul>
 					</>
 				),
@@ -1012,7 +1078,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -1296,8 +1362,11 @@ const Program_DB_Master = [
 		completedBy: 1030,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DeepLearning,
+		icon: i3,
 		description:
 			'A deep dive into the most interesting branch of artificial intelligence. In this specialization, you will learn how to build and train neural networks using the latest techniques in modern AI research.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'150+ hours of live sessions',
@@ -1318,7 +1387,8 @@ const Program_DB_Master = [
 			dropdownQuestion: [
 				{
 					question: 'What does a Data Scientist do in an Finance product companies?',
-					answer: 'A Data Scientist has a very vast area of work. But a Data Scientist who has expertise in AI, deep learning, and machine learning is already in high demand. And the demand will keep rising. Here is the typical hiring profile of a Data Scientist: 1) A Data Scientist should be able to efficiently use Python libraries like Scikit Learn, PyTorch, Tensor Flow, and NumPy. 2)A Data Scientist should be able to build predictive models like Random Forest, Gradient Boosting, Neural Networks etc. 3) A Data Scientist should be able to communicate his/her ideas and results to Management, Technical people, and Business people. 4) A Data Scientist should be able to extract insights from data, create results, and present them to others. Here are some of the popular job postings for AI, deep learning and machine learning engineers: Google, Amazon, Microsoft, Airbnb, Facebook and many more.'
+					answer:
+						'A Data Scientist has a very vast area of work. But a Data Scientist who has expertise in AI, deep learning, and machine learning is already in high demand. And the demand will keep rising. Here is the typical hiring profile of a Data Scientist: 1) A Data Scientist should be able to efficiently use Python libraries like Scikit Learn, PyTorch, Tensor Flow, and NumPy. 2)A Data Scientist should be able to build predictive models like Random Forest, Gradient Boosting, Neural Networks etc. 3) A Data Scientist should be able to communicate his/her ideas and results to Management, Technical people, and Business people. 4) A Data Scientist should be able to extract insights from data, create results, and present them to others. Here are some of the popular job postings for AI, deep learning and machine learning engineers: Google, Amazon, Microsoft, Airbnb, Facebook and many more.',
 				},
 				{
 					question: 'Who can enroll for this course and what are the prerequisites?',
@@ -1327,29 +1397,34 @@ const Program_DB_Master = [
 				},
 				{
 					question: 'What will you learn from this course?',
-					answer:
-					(
+					answer: (
 						<>
-							If you’re looking to learn more about deep learning, but you’re a beginner and don’t know where to start, this course will take you from zero to hero in no time! Excelsior’s cutting-edge curriculum, blended learning model, and thoughtful instructors combine to make an immersive, transformative experience.
-This course will equip you with all the skills you need to become a deep learning expert. Image classification, data science, natural language processing, computer vision - you name it, you’ll be able to do it after this program.
+							If you’re looking to learn more about deep learning, but you’re a
+							beginner and don’t know where to start, this course will take you
+							from zero to hero in no time! Excelsior’s cutting-edge curriculum,
+							blended learning model, and thoughtful instructors combine to make an
+							immersive, transformative experience. This course will equip you with
+							all the skills you need to become a deep learning expert. Image
+							classification, data science, natural language processing, computer
+							vision - you name it, you’ll be able to do it after this program.
 							<br />
 							Tools covered
 							<ul className='px-4'>
-							<li>Python Programming</li>
-							<li>Tableau</li>
-							<li>Keras</li>
-							<li>Numpy</li>
-							<li>Pandas</li>
-							<li>Spark</li>
-							<li>Hadoop</li>
-							<li>Microsoft Power BI</li>
-							<li>Alteryx</li>
-							<li>Matplotlib</li>
-							<li>NLP</li>
-							<li>Computer Vision</li>
-							<li>SVM</li>
-							<li>Neural Networks</li>
-							<li>Advance Excel</li>
+								<li>Python Programming</li>
+								<li>Tableau</li>
+								<li>Keras</li>
+								<li>Numpy</li>
+								<li>Pandas</li>
+								<li>Spark</li>
+								<li>Hadoop</li>
+								<li>Microsoft Power BI</li>
+								<li>Alteryx</li>
+								<li>Matplotlib</li>
+								<li>NLP</li>
+								<li>Computer Vision</li>
+								<li>SVM</li>
+								<li>Neural Networks</li>
+								<li>Advance Excel</li>
 							</ul>
 						</>
 					),
@@ -1362,7 +1437,8 @@ This course will equip you with all the skills you need to become a deep learnin
 			],
 		},
 		curriculum: {
-			description: 'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -1542,9 +1618,9 @@ This course will equip you with all the skills you need to become a deep learnin
 						Excelsior’s industry experts are the ultimate resource for anyone
 						looking to build their profile
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Resume Building</li>
-							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
-							<li style={{width: 'max-content'}}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
 						</ul>
 					</>
 				),
@@ -1555,10 +1631,14 @@ This course will equip you with all the skills you need to become a deep learnin
 					<>
 						Excelsior offer expert advice on softskills and HR topics
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Counselling Sessions with Real Data Science experts</li>
-							<li style={{width: 'max-content'}}>Prepare for HR Interviews</li>
-							<li style={{width: 'max-content'}}>Learn Interviewers Psychology</li>
-							<li style={{width: 'max-content'}}>Develop Soft-Skills</li>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
 						</ul>
 					</>
 				),
@@ -1567,11 +1647,14 @@ This course will equip you with all the skills you need to become a deep learnin
 				title: 'Mock Interviews',
 				body: (
 					<>
-						Get an upper hand in a data science job interview? Prepare for high pressure interview scenarios
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Live Interview Simulations</li>
-							<li style={{width: 'max-content'}}>Expert Feedbacks</li>
-							<li style={{width: 'max-content'}}>Prepare for real high pressure scenarios</li>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
 						</ul>
 					</>
 				),
@@ -1582,9 +1665,16 @@ This course will equip you with all the skills you need to become a deep learnin
 					<>
 						Work on unlimited live projects with the help of industry experts
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Work on Live Projects from your dream company</li>
-							<li style={{width: 'max-content'}}>Practice the core skills by applying on real Life scenarios</li>
-							<li style={{width: 'max-content'}}>Get feedback from experts to improve your knowledge and build your portfolio</li>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
 						</ul>
 					</>
 				),
@@ -1616,7 +1706,7 @@ This course will equip you with all the skills you need to become a deep learnin
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -1900,8 +1990,11 @@ This course will equip you with all the skills you need to become a deep learnin
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: ML,
+		icon: i4,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -1971,7 +2064,8 @@ This course will equip you with all the skills you need to become a deep learnin
 			],
 		},
 		curriculum: {
-			description: 'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -2139,9 +2233,9 @@ This course will equip you with all the skills you need to become a deep learnin
 						Excelsior’s industry experts are the ultimate resource for anyone
 						looking to build their profile
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Resume Building</li>
-							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
-							<li style={{width: 'max-content'}}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
 						</ul>
 					</>
 				),
@@ -2152,10 +2246,14 @@ This course will equip you with all the skills you need to become a deep learnin
 					<>
 						Excelsior offer expert advice on softskills and HR topics
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Counselling Sessions with Real Data Science experts</li>
-							<li style={{width: 'max-content'}}>Prepare for HR Interviews</li>
-							<li style={{width: 'max-content'}}>Learn Interviewers Psychology</li>
-							<li style={{width: 'max-content'}}>Develop Soft-Skills</li>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
 						</ul>
 					</>
 				),
@@ -2164,11 +2262,14 @@ This course will equip you with all the skills you need to become a deep learnin
 				title: 'Mock Interviews',
 				body: (
 					<>
-						Get an upper hand in a data science job interview? Prepare for high pressure interview scenarios
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Live Interview Simulations</li>
-							<li style={{width: 'max-content'}}>Expert Feedbacks</li>
-							<li style={{width: 'max-content'}}>Prepare for real high pressure scenarios</li>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
 						</ul>
 					</>
 				),
@@ -2179,9 +2280,16 @@ This course will equip you with all the skills you need to become a deep learnin
 					<>
 						Work on unlimited live projects with the help of industry experts
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Work on Live Projects from your dream company</li>
-							<li style={{width: 'max-content'}}>Practice the core skills by applying on real Life scenarios</li>
-							<li style={{width: 'max-content'}}>Get feedback from experts to improve your knowledge and build your portfolio</li>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
 						</ul>
 					</>
 				),
@@ -2213,7 +2321,7 @@ This course will equip you with all the skills you need to become a deep learnin
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -2497,8 +2605,11 @@ This course will equip you with all the skills you need to become a deep learnin
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DataAnalytics,
+		icon: i5,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -2568,7 +2679,8 @@ This course will equip you with all the skills you need to become a deep learnin
 			],
 		},
 		curriculum: {
-			description: 'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -2705,9 +2817,9 @@ This course will equip you with all the skills you need to become a deep learnin
 						Excelsior’s industry experts are the ultimate resource for anyone
 						looking to build their profile
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Resume Building</li>
-							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
-							<li style={{width: 'max-content'}}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
 						</ul>
 					</>
 				),
@@ -2718,10 +2830,14 @@ This course will equip you with all the skills you need to become a deep learnin
 					<>
 						Excelsior offer expert advice on softskills and HR topics
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Counselling Sessions with Real Data Science experts</li>
-							<li style={{width: 'max-content'}}>Prepare for HR Interviews</li>
-							<li style={{width: 'max-content'}}>Learn Interviewers Psychology</li>
-							<li style={{width: 'max-content'}}>Develop Soft-Skills</li>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
 						</ul>
 					</>
 				),
@@ -2730,11 +2846,14 @@ This course will equip you with all the skills you need to become a deep learnin
 				title: 'Mock Interviews',
 				body: (
 					<>
-						Get an upper hand in a data science job interview? Prepare for high pressure interview scenarios
+						Get an upper hand in a data science job interview? Prepare for high
+						pressure interview scenarios
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Live Interview Simulations</li>
-							<li style={{width: 'max-content'}}>Expert Feedbacks</li>
-							<li style={{width: 'max-content'}}>Prepare for real high pressure scenarios</li>
+							<li style={{ width: 'max-content' }}>Live Interview Simulations</li>
+							<li style={{ width: 'max-content' }}>Expert Feedbacks</li>
+							<li style={{ width: 'max-content' }}>
+								Prepare for real high pressure scenarios
+							</li>
 						</ul>
 					</>
 				),
@@ -2745,9 +2864,16 @@ This course will equip you with all the skills you need to become a deep learnin
 					<>
 						Work on unlimited live projects with the help of industry experts
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Work on Live Projects from your dream company</li>
-							<li style={{width: 'max-content'}}>Practice the core skills by applying on real Life scenarios</li>
-							<li style={{width: 'max-content'}}>Get feedback from experts to improve your knowledge and build your portfolio</li>
+							<li style={{ width: 'max-content' }}>
+								Work on Live Projects from your dream company
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Practice the core skills by applying on real Life scenarios
+							</li>
+							<li style={{ width: 'max-content' }}>
+								Get feedback from experts to improve your knowledge and build your
+								portfolio
+							</li>
 						</ul>
 					</>
 				),
@@ -2779,7 +2905,7 @@ This course will equip you with all the skills you need to become a deep learnin
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -3063,8 +3189,11 @@ This course will equip you with all the skills you need to become a deep learnin
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: PythonBootcamp,
+		icon: i6,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -3134,7 +3263,8 @@ This course will equip you with all the skills you need to become a deep learnin
 			],
 		},
 		curriculum: {
-			description: 'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
+			description:
+				'Learn the most Industry oriented curriculum. Our curriculum is updated every 3 months',
 			curriculumData: [
 				{
 					title: 'Python',
@@ -3281,7 +3411,7 @@ This course will equip you with all the skills you need to become a deep learnin
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',

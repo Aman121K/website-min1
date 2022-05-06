@@ -9,7 +9,7 @@ function Mentors({ mentorsData }) {
 			<div className='row'>
 				{mentorsData.map((e, i) => (
 					<Fragment key={i}>
-						<div className='col col-lg-3 col-md-3 col-sm-12'>
+						<div className='col col-lg-3 col-md-3 col-sm-12 mb-3'>
 							<Card hoverable className='h-100'>
 								<div className='mb-n5 card-body'>
 									<div className='d-flex align-items-center flex-column justify-content-center'>

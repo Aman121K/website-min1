@@ -470,24 +470,14 @@ button {
 	border-bottom-left-radius: $borderRadius;
 	position: relative;
 
-	h4 {
-		color: $white;
-		text-align: center;
+	@media only screen and (max-width: 600px) {
+		flex: 0.35;
 	}
 
-	.home__videos-item-time {
-		background-color: $white;
+	img {
+		width: 100%;
+		border-top-left-radius: $borderRadius;
 		border-bottom-left-radius: $borderRadius;
-		border-top-right-radius: 2px;
-
-		position: absolute;
-		left: 5%;
-		bottom: 4%;
-
-		p {
-			font-size: 10px;
-			padding: 0 6px;
-		}
 	}
 }
 .home__videos-item-right {
@@ -614,7 +604,7 @@ button {
 	}
 }
 .home__banner-left-content {
-	background-image: url('../images/Home.png');
+	background-image: url('../images/Home2.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 20px;

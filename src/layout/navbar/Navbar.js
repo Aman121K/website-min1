@@ -76,9 +76,9 @@ const Navbar = () => {
 									</Link>
 								);
 							})}
-							{/* <a href='/a' onClick={(e) => e.stopPropagation()}>ABCF</a>
-							<a href='/b' onClick={(e) => e.stopPropagation()}>JKBC</a>
-							<a href='/c' onClick={(e) => e.stopPropagation()}>KDYN</a> */}
+							<Link to='/programs' onClick={(e) => e.stopPropagation()}>
+								All Programs
+							</Link>
 						</div>
 					</div>
 				</NavLink>

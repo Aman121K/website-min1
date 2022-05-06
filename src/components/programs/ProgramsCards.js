@@ -1,16 +1,16 @@
 import { Card, Col } from 'antd';
 import React from 'react';
-import Program_DB_Master from '../../assets/static/Program_DB_Master';
 
-function ProgramsCards() {
+function ProgramsCards({ features }) {
 	return (
 		<Col xs={24} sm={24} lg={4}>
-			<Card className='h-100 text-center' title='Card title' bordered={false}>
-				<ul className='card_list text-center'>
-					<ul>lorem</ul>
-					<ul>lorem</ul>
-					<ul>lorem</ul>
-					<ul>lorem</ul>
+			<Card className='h-100 text-center' title={features.title} bordered={false}>
+				<ul className='card_list text-center' style={{ listStyle: 'none' }}>
+					{features.content.map((item, i) => (
+						<li className='mb-2' key={i}>
+							{item}
+						</li>
+					))}
 				</ul>
 			</Card>
 		</Col>
