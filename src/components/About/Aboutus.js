@@ -80,19 +80,19 @@ Excelsior aims equip learners with the resources and inspiration they need to re
 							<h2 className='admission_heading mb-3'> TimeLine</h2>
 							<Card>
 								<Timeline mode={'alternate'}>
-									<Timeline.Item className='custom-text-primary' label='Beginning (2017)'>
+									<Timeline.Item label='Beginning (2017)'>
 									Excelsior was born
 									</Timeline.Item>
 									<Timeline.Item label='First Milestone 2019'>
 									1000+ students succesfully placed
 									</Timeline.Item>
-									<Timeline.Item className='custom-text-primary' label='We expanded 2019'>
+									<Timeline.Item label='We expanded 2019'>
 										Succesfully Launched IT Vertical
 									</Timeline.Item>
 									<Timeline.Item label='Proven results(2020)'>
 										5000+ careers transformed
 									</Timeline.Item>
-									<Timeline.Item className='custom-text-primary' label='And growing'>
+									<Timeline.Item label='And growing'>
 										..and we continue our journey towards excellence
 									</Timeline.Item>
 								</Timeline>
