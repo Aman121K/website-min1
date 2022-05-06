@@ -36,44 +36,23 @@ function Aboutus() {
 					<h2 className='admission_heading mb-3'> Our Values</h2>
 					<Row gutter={[20, 30]} className='mb-5'>
 						<Col xs={24} sm={24} md={12} lg={8}>
-							<Card title='Our Values' hoverable>
+							<Card title='Efficiency' hoverable>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-									eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-									enim ad minim veniam, quis nostrud exercitation ullamco laboris
-									nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-									in reprehenderit in voluptate velit esse cillum dolore eu
-									fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est
-									laborum
+								Their can be growth only where there is efficiency
 								</p>
 							</Card>
 						</Col>
 						<Col xs={24} sm={24} md={12} lg={8}>
-							<Card title='Our Values' hoverable>
+							<Card title='Committment' hoverable>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-									eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-									enim ad minim veniam, quis nostrud exercitation ullamco laboris
-									nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-									in reprehenderit in voluptate velit esse cillum dolore eu
-									fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est
-									laborum
+								Committment reflects in the output
 								</p>
 							</Card>
 						</Col>
 						<Col xs={24} sm={24} md={12} lg={8}>
-							<Card title='Our Values' hoverable>
+							<Card title='Reliability' hoverable>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-									eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-									enim ad minim veniam, quis nostrud exercitation ullamco laboris
-									nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-									in reprehenderit in voluptate velit esse cillum dolore eu
-									fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est
-									laborum
+									Reliability is the pre-condition to trust
 								</p>
 							</Card>
 						</Col>
@@ -101,18 +80,20 @@ Excelsior aims equip learners with the resources and inspiration they need to re
 							<h2 className='admission_heading mb-3'> TimeLine</h2>
 							<Card>
 								<Timeline mode={'alternate'}>
-									<Timeline.Item label='2015-09-01'>
-										Create a services
+									<Timeline.Item className='custom-text-primary' label='Beginning (2017)'>
+									Excelsior was born
 									</Timeline.Item>
-									<Timeline.Item label='2015-09-01 09:12:11'>
-										Solve initial network problems
+									<Timeline.Item label='First Milestone 2019'>
+									1000+ students succesfully placed
 									</Timeline.Item>
-									<Timeline.Item>Technical testing</Timeline.Item>
-									<Timeline.Item label='2015-09-01 09:12:11'>
-										Network problems being solved
+									<Timeline.Item className='custom-text-primary' label='We expanded 2019'>
+										Succesfully Launched IT Vertical
 									</Timeline.Item>
-									<Timeline.Item label='2015-09-01 09:12:11'>
-										Network problems being solved
+									<Timeline.Item label='Proven results(2020)'>
+										5000+ careers transformed
+									</Timeline.Item>
+									<Timeline.Item className='custom-text-primary' label='And growing'>
+										..and we continue our journey towards excellence
 									</Timeline.Item>
 								</Timeline>
 							</Card>
@@ -123,13 +104,13 @@ Excelsior aims equip learners with the resources and inspiration they need to re
 								<Col xs={12} sm={12} md={12} lg={12}>
 									<div className='home__stats-item'>
 										<Avatar size={42} />
-										<h3 className='custom-text-primary mt-2'>{'Primary'}</h3>
+										<h3 className='mt-2'>{'97% Placement'}</h3>
 									</div>
 								</Col>
 								<Col xs={12} sm={12} md={12} lg={12}>
 									<div className='home__stats-item'>
 										<Avatar size={42} />
-										<h3 className='custom-text-primary mt-2'>{'Primary'}</h3>
+										<h3 className='mt-2'>{'160+ partners'}</h3>
 									</div>
 								</Col>
 							</Row>
@@ -137,13 +118,13 @@ Excelsior aims equip learners with the resources and inspiration they need to re
 								<Col xs={12} sm={12} md={12} lg={12}>
 									<div className='home__stats-item'>
 										<Avatar size={42} />
-										<h3 className='custom-text-primary mt-2'>{'Primary'}</h3>
+										<h3 className='text-center mt-2'>{'6,000+ students have successfully transformed their career with us'}</h3>
 									</div>
 								</Col>
 								<Col xs={12} sm={12} md={12} lg={12}>
 									<div className='home__stats-item'>
 										<Avatar size={42} />
-										<h3 className='custom-text-primary mt-2'>{'Primary'}</h3>
+										<h3 className='text-center mt-2'>{'Revolutionary product that provides relevant data about the job market'}</h3>
 									</div>
 								</Col>
 							</Row>
