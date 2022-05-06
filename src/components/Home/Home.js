@@ -14,7 +14,7 @@ import {
 	Radio,
 	Menu, Dropdown, message, Space, Tooltip
 } from 'antd';
-
+import BlogMiniCard from '../Blogs/components/BlogMiniCard';
 
 import { RightOutlined, DownOutlined, UserOutlined, BorderOutlined, SearchOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
@@ -37,6 +37,7 @@ const { Option } = Select;
 const Home = () => {
 	const navigate = useNavigate();
 	const [name, setName] = useState();
+	const [realted,setRelatedBlog]=useState([])
 	const [email, setEmail] = useState();
 	const [subscribeEmail, setSubscribeEmail] = useState();
 	const [subscribeName, setSubscribeName] = useState();
@@ -313,7 +314,7 @@ const Home = () => {
 							</Col>
 						</Row>
 					<button className='enroll_button' onClick={() => console.log('enroll')}>
-						Enroll Now
+						Get Started
 					</button>
 					</div>
 				</div>
@@ -507,34 +508,21 @@ const Home = () => {
 							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
 								Recent Blogs
 							</h2>
+							
 							<Card className='test_admission'>
-								{recentTestimonialsData?.map((item, index) => (
-									<Row className='mb-3' key={index} gutter={[20, 30]}>
-										<Col xs={10} sm={10} md={10} lg={10}>
-											<img src={item.image} alt={item.title} />
-										</Col>
-										<Col xs={14} sm={14} md={14} lg={14}>
-											<h6>
-												<b>{item.title} </b>
-											</h6>
-											<Rate disabled defaultValue={item.rating} />
-										</Col>
-									</Row>
+							<Col xs={24} sm={24} md={24} lg={6}/>
+						
+						{realted.map((item, index) => (
+							<BlogMiniCard key={index} item={item}  />
 								))}
 								<Row align='middle' justify='center'>
-									<Button
-										onClick={() => setIsRecentTestimonialsModalVisible(true)}
-										type='primary'
-										ghost
-									>
-										See More
-									</Button>
+								<Button type='primary'>See More</Button>
 								</Row>
 							</Card>
 						</Col>
 					</Row>
 				</div>
-
+	)
 				<div className='mt-5' id='Review' name='Review'>
 					<Review reviews={Program_DB_Master[0].reviews} />
 				</div>
