@@ -4,31 +4,25 @@ import {
 	Col,
 	Button,
 	Avatar,
-	Rate,
 	Form,
 	Input,
-	Steps,
 	Card,
 	Select,
 	Modal,
-	Radio,
-	Menu, Dropdown, message, Space, Tooltip
+	Menu,
+	message,
 } from 'antd';
 import BlogMiniCard from '../Blogs/components/BlogMiniCard';
 
-import { RightOutlined, DownOutlined, UserOutlined, BorderOutlined, SearchOutlined } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom';
+import { RightOutlined } from '@ant-design/icons';
+import { Link, useNavigate } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import images from '../../assets/images';
 import Admission from '../programs/Admission';
-import Helmet from 'react-helmet';
-import { ScrollElement } from 'react-scroll/modules';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-import i1 from '../../assets/images/Home page Program Icons/DS for IT.png';
 import Program_DB_Master from '../../assets/static/Program_DB_Master';
-import TestimonialCarousel from './TestimonialCarousel';
 import HtmlHead from '../HtmlHead';
 import Review from '../programs/Review';
 import { CheckSquare, ChartUp, Star, Wizard, StartUp, Suitcase } from '../Icons';
@@ -37,7 +31,7 @@ const { Option } = Select;
 const Home = () => {
 	const navigate = useNavigate();
 	const [name, setName] = useState();
-	const [realted,setRelatedBlog]=useState([])
+	const [realted, setRelatedBlog] = useState([]);
 	const [email, setEmail] = useState();
 	const [subscribeEmail, setSubscribeEmail] = useState();
 	const [subscribeName, setSubscribeName] = useState();
@@ -250,11 +244,11 @@ const Home = () => {
 		<Menu
 			items={[
 				{
-					label: <a href="https://www.antgroup.com">1st menu item</a>,
+					label: <a href='https://www.antgroup.com'>1st menu item</a>,
 					key: '0',
 				},
 				{
-					label: <a href="https://www.aliyun.com">2nd menu item</a>,
+					label: <a href='https://www.aliyun.com'>2nd menu item</a>,
 					key: '1',
 				},
 				{
@@ -289,7 +283,10 @@ const Home = () => {
 	return (
 		<div className='mb-5'>
 			<ToastContainer />
-			<HtmlHead title='Excelsior | Online Education Platform | Data Science and Cloud technologies' desc='We keep it simple- we focus on the things that really produce results. Keeping this in mind, we encourage you to AIM HIGHER. Excelsior is the best online Data Science institute in Delhi and best online Data Science institute in Bengaluru. Contact- Info@getexcelsior.Com' />
+			<HtmlHead
+				title='Excelsior | Online Education Platform | Data Science and Cloud technologies'
+				desc='We keep it simple- we focus on the things that really produce results. Keeping this in mind, we encourage you to AIM HIGHER. Excelsior is the best online Data Science institute in Delhi and best online Data Science institute in Bengaluru. Contact- Info@getexcelsior.Com'
+			/>
 			<div className='container mt-4'>
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
 				<h3 className='mb-4 '>We don't just train, We make careers</h3>
@@ -313,9 +310,9 @@ const Home = () => {
 								</h3>
 							</Col>
 						</Row>
-					<button className='enroll_button' onClick={() => console.log('enroll')}>
-						Get Started
-					</button>
+						<button className='enroll_button' onClick={() => console.log('enroll')}>
+							Get Started
+						</button>
 					</div>
 				</div>
 			</div>
@@ -344,7 +341,7 @@ const Home = () => {
 					<Row gutter={[10, 30]}>
 						<Col xs={24} sm={24} md={8} lg={8}>
 							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
-								Help
+								Take your first step
 							</h2>
 							<Card>
 								<Form name='horizontal_login' layout='outline'>
@@ -392,39 +389,35 @@ const Home = () => {
 											onChange={(text) => setPhone(text.target.value)}
 										/>
 									</Form.Item>
-									<Form.Item
-										name='experience'
-										rules={[
-											{
-												required: true,
-												message: 'Total Experience',
-											},
-										]}
-										className='mb-3'
-									>
-										<Input
-											value={experience}
-											type='number'
-											placeholder='Experience'
-											onChange={(text) => setExperience(text.target.value)}
-										/>
-									</Form.Item>
-										<Form.Item>
-									<select name="cars" id="cars">
-										<option value="volvo">Experience</option>
-										<option value="saab">Saab</option>
-										<option value="opel">Opel</option>
-										<option value="audi">Audi</option>
 
-									</select>
+									<Form.Item>
+										<Select
+											defaultValue='experience'
+											name='experience'
+											id='experience'
+										>
+											<Option value='experience'>Experience</Option>
+											<Option value='fresher'>Fresher</Option>
+											<Option value='0-2yrs'>0-2 Years</Option>
+											<Option value='2-5yrs'>2-5 Years</Option>
+											<Option value='5-8yrs'>5-8 Years</Option>
+											<Option value='8+yrs'>8+ Years</Option>
+										</Select>
 									</Form.Item>
 									<Form.Item>
-									<select name="cars" id="cars">
-										<option value="volvo">Highest Qualification</option>
-										<option value="saab">Saab</option>
-										<option value="opel">Opel</option>
-										<option value="audi">Audi</option>
-									</select>
+										<Select
+											defaultValue='highest-qualification'
+											name='highest-qualification'
+											id='highest-qualification'
+										>
+											<Option value='highest-qualification'>
+												Highest Qualification
+											</Option>
+											<Option value='UG'>Undergraduate</Option>
+											<Option value='Graduate'>Graduate</Option>
+											<Option value='PG'>Post Graduate</Option>
+											<Option value='PhD'>Ph.D</Option>
+										</Select>
 									</Form.Item>
 									<Form.Item shouldUpdate>
 										{() => (
@@ -444,11 +437,15 @@ const Home = () => {
 							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
 								Programs
 							</h2>
-							<Row gutter={[20, 30]} style={{ flex: '1 1 100%', rowGap: '10px' }}>
+							<Row gutter={[20, 30]} style={{ flex: '1 1 100%', rowGap: '12px' }}>
 								{Program_DB_Master.map(
-									({ nameOfProgram, icon, shortDescription }, index) => (
+									(
+										{ nameOfProgram, icon, shortDescription, pathname },
+										index
+									) => (
 										<Col xs={24} sm={24} md={12} key={index} className='d-flex'>
-											<div
+											<Link
+												to={pathname}
 												className='home__videos-item'
 												style={{ flex: '1 1 100%' }}
 											>
@@ -461,7 +458,7 @@ const Home = () => {
 														{shortDescription}
 													</p>
 												</div>
-											</div>
+											</Link>
 										</Col>
 									)
 								)}
@@ -508,21 +505,21 @@ const Home = () => {
 							<h2 className='admission_heading' style={{ color: '#f35d5d' }}>
 								Recent Blogs
 							</h2>
-							
+
 							<Card className='test_admission'>
-							<Col xs={24} sm={24} md={24} lg={6}/>
-						
-						{realted.map((item, index) => (
-							<BlogMiniCard key={index} item={item}  />
+								<Col xs={24} sm={24} md={24} lg={6} />
+
+								{realted.map((item, index) => (
+									<BlogMiniCard key={index} item={item} />
 								))}
 								<Row align='middle' justify='center'>
-								<Button type='primary'>See More</Button>
+									<Button type='primary'>See More</Button>
 								</Row>
 							</Card>
 						</Col>
 					</Row>
 				</div>
-	)
+
 				<div className='mt-5' id='Review' name='Review'>
 					<Review reviews={Program_DB_Master[0].reviews} />
 				</div>

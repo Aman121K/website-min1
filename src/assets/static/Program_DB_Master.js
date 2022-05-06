@@ -16,6 +16,11 @@ import i5 from '../images/Home page Program Icons/Data Analytics.png';
 import PythonBootcamp from '../images/Python Bootcamp.png';
 import i6 from '../images/Home page Program Icons/Python Bootcamp.png';
 
+import mentor1 from '../images/ashutosh.png';
+import mentor2 from '../images/charuchhabra.webp';
+import mentor3 from '../images/rohinijain.webp';
+import mentor4 from '../images/shobhitgupta.webp';
+
 const Program_DB_Master = [
 	{
 		pathname: '/programs/specialization-in-data-science-for-it',
@@ -400,28 +405,24 @@ const Program_DB_Master = [
 		],
 		projects: [
 			{
-				firstRow: {
-					title: 'Fake news detection',
-					description:
-						'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
-				},
-				secondRow: {
-					title: 'Influence of global warming on food chain supply',
-					description:
-						'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
-				},
+				title: 'Fake news detection',
+				description:
+					'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
 			},
 			{
-				firstRow: {
-					title: 'Segmentation of customer groups',
-					description:
-						'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
-				},
-				secondRow: {
-					title: 'Diabetic Retinopathy',
-					description:
-						'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
-				},
+				title: 'Influence of global warming on food chain supply',
+				description:
+					'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
+			},
+			{
+				title: 'Segmentation of customer groups',
+				description:
+					'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
+			},
+			{
+				title: 'Diabetic Retinopathy',
+				description:
+					'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
 			},
 		],
 		mentors: [
@@ -431,8 +432,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'So, here is the question. If there was a person who worked with Microsoft, Facebook, Amazon, Uber and Yahoo just to name a few and then he started working in Fampay as an Engineering Manager. What kind of guidance would you expect from such a person? Would you be interested in asking him how to crack the interviews for these companies? Would this be an opportunity that would be difficult to miss on?? We believe it is definitely worth your effort.If you are someone aspiring to work in any of the large tech companies, or aspire to work in the startup world, his guidance would be invaluable.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor4,
 			},
 			{
 				name: 'Rohini Jain',
@@ -440,8 +440,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'In a world where its hard to hold on to a job due to high pressure and fast pace. Rohini has been excelling at one of the biggest companies of the world, CISCO for over 10 years.Rohini Jain is a technology enthusiast, an experienced Software Architect and a mother of a school-going kid and a baby daughter.  She has a wealth of experience to share with the students : ranging from her college days at MNNIT Allahabad, to her 4 years in industry at ST Ericsson, her MS degree from University of Texas and almost 11 years of work experience at world’s largest networking company Cisco.  Rohini leads a team of software developers and software test engineers who are responsible for implementing automation solutions to make the process of testing software more efficient.She can guide you through every step of your journey and help you land your dream job as well as excel in it.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor3,
 			},
 			{
 				name: 'Charu Chhabra',
@@ -449,8 +448,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'An Academician, A Data scientist, An Author, A researcher working on Artificial intelligence, data science, deep learning and computer vision. A technology enthusiast who loves to contribute in the field of research and development in numerous disciplines. IEEE reviewer, An author of books in collaboration with Genius publications Jaipur, author of several papers and chapters in leading international books and journals. Having almost 10 years of experience in industry and Academia and still counting more as an AI enthusiast.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor2,
 			},
 			{
 				name: 'Ashutosh Deoghre',
@@ -458,64 +456,57 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'A Data Analytics/Science Professional with about 7 years of experience.He loves solving complex business problems and delivering valuable insights via Data Analytics, Data Science & advanced data-driven methods. Has a very good experience working with structured, semi-structured, and unstructured data. Proficient in various Data Science tools & techniques like Python, R, SQL, Tableau, Data Analysis, Data Visualization, Text Mining, Quantitative Analysis, and Storytelling.He is also skilled in Data Mining, Statistics, Predictive Modeling, Machine Learning, NoSQL databases, Deep Neural Networks, Natural Language Processing, Computer Vision, and Big Data Technologies. ',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor1,
 			},
 		],
 		reviews: [
 			{
-				firstRow: {
-					name: 'Shashank Sinha(Data Scientist- Paytm)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I have been to many well-known Data Science / Machine Learning courses in Bangalore. But I could not find the right course which could help me to land my first job in this field. Then, I found Excelsior. Our mentor Mr. Sachin was so helpful and so knowledgeable in this field that he could guide me throughout the course and they helped me to get placed in a Top MNC through his their extensive placement program.',
-				},
-				secondRow: {
-					name: 'Suresh Goel(Data Scientist-Amazon)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I took Excelsior’s course to learn how to do Data Science from a theoretical perspective, and I was not disappointed. The course is accessible to a wide range of students, and the materials are top notch. The professor is a real Data Scientist who knows his stuff and explains it well. The assignments are varied and thought provoking. The placement process was excellent and very transparent.',
-				},
+				name: 'Shashank Sinha (Data Scientist - Paytm)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I have been to many well-known Data Science / Machine Learning courses in Bangalore. But I could not find the right course which could help me to land my first job in this field. Then, I found Excelsior. Our mentor Mr. Sachin was so helpful and so knowledgeable in this field that he could guide me throughout the course and they helped me to get placed in a Top MNC through his their extensive placement program.',
 			},
 			{
-				firstRow: {
-					name: 'Hemanth Reddy(Data Scientist-Airtel)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I am writing this review to thank Excelsior for making Data Science online course. I have recently completed this course and it was the best decision I have made in my life. The course is well designed with details, examples, exercises, lectures and assignments. The mentors are really helpful, and they helped me to clear all my doubts regarding the program. They always replied to my emails on time, and I also got a job through Brilliant Data Science.',
-				},
-				secondRow: {
-					name: 'T Pavan Kumar(Data Scientist-IBM)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'My experience with the course and support team has been very positive. The Excelsior team is friendly and always available to answer questions, and they provide a good mix of reading material and videos. It was a challenging course with a steep learning curve, but it is also very rewarding. I would recommend the Excelsior to anyone who is willing to learn with hands on experience.',
-				},
+				name: 'Suresh Goel (Data Scientist - Amazon)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I took Excelsior’s course to learn how to do Data Science from a theoretical perspective, and I was not disappointed. The course is accessible to a wide range of students, and the materials are top notch. The professor is a real Data Scientist who knows his stuff and explains it well. The assignments are varied and thought provoking. The placement process was excellent and very transparent.',
 			},
 			{
-				firstRow: {
-					name: 'Rahul Yadav (Data Scientist- Adobe)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'Being a non-programmer, it was very hard for me to decide which course to take for Data Science. After doing some research, I found Excelsior course on data science and that was the best decision I could have taken! The course is really good, and their placement team helped me get a job right after the course.',
-				},
-				secondRow: {
-					name: 'Neelam Gupta(Data Scientist-AWS)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I just wanted to thank you all. I finished Excelsior Data Science for IT program recently and it was great. The materials were clear and simple, so it didn’t take me much time to finish the program. And now I have got a job at my dream Company',
-				},
+				name: 'Hemanth Reddy (Data Scientist - Airtel)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I am writing this review to thank Excelsior for making Data Science online course. I have recently completed this course and it was the best decision I have made in my life. The course is well designed with details, examples, exercises, lectures and assignments. The mentors are really helpful, and they helped me to clear all my doubts regarding the program. They always replied to my emails on time, and I also got a job through Brilliant Data Science.',
+			},
+			{
+				name: 'T Pavan Kumar (Data Scientist - IBM)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'My experience with the course and support team has been very positive. The Excelsior team is friendly and always available to answer questions, and they provide a good mix of reading material and videos. It was a challenging course with a steep learning curve, but it is also very rewarding. I would recommend the Excelsior to anyone who is willing to learn with hands on experience.',
+			},
+			{
+				name: 'Rahul Yadav (Data Scientist - Adobe)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'Being a non-programmer, it was very hard for me to decide which course to take for Data Science. After doing some research, I found Excelsior course on data science and that was the best decision I could have taken! The course is really good, and their placement team helped me get a job right after the course.',
+			},
+			{
+				name: 'Neelam Gupta (Data Scientist - AWS)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I just wanted to thank you all. I finished Excelsior Data Science for IT program recently and it was great. The materials were clear and simple, so it didn’t take me much time to finish the program. And now I have got a job at my dream Company',
 			},
 		],
 		faq: [
@@ -1054,28 +1045,24 @@ const Program_DB_Master = [
 		],
 		projects: [
 			{
-				firstRow: {
-					title: 'Revenue Forecasting',
-					description:
-						'Revenue is the amount of money that a company receives from its normal business activities, usually from the sale of goods and services to customers. For this project, you will be using publicly available data with the help of open sources such as Bloomberg (for regions, sectors, securities), Yahoo Finance (for financial and operational metrics) and others and performing Multivariate Statistical analysis on the revenue data. Build a regression model for a set of periods taking into consideration all of the factors affecting the revenue of the company. This is a time series regression problem and the goal is to accurately predict future revenue of a company.',
-				},
-				secondRow: {
-					title: 'Portfolio Optimization Problem',
-					description:
-						' A portfolio optimization problem deals with the determination of different weights you should assign to assets in a portfolio, how much assets you should fold from different asset classes. You have 1000 listed stocks, how would you find out the most listed and profitable stocks? In this project, you would be using an operation research algorithm to find out the optimal weight and best set of 20 stocks out of 1000. If you are interested in finance, portfolio management and investment consultancy, then this is the right project for you.',
-				},
+				title: 'Revenue Forecasting',
+				description:
+					'Revenue is the amount of money that a company receives from its normal business activities, usually from the sale of goods and services to customers. For this project, you will be using publicly available data with the help of open sources such as Bloomberg (for regions, sectors, securities), Yahoo Finance (for financial and operational metrics) and others and performing Multivariate Statistical analysis on the revenue data. Build a regression model for a set of periods taking into consideration all of the factors affecting the revenue of the company. This is a time series regression problem and the goal is to accurately predict future revenue of a company.',
 			},
 			{
-				firstRow: {
-					title: 'Stock price forecasting model',
-					description:
-						'Due to a dynamic nature and liability to quick changes in the stock price, prediction of stock prices becomes a challenging task. In this project, you will be using the traditional statistical models such as exponential smoothing and ARIMA to predict the stock prices using the financial dataset from Bloomberg, NSE, Reliance etc. In the end, using innovative methods for forecasting the stock prices, you will be able to make highly informed business decisions.',
-				},
-				secondRow: {
-					title: 'Build a credit Scorecard model',
-					description:
-						'In the past few decades banks have gathered plenty of information describing the default behavior of their customers. The goal of credit scoring is to quantify this relationship as precisely as possible to assist credit decisions, monitoring, and management. Hence, scorecards are widely used in the financial industry to make decisions on grating credit, monitoring portfolio and calculating loss etc. In this project, you will be working on the practical aspect of using scorecard models at banks. You will be assessing the credit worthiness of customers using a German loan dataset by building a classification model using logistic regression, Random forest and Boosting to classify good or bad customers and score new customers in future.',
-				},
+				title: 'Portfolio Optimization Problem',
+				description:
+					' A portfolio optimization problem deals with the determination of different weights you should assign to assets in a portfolio, how much assets you should fold from different asset classes. You have 1000 listed stocks, how would you find out the most listed and profitable stocks? In this project, you would be using an operation research algorithm to find out the optimal weight and best set of 20 stocks out of 1000. If you are interested in finance, portfolio management and investment consultancy, then this is the right project for you.',
+			},
+			{
+				title: 'Stock price forecasting model',
+				description:
+					'Due to a dynamic nature and liability to quick changes in the stock price, prediction of stock prices becomes a challenging task. In this project, you will be using the traditional statistical models such as exponential smoothing and ARIMA to predict the stock prices using the financial dataset from Bloomberg, NSE, Reliance etc. In the end, using innovative methods for forecasting the stock prices, you will be able to make highly informed business decisions.',
+			},
+			{
+				title: 'Build a credit Scorecard model',
+				description:
+					'In the past few decades banks have gathered plenty of information describing the default behavior of their customers. The goal of credit scoring is to quantify this relationship as precisely as possible to assist credit decisions, monitoring, and management. Hence, scorecards are widely used in the financial industry to make decisions on grating credit, monitoring portfolio and calculating loss etc. In this project, you will be working on the practical aspect of using scorecard models at banks. You will be assessing the credit worthiness of customers using a German loan dataset by building a classification model using logistic regression, Random forest and Boosting to classify good or bad customers and score new customers in future.',
 			},
 		],
 		mentors: [
@@ -1085,8 +1072,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'So, here is the question. If there was a person who worked with Microsoft, Facebook, Amazon, Uber and Yahoo just to name a few and then he started working in Fampay as an Engineering Manager. What kind of guidance would you expect from such a person? Would you be interested in asking him how to crack the interviews for these companies? Would this be an opportunity that would be difficult to miss on?? We believe it is definitely worth your effort.If you are someone aspiring to work in any of the large tech companies, or aspire to work in the startup world, his guidance would be invaluable.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor4,
 			},
 			{
 				name: 'Rohini Jain',
@@ -1094,8 +1080,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'In a world where its hard to hold on to a job due to high pressure and fast pace. Rohini has been excelling at one of the biggest companies of the world, CISCO for over 10 years.Rohini Jain is a technology enthusiast, an experienced Software Architect and a mother of a school-going kid and a baby daughter.  She has a wealth of experience to share with the students : ranging from her college days at MNNIT Allahabad, to her 4 years in industry at ST Ericsson, her MS degree from University of Texas and almost 11 years of work experience at world’s largest networking company Cisco.  Rohini leads a team of software developers and software test engineers who are responsible for implementing automation solutions to make the process of testing software more efficient.She can guide you through every step of your journey and help you land your dream job as well as excel in it.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor3,
 			},
 			{
 				name: 'Charu Chhabra',
@@ -1103,8 +1088,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'An Academician, A Data scientist, An Author, A researcher working on Artificial intelligence, data science, deep learning and computer vision. A technology enthusiast who loves to contribute in the field of research and development in numerous disciplines. IEEE reviewer, An author of books in collaboration with Genius publications Jaipur, author of several papers and chapters in leading international books and journals. Having almost 10 years of experience in industry and Academia and still counting more as an AI enthusiast.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor2,
 			},
 			{
 				name: 'Ashutosh Deoghre',
@@ -1112,64 +1096,63 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'A Data Analytics/Science Professional with about 7 years of experience.He loves solving complex business problems and delivering valuable insights via Data Analytics, Data Science & advanced data-driven methods. Has a very good experience working with structured, semi-structured, and unstructured data. Proficient in various Data Science tools & techniques like Python, R, SQL, Tableau, Data Analysis, Data Visualization, Text Mining, Quantitative Analysis, and Storytelling.He is also skilled in Data Mining, Statistics, Predictive Modeling, Machine Learning, NoSQL databases, Deep Neural Networks, Natural Language Processing, Computer Vision, and Big Data Technologies. ',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor1,
 			},
 		],
 		reviews: [
 			{
-				firstRow: {
-					name: 'Nishant Singh (Data Scientist- RBS)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'Excelsior is a very good institute to learn Business Intelligence & Analytics because they have a very good team of faculties who are experts in their field. They really helped me a lot when I was stuck and guided me towards the right direction. I recommend Excelsior to anyone who wants to learn Business Intelligence or Analytics.',
-				},
-				secondRow: {
-					name: 'Suresh Gupta (Associate Data Scientist- Oracle)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I have always been interested in Learning Data Science, but never had the time to study for it. When I found out about Excelsior and their online, accelerated course, I was instantly intrigued. The course is well organized with a good mix of Live Classes, reading material and videos. It also provides a great way to learn through hands on experiences while working on real world projects and learning what we have to use.',
-				},
+				name: 'Nishant Singh (Data Scientist - RBS)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'Excelsior is a very good institute to learn Business Intelligence & Analytics because they have a very good team of faculties who are experts in their field. They really helped me a lot when I was stuck and guided me towards the right direction. I recommend Excelsior to anyone who wants to learn Business Intelligence or Analytics.',
+				linkedin: 'https://www.linkedin.com/in/nishant-singh-15b745223/',
 			},
 			{
-				firstRow: {
-					name: 'Vikram (Data Scientist-Axis)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I liked the class, it was easy to follow and understand. I have a good understanding of Python and Data Science now. Overall I really liked the class and feel like I learned a lot.',
-				},
-				secondRow: {
-					name: 'Nishant Gupta(Data Scientist-HDFC)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'Excelsior is the best Data Science institute in Bangalore. They offer a wide range of courses to learn Data Science. Moreover, they have one of the best placement program which helps the students to get placed in top companies. Big thanks to Mr. Ekansh and the entire Excelsior team for helping me to get my dream job in Data Science field.',
-				},
+				name: 'Suresh Gupta (Associate Data Scientist - Oracle)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I have always been interested in Learning Data Science, but never had the time to study for it. When I found out about Excelsior and their online, accelerated course, I was instantly intrigued. The course is well organized with a good mix of Live Classes, reading material and videos. It also provides a great way to learn through hands on experiences while working on real world projects and learning what we have to use.',
+				linkedin: 'https://www.linkedin.com/in/suresh-gupta-2b962622a/',
 			},
 			{
-				firstRow: {
-					name: 'Neelam Singhal (Data Scientist - Goldman Sachs)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I highly recommend Excelsior Data Science Courses. The best part is that they have a placement team that will help you get a job after the course which absolutely rocks! I loved their 1-on-1 classes where I learnt from someone who has been in the field for quite a while!',
-				},
-				secondRow: {
-					name: 'Harshita (Data Scientist-Mondelez International)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I was a fresher in Analytics industry, and I wanted to start my career in Data Science. I needed guidance from an expert for this. Excelsior’s Team is very supportive and helped me a lot to get started with in this field. They provided me with in-depth curriculum and detailed teaching which helped me in achieving my goals in the right direction.',
-				},
+				name: 'Vikram (Data Scientist - Axis)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I liked the class, it was easy to follow and understand. I have a good understanding of Python and Data Science now. Overall I really liked the class and feel like I learned a lot.',
+				linkedin: 'https://www.linkedin.com/in/vikram-rajput-9a5698226/',
+			},
+			{
+				name: 'Nishant Gupta (Data Scientist - HDFC)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'Excelsior is the best Data Science institute in Bangalore. They offer a wide range of courses to learn Data Science. Moreover, they have one of the best placement program which helps the students to get placed in top companies. Big thanks to Mr. Sandeep and the entire Excelsior team for helping me to get my dream job in Data Science field.',
+				linkedin: 'https://www.linkedin.com/in/nishant-gupta-1a0484229/',
+			},
+			{
+				name: 'Neelam Singhal (Data Scientist - Goldman Sachs)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I highly recommend Excelsior Data Science Courses. The best part is that they have a placement team that will help you get a job after the course which absolutely rocks! I loved their 1-on-1 classes where I learnt from someone who has been in the field for quite a while!',
+				linkedin: 'https://www.linkedin.com/in/neelam-singhal-6347bb223/',
+			},
+			{
+				name: 'Harshita (Data Scientist - Mondelez International)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I was a fresher in Analytics industry, and I wanted to start my career in Data Science. I needed guidance from an expert for this. Excelsior’s Team is very supportive and helped me a lot to get started with in this field. They provided me with in-depth curriculum and detailed teaching which helped me in achieving my goals in the right direction.',
+				linkedin: 'https://www.linkedin.com/in/harshita-rampal-06a971224/',
 			},
 		],
 		faq: [
@@ -1682,28 +1665,24 @@ const Program_DB_Master = [
 		],
 		projects: [
 			{
-				firstRow: {
-					title: 'Skin cancer detection',
-					description:
-						'The power of machine learning lies in its practical applicability — whether you’re interested in medicine or not, this hands-on project will teach computer vision and AI skills that are in demand worldwide. Deep learning, nowadays,  is becoming a versatile, powerful tool for deriving valuable insights in areas of medicine that were previously inaccessible. Training a computer to analyse skin cancer images with improved accuracy can help in early detection of skin cancer. In this project, you will build a neural network using Python’s Numpy to classify dermal cell images and detect skin cancer.',
-				},
-				secondRow: {
-					title: 'Car price prediction',
-					description:
-						'When buying and selling cars, it can be a challenge to assign the correct price of cars. Understanding how car prices vary with different criteria can help us in negotiating a good deal. In this project, you will predict the price of a given car and get an accurate prediction. This project provides some insights into the pricing trends of used vehicles and suggests variables to pay attention to when browsing the listings.',
-				},
+				title: 'Skin cancer detection',
+				description:
+					'The power of machine learning lies in its practical applicability — whether you’re interested in medicine or not, this hands-on project will teach computer vision and AI skills that are in demand worldwide. Deep learning, nowadays,  is becoming a versatile, powerful tool for deriving valuable insights in areas of medicine that were previously inaccessible. Training a computer to analyse skin cancer images with improved accuracy can help in early detection of skin cancer. In this project, you will build a neural network using Python’s Numpy to classify dermal cell images and detect skin cancer.',
 			},
 			{
-				firstRow: {
-					title: 'Handwritten Digit Recognition',
-					description:
-						'The objective of the project is to build a model that could classify which digit is drawn by the user. In this project, you will build and train a Convolutional Neural Network (CNN) in Keras from scratch to recognize MNIST digits. At the end of this project, you will be able to build, compile, fit and evaluate a convolutional neural network trained on MNIST data set for handwritten digit recognition and then use it for real-time predictions using your own handwritten digits using computer vision.',
-				},
-				secondRow: {
-					title: ' Image Caption Generator Project',
-					description:
-						' Image caption generator is one of the very interesting projects for deep learning and a computer vision enthusiast. Build a deep learning model that converts the image into well formed sentences. In this project, you will generate image captions from a set of images. Investigate social media activity on Instagram for hiking and climbing. Recommend remote, beautiful climbing and hiking locations based on real-time posting data from Instagram users.',
-				},
+				title: 'Car price prediction',
+				description:
+					'When buying and selling cars, it can be a challenge to assign the correct price of cars. Understanding how car prices vary with different criteria can help us in negotiating a good deal. In this project, you will predict the price of a given car and get an accurate prediction. This project provides some insights into the pricing trends of used vehicles and suggests variables to pay attention to when browsing the listings.',
+			},
+			{
+				title: 'Handwritten Digit Recognition',
+				description:
+					'The objective of the project is to build a model that could classify which digit is drawn by the user. In this project, you will build and train a Convolutional Neural Network (CNN) in Keras from scratch to recognize MNIST digits. At the end of this project, you will be able to build, compile, fit and evaluate a convolutional neural network trained on MNIST data set for handwritten digit recognition and then use it for real-time predictions using your own handwritten digits using computer vision.',
+			},
+			{
+				title: ' Image Caption Generator Project',
+				description:
+					' Image caption generator is one of the very interesting projects for deep learning and a computer vision enthusiast. Build a deep learning model that converts the image into well formed sentences. In this project, you will generate image captions from a set of images. Investigate social media activity on Instagram for hiking and climbing. Recommend remote, beautiful climbing and hiking locations based on real-time posting data from Instagram users.',
 			},
 		],
 		mentors: [
@@ -1713,8 +1692,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'So, here is the question. If there was a person who worked with Microsoft, Facebook, Amazon, Uber and Yahoo just to name a few and then he started working in Fampay as an Engineering Manager. What kind of guidance would you expect from such a person? Would you be interested in asking him how to crack the interviews for these companies? Would this be an opportunity that would be difficult to miss on?? We believe it is definitely worth your effort.If you are someone aspiring to work in any of the large tech companies, or aspire to work in the startup world, his guidance would be invaluable.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor4,
 			},
 			{
 				name: 'Rohini Jain',
@@ -1722,8 +1700,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'In a world where its hard to hold on to a job due to high pressure and fast pace. Rohini has been excelling at one of the biggest companies of the world, CISCO for over 10 years.Rohini Jain is a technology enthusiast, an experienced Software Architect and a mother of a school-going kid and a baby daughter.  She has a wealth of experience to share with the students : ranging from her college days at MNNIT Allahabad, to her 4 years in industry at ST Ericsson, her MS degree from University of Texas and almost 11 years of work experience at world’s largest networking company Cisco.  Rohini leads a team of software developers and software test engineers who are responsible for implementing automation solutions to make the process of testing software more efficient.She can guide you through every step of your journey and help you land your dream job as well as excel in it.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor3,
 			},
 			{
 				name: 'Charu Chhabra',
@@ -1731,8 +1708,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'An Academician, A Data scientist, An Author, A researcher working on Artificial intelligence, data science, deep learning and computer vision. A technology enthusiast who loves to contribute in the field of research and development in numerous disciplines. IEEE reviewer, An author of books in collaboration with Genius publications Jaipur, author of several papers and chapters in leading international books and journals. Having almost 10 years of experience in industry and Academia and still counting more as an AI enthusiast.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor2,
 			},
 			{
 				name: 'Ashutosh Deoghre',
@@ -1740,64 +1716,57 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'A Data Analytics/Science Professional with about 7 years of experience.He loves solving complex business problems and delivering valuable insights via Data Analytics, Data Science & advanced data-driven methods. Has a very good experience working with structured, semi-structured, and unstructured data. Proficient in various Data Science tools & techniques like Python, R, SQL, Tableau, Data Analysis, Data Visualization, Text Mining, Quantitative Analysis, and Storytelling.He is also skilled in Data Mining, Statistics, Predictive Modeling, Machine Learning, NoSQL databases, Deep Neural Networks, Natural Language Processing, Computer Vision, and Big Data Technologies. ',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor1,
 			},
 		],
 		reviews: [
 			{
-				firstRow: {
-					name: 'Suresh Gupta (Associate Data Scientist- Oracle)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I have always been interested in Learning Data Science, but never had the time to study for it. When I found out about Excelsior and their online, accelerated course, I was instantly intrigued. The course is well organized with a good mix of Live Classes, reading material and videos. It also provides a great way to learn through hands on experiences while working on real world projects and learning what we have to use.',
-				},
-				secondRow: {
-					name: 'Neelam Singhal (Data Scientist - Goldman Sachs)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I highly recommend Excelsior Data Science Courses. The best part is that they have a placement team that will help you get a job after the course which absolutely rocks! I loved their 1-on-1 classes where I learnt from someone who has been in the field for quite a while!',
-				},
+				name: 'Suresh Gupta (Associate Data Scientist - Oracle)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I have always been interested in Learning Data Science, but never had the time to study for it. When I found out about Excelsior and their online, accelerated course, I was instantly intrigued. The course is well organized with a good mix of Live Classes, reading material and videos. It also provides a great way to learn through hands on experiences while working on real world projects and learning what we have to use.',
 			},
 			{
-				firstRow: {
-					name: 'Suresh Goel(Data Scientist-Amazon)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I took Excelsior’s course to learn how to do Data Science from a theoretical perspective, and I was not disappointed. The course is accessible to a wide range of students, and the materials are top notch. The professor is a real Data Scientist who knows his stuff and explains it well. The assignments are varied and thought provoking. The placement process was excellent and very transparent.',
-				},
-				secondRow: {
-					name: 'Shashank Sinha(Data Scientist- Paytm)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I have been to many well-known Data Science / Machine Learning courses in Bangalore. But I could not find the right course which could help me to land my first job in this field. Then, I found Excelsior. Excelsior mentor Mr. Sachin was so helpful and so knowledgeable in this field that he could guide me throughout the course and they helped me to get placed in a Top MNC through his their extensive placement program.',
-				},
+				name: 'Neelam Singhal (Data Scientist - Goldman Sachs)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I highly recommend Excelsior Data Science Courses. The best part is that they have a placement team that will help you get a job after the course which absolutely rocks! I loved their 1-on-1 classes where I learnt from someone who has been in the field for quite a while!',
 			},
 			{
-				firstRow: {
-					name: 'Harshita (Data Scientist-Mondelez International)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I was a fresher in Analytics industry, and I wanted to start my career in Data Science. I needed guidance from an expert for this. Excelsior’s Team is very supportive and helped me a lot to get started with in this field. They provided me with in-depth curriculum and detailed teaching which helped me in achieving my goals in the right direction.',
-				},
-				secondRow: {
-					name: 'Hemanth Reddy(Data Scientist-Airtel)',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 5,
-					description:
-						'I am writing this review to thank Excelsior for making Data Science online course. I have recently completed this course and it was the best decision I have made in my life. The course is well designed with details, examples, exercises, lectures and assignments. The mentors are really helpful, and they helped me to clear all my doubts regarding the program. They always replied to my emails on time, and I also got a job through Brilliant Data Science. I am really thankful to them for helping me build my profile and gain the head start I needed.',
-				},
+				name: 'Suresh Goel (Data Scientist - Amazon)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I took Excelsior’s course to learn how to do Data Science from a theoretical perspective, and I was not disappointed. The course is accessible to a wide range of students, and the materials are top notch. The professor is a real Data Scientist who knows his stuff and explains it well. The assignments are varied and thought provoking. The placement process was excellent and very transparent.',
+			},
+			{
+				name: 'Shashank Sinha (Data Scientist - Paytm)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I have been to many well-known Data Science / Machine Learning courses in Bangalore. But I could not find the right course which could help me to land my first job in this field. Then, I found Excelsior. Excelsior mentor Mr. Sachin was so helpful and so knowledgeable in this field that he could guide me throughout the course and they helped me to get placed in a Top MNC through his their extensive placement program.',
+			},
+			{
+				name: 'Harshita (Data Scientist - Mondelez International)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I was a fresher in Analytics industry, and I wanted to start my career in Data Science. I needed guidance from an expert for this. Excelsior’s Team is very supportive and helped me a lot to get started with in this field. They provided me with in-depth curriculum and detailed teaching which helped me in achieving my goals in the right direction.',
+			},
+			{
+				name: 'Hemanth Reddy (Data Scientist - Airtel)',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 5,
+				description:
+					'I am writing this review to thank Excelsior for making Data Science online course. I have recently completed this course and it was the best decision I have made in my life. The course is well designed with details, examples, exercises, lectures and assignments. The mentors are really helpful, and they helped me to clear all my doubts regarding the program. They always replied to my emails on time, and I also got a job through Brilliant Data Science. I am really thankful to them for helping me build my profile and gain the head start I needed.',
 			},
 		],
 		faq: [
@@ -2297,28 +2266,24 @@ const Program_DB_Master = [
 		],
 		projects: [
 			{
-				firstRow: {
-					title: 'Fake news detection',
-					description:
-						'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
-				},
-				secondRow: {
-					title: 'Influence of global warming on food chain supply',
-					description:
-						'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
-				},
+				title: 'Fake news detection',
+				description:
+					'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
 			},
 			{
-				firstRow: {
-					title: 'Segmentation of customer groups',
-					description:
-						'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
-				},
-				secondRow: {
-					title: 'Diabetic Retinopathy',
-					description:
-						'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
-				},
+				title: 'Influence of global warming on food chain supply',
+				description:
+					'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
+			},
+			{
+				title: 'Segmentation of customer groups',
+				description:
+					'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
+			},
+			{
+				title: 'Diabetic Retinopathy',
+				description:
+					'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
 			},
 		],
 		mentors: [
@@ -2328,8 +2293,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'So, here is the question. If there was a person who worked with Microsoft, Facebook, Amazon, Uber and Yahoo just to name a few and then he started working in Fampay as an Engineering Manager. What kind of guidance would you expect from such a person? Would you be interested in asking him how to crack the interviews for these companies? Would this be an opportunity that would be difficult to miss on?? We believe it is definitely worth your effort.If you are someone aspiring to work in any of the large tech companies, or aspire to work in the startup world, his guidance would be invaluable.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor4,
 			},
 			{
 				name: 'Rohini Jain',
@@ -2337,8 +2301,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'In a world where its hard to hold on to a job due to high pressure and fast pace. Rohini has been excelling at one of the biggest companies of the world, CISCO for over 10 years.Rohini Jain is a technology enthusiast, an experienced Software Architect and a mother of a school-going kid and a baby daughter.  She has a wealth of experience to share with the students : ranging from her college days at MNNIT Allahabad, to her 4 years in industry at ST Ericsson, her MS degree from University of Texas and almost 11 years of work experience at world’s largest networking company Cisco.  Rohini leads a team of software developers and software test engineers who are responsible for implementing automation solutions to make the process of testing software more efficient.She can guide you through every step of your journey and help you land your dream job as well as excel in it.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor3,
 			},
 			{
 				name: 'Charu Chhabra',
@@ -2346,8 +2309,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'An Academician, A Data scientist, An Author, A researcher working on Artificial intelligence, data science, deep learning and computer vision. A technology enthusiast who loves to contribute in the field of research and development in numerous disciplines. IEEE reviewer, An author of books in collaboration with Genius publications Jaipur, author of several papers and chapters in leading international books and journals. Having almost 10 years of experience in industry and Academia and still counting more as an AI enthusiast.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor2,
 			},
 			{
 				name: 'Ashutosh Deoghre',
@@ -2355,64 +2317,57 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'A Data Analytics/Science Professional with about 7 years of experience.He loves solving complex business problems and delivering valuable insights via Data Analytics, Data Science & advanced data-driven methods. Has a very good experience working with structured, semi-structured, and unstructured data. Proficient in various Data Science tools & techniques like Python, R, SQL, Tableau, Data Analysis, Data Visualization, Text Mining, Quantitative Analysis, and Storytelling.He is also skilled in Data Mining, Statistics, Predictive Modeling, Machine Learning, NoSQL databases, Deep Neural Networks, Natural Language Processing, Computer Vision, and Big Data Technologies. ',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor1,
 			},
 		],
 		reviews: [
 			{
-				firstRow: {
-					name: 'A',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'B',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'A',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 			{
-				firstRow: {
-					name: 'C',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'D',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'B',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 			{
-				firstRow: {
-					name: 'E',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'F',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'C',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'D',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'E',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'F',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 		],
 		faq: [
@@ -2881,28 +2836,24 @@ const Program_DB_Master = [
 		],
 		projects: [
 			{
-				firstRow: {
-					title: 'Fake news detection',
-					description:
-						'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
-				},
-				secondRow: {
-					title: 'Influence of global warming on food chain supply',
-					description:
-						'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
-				},
+				title: 'Fake news detection',
+				description:
+					'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
 			},
 			{
-				firstRow: {
-					title: 'Segmentation of customer groups',
-					description:
-						'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
-				},
-				secondRow: {
-					title: 'Diabetic Retinopathy',
-					description:
-						'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
-				},
+				title: 'Influence of global warming on food chain supply',
+				description:
+					'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
+			},
+			{
+				title: 'Segmentation of customer groups',
+				description:
+					'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
+			},
+			{
+				title: 'Diabetic Retinopathy',
+				description:
+					'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
 			},
 		],
 		mentors: [
@@ -2912,8 +2863,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'So, here is the question. If there was a person who worked with Microsoft, Facebook, Amazon, Uber and Yahoo just to name a few and then he started working in Fampay as an Engineering Manager. What kind of guidance would you expect from such a person? Would you be interested in asking him how to crack the interviews for these companies? Would this be an opportunity that would be difficult to miss on?? We believe it is definitely worth your effort.If you are someone aspiring to work in any of the large tech companies, or aspire to work in the startup world, his guidance would be invaluable.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor4,
 			},
 			{
 				name: 'Rohini Jain',
@@ -2921,8 +2871,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'In a world where its hard to hold on to a job due to high pressure and fast pace. Rohini has been excelling at one of the biggest companies of the world, CISCO for over 10 years.Rohini Jain is a technology enthusiast, an experienced Software Architect and a mother of a school-going kid and a baby daughter.  She has a wealth of experience to share with the students : ranging from her college days at MNNIT Allahabad, to her 4 years in industry at ST Ericsson, her MS degree from University of Texas and almost 11 years of work experience at world’s largest networking company Cisco.  Rohini leads a team of software developers and software test engineers who are responsible for implementing automation solutions to make the process of testing software more efficient.She can guide you through every step of your journey and help you land your dream job as well as excel in it.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor3,
 			},
 			{
 				name: 'Charu Chhabra',
@@ -2930,8 +2879,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'An Academician, A Data scientist, An Author, A researcher working on Artificial intelligence, data science, deep learning and computer vision. A technology enthusiast who loves to contribute in the field of research and development in numerous disciplines. IEEE reviewer, An author of books in collaboration with Genius publications Jaipur, author of several papers and chapters in leading international books and journals. Having almost 10 years of experience in industry and Academia and still counting more as an AI enthusiast.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor2,
 			},
 			{
 				name: 'Ashutosh Deoghre',
@@ -2939,64 +2887,57 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'A Data Analytics/Science Professional with about 7 years of experience.He loves solving complex business problems and delivering valuable insights via Data Analytics, Data Science & advanced data-driven methods. Has a very good experience working with structured, semi-structured, and unstructured data. Proficient in various Data Science tools & techniques like Python, R, SQL, Tableau, Data Analysis, Data Visualization, Text Mining, Quantitative Analysis, and Storytelling.He is also skilled in Data Mining, Statistics, Predictive Modeling, Machine Learning, NoSQL databases, Deep Neural Networks, Natural Language Processing, Computer Vision, and Big Data Technologies. ',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor1,
 			},
 		],
 		reviews: [
 			{
-				firstRow: {
-					name: 'A',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'B',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'A',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 			{
-				firstRow: {
-					name: 'C',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'D',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'B',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 			{
-				firstRow: {
-					name: 'E',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'F',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'C',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'D',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'E',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'F',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 		],
 		faq: [
@@ -3387,28 +3328,24 @@ const Program_DB_Master = [
 		],
 		projects: [
 			{
-				firstRow: {
-					title: 'Fake news detection',
-					description:
-						'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
-				},
-				secondRow: {
-					title: 'Influence of global warming on food chain supply',
-					description:
-						'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
-				},
+				title: 'Fake news detection',
+				description:
+					'Fake news can be dangerous. Your challenge is to build a Fake News classifier by applying ML algorithms such as Passive Aggressive Classifier and determine the accuracy of our model. You will be using various Python packages such as pandas, NumPy, and scikit-learn to determine the legitimacy of the information. With the help of this, you will be able to predict on the fly whether the information you acquired is authentic or not.',
 			},
 			{
-				firstRow: {
-					title: 'Segmentation of customer groups',
-					description:
-						'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
-				},
-				secondRow: {
-					title: 'Diabetic Retinopathy',
-					description:
-						'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
-				},
+				title: 'Influence of global warming on food chain supply',
+				description:
+					'Global warming is influencing the climate pattern and leads to the change in food production. Unusual weather conditions and adaptation of technologies used in agriculture have a significant effect on the pattern of food production globally. In this project you will analyze the factors that are causing these changes, study the data visualization techniques to explain the patterns across different geographical locations, and predict the future trends.',
+			},
+			{
+				title: 'Segmentation of customer groups',
+				description:
+					'Customer segmentation helps companies to market the products in each segment more fitting to each individual customer. Build your clustering model using k-means clustering algorithms learned in machine learning. In this project, you will cluster the customers based on the features and their buying behaviour. Use the Elbow method, Silhouette Analysis method and DBSCAN. Once you have created various segments among customers, this model could be used by businesses to advertise their products to each segment in a way which will grab their attention.',
+			},
+			{
+				title: 'Diabetic Retinopathy',
+				description:
+					'Early treatment of pathological changes in the blood vessels of the eye can help prevent eye disease from progressing to blindness. In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract In this project, you will use Keras with TensorFlow backend to build a deep learning model for automatic diabetic retinopathy screening. We will be using data that has been pre-processed to extract the most important features from retina images.',
 			},
 		],
 		mentors: [
@@ -3418,8 +3355,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'So, here is the question. If there was a person who worked with Microsoft, Facebook, Amazon, Uber and Yahoo just to name a few and then he started working in Fampay as an Engineering Manager. What kind of guidance would you expect from such a person? Would you be interested in asking him how to crack the interviews for these companies? Would this be an opportunity that would be difficult to miss on?? We believe it is definitely worth your effort.If you are someone aspiring to work in any of the large tech companies, or aspire to work in the startup world, his guidance would be invaluable.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor4,
 			},
 			{
 				name: 'Rohini Jain',
@@ -3427,8 +3363,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'In a world where its hard to hold on to a job due to high pressure and fast pace. Rohini has been excelling at one of the biggest companies of the world, CISCO for over 10 years.Rohini Jain is a technology enthusiast, an experienced Software Architect and a mother of a school-going kid and a baby daughter.  She has a wealth of experience to share with the students : ranging from her college days at MNNIT Allahabad, to her 4 years in industry at ST Ericsson, her MS degree from University of Texas and almost 11 years of work experience at world’s largest networking company Cisco.  Rohini leads a team of software developers and software test engineers who are responsible for implementing automation solutions to make the process of testing software more efficient.She can guide you through every step of your journey and help you land your dream job as well as excel in it.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor3,
 			},
 			{
 				name: 'Charu Chhabra',
@@ -3436,8 +3371,7 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'An Academician, A Data scientist, An Author, A researcher working on Artificial intelligence, data science, deep learning and computer vision. A technology enthusiast who loves to contribute in the field of research and development in numerous disciplines. IEEE reviewer, An author of books in collaboration with Genius publications Jaipur, author of several papers and chapters in leading international books and journals. Having almost 10 years of experience in industry and Academia and still counting more as an AI enthusiast.',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor2,
 			},
 			{
 				name: 'Ashutosh Deoghre',
@@ -3445,64 +3379,57 @@ const Program_DB_Master = [
 				location: 'Chennai ,India',
 				description:
 					'A Data Analytics/Science Professional with about 7 years of experience.He loves solving complex business problems and delivering valuable insights via Data Analytics, Data Science & advanced data-driven methods. Has a very good experience working with structured, semi-structured, and unstructured data. Proficient in various Data Science tools & techniques like Python, R, SQL, Tableau, Data Analysis, Data Visualization, Text Mining, Quantitative Analysis, and Storytelling.He is also skilled in Data Mining, Statistics, Predictive Modeling, Machine Learning, NoSQL databases, Deep Neural Networks, Natural Language Processing, Computer Vision, and Big Data Technologies. ',
-				imageURL:
-					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				imageURL: mentor1,
 			},
 		],
 		reviews: [
 			{
-				firstRow: {
-					name: 'A',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'B',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'A',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 			{
-				firstRow: {
-					name: 'C',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'D',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'B',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 			{
-				firstRow: {
-					name: 'E',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
-				secondRow: {
-					name: 'F',
-					imageURL:
-						'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
-					rating: 4.5,
-					description:
-						'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
-				},
+				name: 'C',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'D',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'E',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
+			},
+			{
+				name: 'F',
+				imageURL:
+					'https://acorn-react-classic-dashboard.coloredstrategies.com/img/profile/profile-1.webp',
+				rating: 4.5,
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi quas quos necessitatibus earum veniam, voluptatem voluptatibus, cum magnam amet eos dignissimos non reprehenderit minus dolor officiis ea quibusdam fugit!',
 			},
 		],
 		faq: [

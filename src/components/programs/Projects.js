@@ -1,7 +1,10 @@
-import { Card, Carousel, Col, Image, Row } from 'antd';
-import React, { Fragment } from 'react';
+import { Card, Col, Row } from 'antd';
+import React from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 import { FiChevronRight } from 'react-icons/fi';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function PrevArrow(props) {
 	const { className, style, onClick } = props;
@@ -14,54 +17,50 @@ function NextArrow(props) {
 }
 
 function Projects({ projectsData }) {
+	const settings = {
+		infinite: true,
+		swipeToSlide: true,
+		slidesToShow: 2,
+		speed: 500,
+		nextArrow: <NextArrow />,
+		prevArrow: <PrevArrow />,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+					adaptiveHeight: true,
+				},
+			},
+		],
+	};
+
 	return (
-		<div className='container mb-5'>
+		<div className='container mb-4'>
 			<h2 className='admission_heading'>Sample Projects</h2>
-			<Carousel
-				className='d-lg-jsjs'
-				dots={false}
-				autoplay={false}
-				arrows={true}
-				prevArrow={<PrevArrow />}
-				nextArrow={<NextArrow />}
-			>
+			<Slider {...settings}>
 				{projectsData.map((e, i) => (
-					<div className='mb-4' key={i}>
-						<Row gutter={[20, 30]}>
-							<Col lg={12} className='d-flex'>
-								<Card>
+					<div key={i}>
+						<Row gutter={[20, 30]} className='m-2 project-card'>
+							<Col lg={24} className='d-flex p-0'>
+								<Card className='p-0'>
 									<div className='d-flex flex-column'>
 										<div
 											className='project_header'
 											style={{ backgroundColor: 'rgb(243 93 93 / 90%)' }}
 										>
 											<header className='text-center'>
-												<h3 style={{ color: '#fff' }}>{e.firstRow.title}</h3>
+												<h3 style={{ color: '#fff' }}>{e.title}</h3>
 											</header>
 										</div>
 										<div className='order-lg-2 p-2 mt-2'>
-											<p style={{ lineHeight: '1.5' }}>
-												{e.firstRow.description}
-											</p>
-										</div>
-									</div>
-								</Card>
-							</Col>
-							<Col lg={12} className='d-flex'>
-								<Card>
-									<div className='d-flex flex-column'>
-										<div
-											className='project_header'
-											style={{ backgroundColor: 'rgb(243 93 93 / 90%)' }}
-										>
-											<header className='text-center'>
-												<h3 style={{ color: '#fff' }}>{e.secondRow.title}</h3>
-											</header>
-										</div>
-										<div className='order-lg-2 p-2 mt-2'>
-											<p style={{ lineHeight: '1.5' }}>
-												{e.secondRow.description}
-											</p>
+											<p style={{ lineHeight: '1.5' }}>{e.description}</p>
 										</div>
 									</div>
 								</Card>
@@ -69,7 +68,7 @@ function Projects({ projectsData }) {
 						</Row>
 					</div>
 				))}
-			</Carousel>
+			</Slider>
 		</div>
 	);
 }
