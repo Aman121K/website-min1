@@ -5,9 +5,7 @@ function FAQ({ faqData }) {
 	const { Panel } = Collapse;
 	return (
 		<div className='mt-5'>
-			<h3 className='mb-3' style={{ fontSize: '24px', fontWeight: 'bolder' }}>
-				Frequently Asked Questions
-			</h3>
+			<h2 className='mb-3 custom-text-primary'>Frequently Asked Questions</h2>
 
 			<Collapse accordion expandIconPosition='right'>
 				{faqData.map(({ typeOfFAQ, content }) => (
@@ -15,7 +13,7 @@ function FAQ({ faqData }) {
 						<Collapse accordion>
 							{content.map(({ question, answer }) => (
 								<Panel header={question} key={question}>
-									<p>{answer}</p>
+									<h4 style={{ lineHeight: '1.5' }}>{answer}</h4>
 								</Panel>
 							))}
 						</Collapse>

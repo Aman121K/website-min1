@@ -1,4 +1,4 @@
-import { Card, Carousel, Col, Rate, Row } from 'antd';
+import { Card, Carousel, Col, Row } from 'antd';
 import React from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 import { FiChevronRight } from 'react-icons/fi';
@@ -17,13 +17,13 @@ function NextArrow(props) {
 function Review({ reviews }) {
 	return (
 		<div className='container mb-4'>
-			<h3 className='admission_heading'> Reviews </h3>
+			<h2 className='admission_heading'>Reviews</h2>
 
 			<Carousel
 				className='d-lg-jsjs'
 				dots={false}
-				autoplay={false}
-				arrows={true}
+				autoplay
+				arrows
 				prevArrow={<PrevArrow />}
 				nextArrow={<NextArrow />}
 			>

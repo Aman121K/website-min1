@@ -7,7 +7,7 @@ function LearningExperience({ learningExperience }) {
 
 	return (
 		<div className='mb-5'>
-			<h3 className='admission_heading '> Career Support </h3>
+			<h2 className='admission_heading '> Career Support </h2>
 			<p>
 				Excelsior’s industry experts are the ultimate resource for anyone looking to
 				build their profile Resume Building LinkedIn Profile Building Github Building
@@ -21,31 +21,51 @@ function LearningExperience({ learningExperience }) {
 								setActiveKey(parseInt(selectedKeys));
 							}}
 						>
-							<Menu.Item key='1' className='text-center' icon={<BugFilled />}>
-								Class Notifications
+							<Menu.Item
+								key='1'
+								className='text-center'
+								style={{ fontSize: '16px' }}
+							>
+								Profile Building
 							</Menu.Item>
-							<Menu.Item key='2' className='text-center' icon={<BulbFilled />}>
-								Hackathons
+							<Menu.Item
+								key='2'
+								className='text-center'
+								style={{ fontSize: '16px' }}
+							>
+								Expert Sessions
 							</Menu.Item>
-							<Menu.Item key='3' className='text-center' icon={<CloudFilled />}>
-								Career Services
+							<Menu.Item
+								key='3'
+								className='text-center'
+								style={{ fontSize: '16px' }}
+							>
+								Mock Interviews
 							</Menu.Item>
-							<Menu.Item key='4' className='text-center' icon={<CodeFilled />}>
-								Major Announcements
+							<Menu.Item
+								key='4'
+								className='text-center'
+								style={{ fontSize: '16px' }}
+							>
+								Project Guidance
 							</Menu.Item>
 						</Menu>
 					</Col>
 					<Col
 						md={16}
-						className='d-flex px-0 py-2'
+						className='d-flex px-0 py-2 align-items-center justify-content-center'
 						style={{ borderLeft: '1px solid #ececec' }}
 					>
 						{learningExperience.map(
 							({ body }, index) =>
 								activeKey === index + 1 && (
 									<p
-										className='p-3'
-										style={{ backgroundColor: 'white' }}
+										className='p-3 w-100'
+										style={{
+											backgroundColor: 'white',
+											lineHeight: '1.5',
+											fontSize: '16px',
+										}}
 										key={index}
 									>
 										{body}

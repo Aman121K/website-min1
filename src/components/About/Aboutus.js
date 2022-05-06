@@ -22,11 +22,11 @@ function Aboutus() {
 			</Helmet>
 			<div className='container mt-4'>
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
-				<p className='mb-4 '>Excelsior is ideal for professionals who wants to</p>
+				<p className='mb-4'>Excelsior is ideal for professionals who wants to</p>
 			</div>
 			<div>
 				<div className='banner mb-3 container'>
-					<div className='container'>
+					<div className='container pl-4'>
 						<h1 className='admission_heading mb-3' style={{ color: '#fff' }}>
 							About US
 						</h1>
@@ -136,15 +136,13 @@ function Aboutus() {
 								<Col xs={12} sm={12} md={12} lg={12}>
 									<div className='home__stats-item'>
 										<Avatar size={42} />
-										<p>{'Name'}</p>
-										<h6 className='text-primary'>{'Primary'}</h6>
+										<h3 className='custom-text-primary mt-2'>{'Primary'}</h3>
 									</div>
 								</Col>
 								<Col xs={12} sm={12} md={12} lg={12}>
 									<div className='home__stats-item'>
 										<Avatar size={42} />
-										<p>{'Name'}</p>
-										<h6 className='text-primary'>{'Primary'}</h6>
+										<h3 className='custom-text-primary mt-2'>{'Primary'}</h3>
 									</div>
 								</Col>
 							</Row>
@@ -152,15 +150,13 @@ function Aboutus() {
 								<Col xs={12} sm={12} md={12} lg={12}>
 									<div className='home__stats-item'>
 										<Avatar size={42} />
-										<p>{'Name'}</p>
-										<h6 className='text-primary'>{'Primary'}</h6>
+										<h3 className='custom-text-primary mt-2'>{'Primary'}</h3>
 									</div>
 								</Col>
 								<Col xs={12} sm={12} md={12} lg={12}>
 									<div className='home__stats-item'>
 										<Avatar size={42} />
-										<p>{'Name'}</p>
-										<h6 className='text-primary'>{'Primary'}</h6>
+										<h3 className='custom-text-primary mt-2'>{'Primary'}</h3>
 									</div>
 								</Col>
 							</Row>
