@@ -17,10 +17,11 @@ const { Meta } = Card;
 
 const BlogDetail = () => {
 	const {state} = useLocation();
-	const { blogId,allArray} = state; 
+	const { blogId} = state; 
 	const [details,setDetails]=useState();
+	const [realted,setRelatedBlog]=useState([])
 	console.log("blog detail min..",blogId);
-	console.log("all array..",allArray);
+	// console.log("all array..",allArray);
 	useEffect(()=>{
 		getParticularBlog()
 	},[])
@@ -32,6 +33,9 @@ const BlogDetail = () => {
 		console.log("particular res..",response.data);
 		if(response.data.data){
 			setDetails(response.data.data)
+			if(response.data.blogresult.length>0){
+				setRelatedBlog(response.data.blogresult)
+			}
 		}
 	}
 	return (
@@ -70,17 +74,17 @@ const BlogDetail = () => {
 						<div className='blog__details-also-like section'>
 							<h4 className='text-primary'>You May Also Like</h4>
 							<Row gutter={[20, 30]} className='mt-10'>
-								{[1,2,3].map((item, index) => (
+								{/* {realted.map((item, index) => (
 									<Col xs={24} sm={24} md={8} lg={8} key={index}>
 										<BlogCard item={item} />
 									</Col>
-								))}
+								))} */}
 							</Row>
 						</div>
 					</Col>
 					<Col xs={24} sm={24} md={24} lg={6}>
-						{[1,2,3,4].map((item, index) => (
-							<BlogMiniCard key={index}  />
+						{realted.map((item, index) => (
+							<BlogMiniCard key={index} item={item}  />
 						))}
 						<div className='blogs__details-advertise-blogs'>
 							<Card className='blogs__details-advertise-blog'>

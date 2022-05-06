@@ -12,11 +12,11 @@ import {
 	Select,
 	Modal,
 	Radio,
-	Menu, Dropdown,  message, Space, Tooltip 
+	Menu, Dropdown, message, Space, Tooltip
 } from 'antd';
 
 
-import { RightOutlined,DownOutlined, UserOutlined , BorderOutlined, SearchOutlined } from '@ant-design/icons';
+import { RightOutlined, DownOutlined, UserOutlined, BorderOutlined, SearchOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -72,12 +72,12 @@ const Home = () => {
 	function handleButtonClick(e) {
 		message.info('Click on left button.');
 		console.log('click left button', e);
-	  }
-	  
-	  function handleMenuClick(e) {
+	}
+
+	function handleMenuClick(e) {
 		message.info('Click on menu item.');
 		console.log('click', e);
-	  }
+	}
 	const [latestNewsData, setLatestNewsData] = useState([
 		{
 			title: 'New Initiative: Free Counselling Session with Real Data Scientist before enrolling',
@@ -196,6 +196,27 @@ const Home = () => {
 			console.log('home api is...///...', response.data);
 		}
 	};
+	const menu = (
+		<Menu
+			items={[
+				{
+					label: <a href="https://www.antgroup.com">1st menu item</a>,
+					key: '0',
+				},
+				{
+					label: <a href="https://www.aliyun.com">2nd menu item</a>,
+					key: '1',
+				},
+				{
+					type: 'divider',
+				},
+				{
+					label: '3rd menu item',
+					key: '3',
+				},
+			]}
+		/>
+	);
 	const subScribeApi = async () => {
 		if (!subscribeEmail) {
 			toast.error('Some parameter is missing');
@@ -334,20 +355,23 @@ const Home = () => {
 											onChange={(text) => setExperience(text.target.value)}
 										/>
 									</Form.Item>
-									<Space wrap>
-    <Dropdown.Button onClick={handleButtonClick} overlay={menu}>
-      Dropdown
-    </Dropdown.Button>
-  </Space>
-									{/* <Form.Item>
-                    <Radio.Group
-                    // onChange={onChange}
-                    // value={value }
-                    >
-                      <Radio value={"Myself"}>Myself</Radio>
-                      <Radio value={"My Company"}>My Company</Radio>
-                    </Radio.Group>
-                  </Form.Item> */}
+										<Form.Item>
+									<select name="cars" id="cars">
+										<option value="volvo">Experience</option>
+										<option value="saab">Saab</option>
+										<option value="opel">Opel</option>
+										<option value="audi">Audi</option>
+
+									</select>
+									</Form.Item>
+									<Form.Item>
+									<select name="cars" id="cars">
+										<option value="volvo">Highest Qualification</option>
+										<option value="saab">Saab</option>
+										<option value="opel">Opel</option>
+										<option value="audi">Audi</option>
+									</select>
+									</Form.Item>
 									<Form.Item shouldUpdate>
 										{() => (
 											<Button
@@ -469,7 +493,7 @@ const Home = () => {
 					<p className='mb-3 text-center'>
 						Stay updated with the latest news from the industry.
 					</p>
-					            <Form layout='vertical'>
+					<Form layout='vertical'>
 						<div className='d-flex'>
 							<Form.Item
 								className='mr-4 w-100'
