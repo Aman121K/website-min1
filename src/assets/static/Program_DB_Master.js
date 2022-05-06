@@ -1,9 +1,20 @@
 import DSforIT from '../images/DSforIT.png';
+import i1 from '../images/Home page Program Icons/DS for IT.png';
+
 import DSforFinance from '../images/DS for Finance.png';
+import i2 from '../images/Home page Program Icons/DS for Finance.png';
+
 import DeepLearning from '../images/Deep Learning.png';
+import i3 from '../images/Home page Program Icons/Deep Learning.png';
+
 import ML from '../images/Machine Learning with Python.png';
+import i4 from '../images/Home page Program Icons/Machine Learning with Python.png';
+
 import DataAnalytics from '../images/Data Analytics.png';
+import i5 from '../images/Home page Program Icons/Data Analytics.png';
+
 import PythonBootcamp from '../images/Python Bootcamp.png';
+import i6 from '../images/Home page Program Icons/Python Bootcamp.png';
 
 const Program_DB_Master = [
 	{
@@ -14,8 +25,11 @@ const Program_DB_Master = [
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DSforIT,
+		icon: i1,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -285,9 +299,9 @@ const Program_DB_Master = [
 						Excelsior’s industry experts are the ultimate resource for anyone
 						looking to build their profile
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Resume Building</li>
-							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
-							<li style={{width: 'max-content'}}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
 						</ul>
 					</>
 				),
@@ -298,10 +312,14 @@ const Program_DB_Master = [
 					<>
 						Excelsior offer expert advice on softskills and HR topics
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Counselling Sessions with Real Data Science experts</li>
-							<li style={{width: 'max-content'}}>Prepare for HR Interviews</li>
-							<li style={{width: 'max-content'}}>Learn Interviewers Psychology</li>
-							<li style={{width: 'max-content'}}>Develop Soft-Skills</li>
+							<li style={{ width: 'max-content' }}>
+								Counselling Sessions with Real Data Science experts
+							</li>
+							<li style={{ width: 'max-content' }}>Prepare for HR Interviews</li>
+							<li style={{ width: 'max-content' }}>
+								Learn Interviewers Psychology
+							</li>
+							<li style={{ width: 'max-content' }}>Develop Soft-Skills</li>
 						</ul>
 					</>
 				),
@@ -313,9 +331,9 @@ const Program_DB_Master = [
 						Excelsior’s industry experts are the ultimate resource for anyone
 						looking to build their profile
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Resume Building</li>
-							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
-							<li style={{width: 'max-content'}}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
 						</ul>
 					</>
 				),
@@ -327,9 +345,9 @@ const Program_DB_Master = [
 						Excelsior’s industry experts are the ultimate resource for anyone
 						looking to build their profile
 						<ul className='pl-4 mt-2'>
-							<li style={{width: 'max-content'}}>Resume Building</li>
-							<li style={{width: 'max-content'}}>LinkedIn Profile Building</li>
-							<li style={{width: 'max-content'}}>Github Building</li>
+							<li style={{ width: 'max-content' }}>Resume Building</li>
+							<li style={{ width: 'max-content' }}>LinkedIn Profile Building</li>
+							<li style={{ width: 'max-content' }}>Github Building</li>
 						</ul>
 					</>
 				),
@@ -361,7 +379,7 @@ const Program_DB_Master = [
 				},
 			},
 		],
-		mentor: [
+		mentors: [
 			{
 				name: 'Shobhit Gupta',
 				areaOfExpert: 'Data Science',
@@ -645,8 +663,11 @@ const Program_DB_Master = [
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DSforFinance,
+		icon: i2,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -1236,8 +1257,11 @@ const Program_DB_Master = [
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DeepLearning,
+		icon: i3,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -1827,8 +1851,11 @@ const Program_DB_Master = [
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: ML,
+		icon: i4,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -2418,8 +2445,11 @@ const Program_DB_Master = [
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: DataAnalytics,
+		icon: i5,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',
@@ -3009,8 +3039,11 @@ const Program_DB_Master = [
 		completedBy: 907,
 		demoVideoURL: 'https://youtu.be/Y_wXF1Pe4AA',
 		banner: PythonBootcamp,
+		icon: i6,
 		description:
 			'Prepare Yourself For Product-based IT Companies. A program that combines the two fields of Data Science and Product Management. The knowledge provided in this course will help you take your career to next level.',
+		shortDescription:
+			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe illum, consectetur',
 		highlight: {
 			firstRow: [
 				'200+ hours of live sessions',

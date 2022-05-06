@@ -163,7 +163,7 @@ const ProgramDetails = ({ programData }) => {
 								<Projects projectsData={programData.projects} />
 							</div>
 							<div id='Mentors' name='Mentors'>
-								<Mentors mentorsData={programData.mentor} />
+								<Mentors mentorsData={programData.mentors} />
 							</div>
 							<div className='mt-5' id='Review' name='Review'>
 								<Review reviews={programData.reviews} />

@@ -28,6 +28,7 @@ import Program_DB_Master from '../../assets/static/Program_DB_Master';
 import TestimonialCarousel from './TestimonialCarousel';
 import HtmlHead from '../HtmlHead';
 import Review from '../programs/Review';
+import { CheckSquare, ChartUp, Star, Wizard, StartUp, Suitcase } from '../Icons';
 
 const { Option } = Select;
 const Home = () => {
@@ -45,26 +46,74 @@ const Home = () => {
 		{
 			title: 'Total Placed',
 			text: '6600+ students',
+			icon: (
+				<CheckSquare
+					strokeWidth='1.2'
+					className='custom-text-primary'
+					width='28px'
+					height='28px'
+				/>
+			),
 		},
 		{
 			title: 'Average Salary Hike',
 			text: '53%',
+			icon: (
+				<ChartUp
+					strokeWidth='1.2'
+					className='custom-text-primary'
+					width='28px'
+					height='28px'
+				/>
+			),
 		},
 		{
 			title: 'Average Salary',
 			text: '10.7 LPA',
+			icon: (
+				<Star
+					strokeWidth='1.2'
+					className='custom-text-primary'
+					width='28px'
+					height='28px'
+				/>
+			),
 		},
 		{
 			title: 'Placement %',
 			text: '96.80%',
+			icon: (
+				<Wizard
+					strokeWidth='1.2'
+					className='custom-text-primary'
+					width='28px'
+					height='28px'
+				/>
+			),
 		},
 		{
 			title: 'Highest Salary',
 			text: '76.8 LPA',
+			icon: (
+				<StartUp
+					strokeWidth='1.2'
+					className='custom-text-primary'
+					width='28px'
+					height='28px'
+				/>
+			),
 		},
 		{
 			title: 'Number of Clients',
 			text: '160+',
+			icon: (
+				<Suitcase
+					strokeWidth='1.2'
+					className='custom-text-primary'
+					width='28px'
+					height='28px'
+				/>
+			),
 		},
 	]);
 	const [latestNewsData, setLatestNewsData] = useState([
@@ -246,7 +295,11 @@ const Home = () => {
 						{statsData?.map((item, index) => (
 							<Col xs={24} sm={24} md={6} lg={4} key={index}>
 								<div className='home__stats-item text-center h-100'>
-									<Avatar size={40} />
+									<Avatar
+										className='d-flex align-items-center justify-content-center'
+										size={40}
+										src={item.icon}
+									/>
 									<p style={{ fontSize: '12px' }}>{item.title}</p>
 									<h3 style={{ color: '#f35d5d' }}>{item.text}</h3>
 								</div>
@@ -362,25 +415,26 @@ const Home = () => {
 								Programs
 							</h2>
 							<Row gutter={[20, 30]} style={{ flex: '1 1 100%', rowGap: '10px' }}>
-								{Program_DB_Master.map(({ nameOfProgram }, index) => (
-									<Col xs={24} sm={24} md={12} key={index} className='d-flex'>
-										<div
-											className='home__videos-item'
-											style={{ flex: '1 1 100%' }}
-										>
-											<div className='home__videos-item-left'>
-												{/* <img src={i1} alt="abc" /> */}
+								{Program_DB_Master.map(
+									({ nameOfProgram, icon, shortDescription }, index) => (
+										<Col xs={24} sm={24} md={12} key={index} className='d-flex'>
+											<div
+												className='home__videos-item'
+												style={{ flex: '1 1 100%' }}
+											>
+												<div className='home__videos-item-left'>
+													<img src={icon} alt={nameOfProgram} width='100%' />
+												</div>
+												<div className='home__videos-item-right p-2'>
+													<h3>{nameOfProgram}</h3>
+													<p className='mt-2' style={{ fontSize: '13px' }}>
+														{shortDescription}
+													</p>
+												</div>
 											</div>
-											<div className='home__videos-item-right p-2'>
-												<h3>{nameOfProgram}</h3>
-												<p className='mt-2' style={{ fontSize: '13px' }}>
-													Lorem ipsum dolor sit amet consectetur, adipisicing
-													elit. Saepe illum, consectetur
-												</p>
-											</div>
-										</div>
-									</Col>
-								))}
+										</Col>
+									)
+								)}
 							</Row>
 						</Col>
 					</Row>
@@ -401,7 +455,7 @@ const Home = () => {
 								<div style={{ display: 'grid', gap: '1rem' }}>
 									{latestNewsData?.map((item, index) => (
 										<Row gutter={[20, 30]} key={index}>
-											<div className='d-flex align-items-center'>
+											<div className='d-flex'>
 												<span className='mr-2'>&#10146;</span>
 												<h4 style={{ lineHeight: '1.3' }}>{item.title}</h4>
 											</div>
