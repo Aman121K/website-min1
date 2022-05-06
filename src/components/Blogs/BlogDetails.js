@@ -58,12 +58,12 @@ const BlogDetail = () => {
 						</div>
 						{details?
 						<div className='blog__details-author-section section'>
-							<h3 className='text-primary'>About the Author</h3>
+							<h3 className='custom-text-primary'>About the Author</h3>
 							<Card className='mt-10'>
 								<div className='blog__details-author'>
 									<Avatar />
 									<div className='blog__details-author-info'>
-										<h4 className='text-primary'>{details.author_name}</h4>
+										<h4 className='custom-text-primary'>{details.author_name}</h4>
 										<p>{details.author_title}</p>
 										<p className='blog__details-author-description'>
 											{details.author_des}
