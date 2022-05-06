@@ -23,7 +23,7 @@ const BlogCard = (item,allArray) => {
             cover={
                 <img
                     alt="food"
-                    src={images.food}
+                    src={item.item.fullimage}
                     className="blogs__blog-card-image"
                 />
             }
