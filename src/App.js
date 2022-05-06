@@ -7,7 +7,6 @@ import FixedPlugin from './layout/navbar/FixedPlugin';
 import { AppRoutes } from './routes';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from './utils/ScrollToTop';
-
 const App = () => {
 	if (window.performance) {
 		if (performance.navigation.type == 1) {

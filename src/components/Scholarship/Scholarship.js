@@ -35,7 +35,7 @@ getAllQuiz()
             cover={
               <img
                 className="blogs__blog-card-image"
-                src={item.image}
+                src={item.fullimage}
                 alt="card-image"
               />
             }

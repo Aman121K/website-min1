@@ -46,7 +46,7 @@ const BlogDetail = () => {
 				<Row gutter={[20, 30]} className='mt-20'>
 					<Col xs={24} sm={24} md={24} lg={18}>
 						<div className='blog__details-container'>
-							<img className='blog__details__image' src={images.food} alt='food' />
+							<img className='blog__details__image' src={blogId.fullimage} alt='food' />
 							<div className='blog__details-content section'>
 								<h2>{blogId.title}</h2>
 								<p style={{ marginTop: 10 }}>

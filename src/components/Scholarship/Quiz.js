@@ -95,6 +95,7 @@ function Quiz() {
     if(response.data.data.question.length>0){
       setName(response.data.data.quiz.name);
       setDescription(response.data.data.quiz.descritpion)
+      console.log("Quiz image is/....",response.data.data.quiz.image)
       setImage(response.data.data.quiz.image);
       setCardTime(response.data.data.quiz.time);
       if(localStorage.getItem('user_Data')){
@@ -189,7 +190,7 @@ function Quiz() {
           <Card className="quizz_list">
             <img
               className="card-img-top sh-25"
-              src={image}
+              src={`http://3.111.207.167:8000/uploads/quiz/${image}`}
               alt="card-image"
             />
             <div className="p-4">
