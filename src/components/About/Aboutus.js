@@ -83,28 +83,15 @@ function Aboutus() {
 						<Col xs={24} sm={24} md={12} lg={12}>
 							<Card title='Our Mission' hoverable>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-									eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-									enim ad minim veniam, quis nostrud exercitation ullamco laboris
-									nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-									in reprehenderit in voluptate velit esse cillum dolore eu
-									fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est
-									laborum
+								Excelsior aspires to fulfill its purpose of re-inventing the student learning experience by elevating mentoring, learning, and placement to new heights. Our philosophy is that learning and experiential mentoring should go hand in hand. 
+Excelsior aims equip learners with the resources and inspiration they need to reshape their careers, fulfill their dreams, and make a real difference in the world.
 								</p>
 							</Card>
 						</Col>
 						<Col xs={24} sm={24} md={12} lg={12}>
 							<Card title='Our Vision' hoverable>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-									eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-									enim ad minim veniam, quis nostrud exercitation ullamco laboris
-									nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-									in reprehenderit in voluptate velit esse cillum dolore eu
-									fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt mollit anim id est
-									laborum
+								We have a problem. And Excelsior is working on a solution. We have the problem of rising tuition and diminishing returns for students who are placed in the wrong classes or receive weak guidance. We seek to solve this problem by offering a dynamic learning experience that guides students through the most efficient paths for knowledge acquisition and development of skills and passions to achieve long term success.
 								</p>
 							</Card>
 						</Col>
