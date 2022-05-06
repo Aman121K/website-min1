@@ -77,18 +77,42 @@ const Program = () => {
 					<Col xs={24} sm={24} md={8} lg={8} className='mb-5 d-flex flex-column'>
 						<h2 className='admission_heading'>List of Quizes</h2>
 						<div className='quizes_lists'>
-							<li className='quizes_list'>
-								<ul>lorem</ul>
-								<ul>ipsum</ul>
-							</li>
-							<li className='quizes_list'>
-								<ul>lorem</ul>
-								<ul>ipsum</ul>
-							</li>
-							<li className='quizes_list'>
-								<ul>lorem</ul>
-								<ul>ipsum</ul>
-							</li>
+							<div className='mb-4'>
+								<h3
+									className='custom-text-primary mb-1'
+									style={{ fontWeight: 'bold' }}
+								>
+									Scholarship Test
+								</h3>
+								<p>
+									<Link to='/' style={{ color: '#000' }}>
+										Mathematics Test
+									</Link>
+								</p>
+								<p>
+									<Link to='/' style={{ color: '#000' }}>
+										Aptitude Test
+									</Link>
+								</p>
+							</div>
+							<div>
+								<h3
+									className='custom-text-primary mb-1'
+									style={{ fontWeight: 'bold' }}
+								>
+									Practice Test
+								</h3>
+								<p>
+									<Link to='/' style={{ color: '#000' }}>
+										Python Test
+									</Link>
+								</p>
+								<p>
+									<Link to='/' style={{ color: '#000' }}>
+										Machine Learning Test
+									</Link>
+								</p>
+							</div>
 						</div>
 					</Col>
 					<Col
