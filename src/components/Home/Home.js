@@ -207,7 +207,7 @@ const Home = () => {
 	return (
 		<div className='mb-5'>
 			<ToastContainer />
-			<HtmlHead title='Excelsior' desc='My beautiful home page' />
+			<HtmlHead title='Excelsior | Online Education Platform | Data Science and Cloud technologies' desc='We keep it simple- we focus on the things that really produce results. Keeping this in mind, we encourage you to AIM HIGHER. Excelsior is the best online Data Science institute in Delhi and best online Data Science institute in Bengaluru. Contact- Info@getexcelsior.Com' />
 			<div className='container mt-4'>
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
 				<h3 className='mb-4 '>We don't just train, We make careers</h3>
