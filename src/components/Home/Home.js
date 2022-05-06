@@ -312,9 +312,9 @@ const Home = () => {
 								</h3>
 							</Col>
 						</Row>
-						<Button type='primary' icon={<RightOutlined />}>
-							Getting Started
-						</Button>
+					<button className='enroll_button' onClick={() => console.log('enroll')}>
+						Enroll Now
+					</button>
 					</div>
 				</div>
 			</div>
