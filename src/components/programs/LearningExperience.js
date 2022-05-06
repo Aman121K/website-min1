@@ -33,21 +33,21 @@ function LearningExperience({ learningExperience }) {
 								className='text-center'
 								style={{ fontSize: '16px' }}
 							>
-								Hackathons
+								Expert Sessions
 							</Menu.Item>
 							<Menu.Item
 								key='3'
 								className='text-center'
 								style={{ fontSize: '16px' }}
 							>
-								Career Services
+								Mock Interviews
 							</Menu.Item>
 							<Menu.Item
 								key='4'
 								className='text-center'
 								style={{ fontSize: '16px' }}
 							>
-								Major Announcements
+								Project Guidance
 							</Menu.Item>
 						</Menu>
 					</Col>
