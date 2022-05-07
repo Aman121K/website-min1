@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { HomeOutlined } from "@ant-design/icons";
+import { FieldTimeOutlined } from "@ant-design/icons";
 import {Row, Col, Card, Form, Input, Upload , Button, Modal } from "antd";
 import { RightOutlined, UploadOutlined } from "@ant-design/icons";
 import axios from "axios";
@@ -26,7 +26,7 @@ getAllQuiz()
   }
   return (
     <div className="container mt-3 mb-5">
-      <h3 className="admission_heading"> Quiz </h3>
+      <h1 className="admission_heading"> Scholarship Test </h1>
       <Row gutter={[20, 30]}>
       {quiz.map((item,inde)=>(
         <Col className="hover-scale-up" xs={24} sm={24} md={12} lg={8} onClick={()=>onButtonClick(item)}>
@@ -48,7 +48,7 @@ getAllQuiz()
               <div className="g-0 align-items-center mb-1 row">
                 <div className="col-auto">
                   <div className="sw-3 sh-4 d-flex justify-content-center align-items-center">
-                    <HomeOutlined />
+                    <FieldTimeOutlined />
                   </div>
                 </div>
                 <div className="ps-3 col">

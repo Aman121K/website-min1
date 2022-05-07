@@ -63,7 +63,7 @@ function Review({ reviews }) {
 											</Col> */}
 										<Col lg={24}>
 											<div className='d-flex align-items-center'>
-												<h3 className='mr-2'>{name}</h3>
+												<h3 className='mr-2 custom-text-primary'>{name}</h3>
 												<a
 													href={linkedin}
 													className='d-flex'
