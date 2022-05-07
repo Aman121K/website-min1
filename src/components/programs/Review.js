@@ -3,6 +3,9 @@ import React from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 import { FiChevronRight } from 'react-icons/fi';
 import { FaLinkedin } from 'react-icons/fa';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function PrevArrow(props) {
 	const { className, style, onClick } = props;
@@ -15,67 +18,65 @@ function NextArrow(props) {
 }
 
 function Review({ reviews }) {
+	const settings = {
+		infinite: true,
+		swipeToSlide: true,
+		slidesToShow: 2,
+		speed: 500,
+		nextArrow: <NextArrow />,
+		prevArrow: <PrevArrow />,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+					adaptiveHeight: true,
+				},
+			},
+		],
+	};
+
 	return (
 		<div className='container mb-4'>
 			<h2 className='admission_heading'>Reviews</h2>
 
-			<Carousel
-				className='d-lg-jsjs'
-				dots={false}
-				autoplay
-				arrows
-				prevArrow={<PrevArrow />}
-				nextArrow={<NextArrow />}
-			>
-				{reviews.map(({ firstRow, secondRow }, index) => {
+			<Slider {...settings}>
+				{reviews.map(({ name, imageURL, description, linkedin }, index) => {
 					return (
 						<div key={index}>
-							<Row gutter={[20, 30]}>
-								<Col lg={12} className='d-flex'>
-									<Card>
-										<Row gutter={[20, 30]} className='align-items-center mb-2'>
-											<Col lg={4}>
+							<Row gutter={[20, 30]} className='m-2 review-card'>
+								<Col lg={24} className='d-flex p-0'>
+									<Card className='p-0'>
+										{/* <Row gutter={[20, 30]} className='align-items-center mb-2'> */}
+										{/* <Col lg={4}>
 												<img
 													className='img-fluid rounded-xl'
 													alt='ak'
-													src={firstRow.imageURL}
+													src={imageURL}
 												/>
-											</Col>
-											<Col lg={16}>
-												<div className='d-flex align-items-center'>
-													<p className='mr-1'>{firstRow.name}</p>
-													<a href='/' className='d-flex'>
-														<FaLinkedin color='#0A66C2' size='28' />
-													</a>
-												</div>
-											</Col>
-										</Row>
+											</Col> */}
+										<Col lg={24}>
+											<div className='d-flex align-items-center'>
+												<h3 className='mr-2'>{name}</h3>
+												<a
+													href={linkedin}
+													className='d-flex'
+													target='_blank'
+													rel='noopener noreferrer'
+												>
+													<FaLinkedin color='#0A66C2' size='28' />
+												</a>
+											</div>
+										</Col>
+										{/* </Row> */}
 										<div className='p-2'>
-											<p>{firstRow.description}</p>
-										</div>
-									</Card>
-								</Col>
-								<Col lg={12} className='d-flex'>
-									<Card>
-										<Row gutter={[20, 30]} className='align-items-center mb-2'>
-											<Col lg={4}>
-												<img
-													className='img-fluid rounded-xl'
-													alt='ak'
-													src={secondRow.imageURL}
-												/>
-											</Col>
-											<Col lg={16}>
-												<div className='d-flex align-items-center'>
-													<p className='mr-1'>{secondRow.name}</p>
-													<a href='/' className='d-flex'>
-														<FaLinkedin color='#0A66C2' size='28' />
-													</a>
-												</div>
-											</Col>
-										</Row>
-										<div className='p-2'>
-											<p>{secondRow.description}</p>
+											<p>{description}</p>
 										</div>
 									</Card>
 								</Col>
@@ -83,7 +84,7 @@ function Review({ reviews }) {
 						</div>
 					);
 				})}
-			</Carousel>
+			</Slider>
 		</div>
 	);
 }

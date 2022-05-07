@@ -833,9 +833,15 @@ button {
 	height: 100%;
 }
 
-.quizes_list {
-	display: flex;
-	justify-content: space-between;
+.quizes_lists {
+	a {
+		color: #000;
+		transition: all 0.2s;
+	}
+
+	a:hover {
+		color: $primaryColor;
+	}
 }
 .quizes_list > ul {
 	margin-top: 0%;
@@ -1167,27 +1173,23 @@ button {
 	color: #fff !important;
 }
 
-.ant-carousel .slick-prev,
-.ant-carousel .slick-next {
+.slick-prev,
+.slick-next {
 	color: #000;
 	height: 30px;
 	width: 30px;
-	transform: translateY(-50%);
+
+	@media only screen and (max-width: 600px) {
+		width: 25px;
+		height: 25px;
+	}
 }
 
-.ant-carousel .slick-prev:focus,
-.ant-carousel .slick-next:focus,
-.ant-carousel .slick-prev:hover,
-.ant-carousel .slick-next:hover {
+.slick-prev:focus,
+.slick-next:focus,
+.slick-prev:hover,
+.slick-next:hover {
 	color: #000;
-}
-
-.ant-carousel .slick-prev {
-	left: -35px;
-}
-
-.ant-carousel .slick-next {
-	right: -35px;
 }
 
 .navbar__link {
@@ -1319,4 +1321,47 @@ button {
 
 .steps-content {
 	font-size: 16px;
+}
+
+.review-card,
+.mentor-card {
+	min-height: 230px;
+	cursor: grab;
+
+	@media only screen and (max-width: 1024px) {
+		min-height: 300px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		min-height: 280px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		min-height: 1px;
+
+		.ant-card-body {
+			padding: 1rem;
+		}
+	}
+}
+
+.project-card {
+	min-height: 350px;
+	cursor: grab;
+
+	@media only screen and (max-width: 1024px) {
+		min-height: 400px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		min-height: 380px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		min-height: 1px;
+
+		.ant-card-body {
+			padding: 1rem;
+		}
+	}
 }

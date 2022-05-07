@@ -135,20 +135,27 @@ function Contact() {
 										</div>
 									</div>
 								</div>
-							</div>
-							<div className='mt-5'>
-								<h3 className='mb-5 '>
-									<b> Additional Office Locations</b>
-								</h3>
 								<div className='mb-4'>
-									<div className='d-flex mb-3'>
-										<h6> US </h6>
+										<div className='mb-3'>
+											<h6>OUR CONTACT NUMBER</h6>
+										</div>
+										<div className='mb-3'>
+											<a href='#'><ul><li>tel: +91 9289460444</li>
+															<li>tel: +91 9289460555</li>
+															</ul></a>
+										</div>
 									</div>
-									<div className='mb-3'>
-										<p className='text-muted'>C2 Sector 1, Noida, 201301</p>
+									<div className='mb-4'>
+										<div className='mb-3'>
+											<h6>Whatsapp Us</h6>
+										</div>
+										<div className='mb-3'>
+											<a href='https://wa.me/+919289460444' target="_blank" rel="noreferrer">+91 9289460444 </a>
+															
+										</div>
 									</div>
-								</div>
 							</div>
+
 						</Col>
 						<Col xs={24} sm={24} md={12} lg={12}>
 							<div>

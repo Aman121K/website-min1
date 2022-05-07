@@ -1,11 +1,12 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Col, Form, Input, Radio, Row, Button, DatePicker, TimePicker } from 'antd';
+import { Card, Col, Form, Input, Row, Button, DatePicker, TimePicker } from 'antd';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import ProgramsCards from '../ProgramsCards';
 import Program_DB_Master from '../../../assets/static/Program_DB_Master';
 import { programData } from './data';
+import Mentors from '../Mentors';
 
 const Program = () => {
 	const [name, setName] = useState();
@@ -77,7 +78,7 @@ const Program = () => {
 					<Col xs={24} sm={24} md={8} lg={8} className='mb-5 d-flex flex-column'>
 						<h2 className='admission_heading'>List of Quizes</h2>
 						<div className='quizes_lists'>
-							<div className='mb-4'>
+							<div className='mb-5'>
 								<h3
 									className='custom-text-primary mb-1'
 									style={{ fontWeight: 'bold' }}
@@ -85,14 +86,10 @@ const Program = () => {
 									Scholarship Test
 								</h3>
 								<p>
-									<Link to='/' style={{ color: '#000' }}>
-										Mathematics Test
-									</Link>
+									<Link to='/'>Mathematics Test</Link>
 								</p>
 								<p>
-									<Link to='/' style={{ color: '#000' }}>
-										Aptitude Test
-									</Link>
+									<Link to='/'>Aptitude Test</Link>
 								</p>
 							</div>
 							<div>
@@ -103,14 +100,10 @@ const Program = () => {
 									Practice Test
 								</h3>
 								<p>
-									<Link to='/' style={{ color: '#000' }}>
-										Python Test
-									</Link>
+									<Link to='/'>Python Test</Link>
 								</p>
 								<p>
-									<Link to='/' style={{ color: '#000' }}>
-										Machine Learning Test
-									</Link>
+									<Link to='/'>Machine Learning Test</Link>
 								</p>
 							</div>
 						</div>
@@ -233,30 +226,7 @@ const Program = () => {
 				</Row>
 			</div>
 			<div className='mb-5'>
-				<h2 className='admission_heading'>Mentors</h2>
-				<div className='row'>
-					{programData.mentors.map((e, i) => (
-						<Fragment key={i}>
-							<div className='col col-lg-3 col-md-3 col-sm-12 mb-3'>
-								<Card hoverable className='h-100'>
-									<div className='mb-n5 card-body'>
-										<div className='d-flex align-items-center flex-column justify-content-center'>
-											<div className='sw-13 position-relative mb-2'>
-												<img
-													className='img-fluid rounded-xl'
-													alt='ak'
-													src={e.imageURL}
-												/>
-											</div>
-											<div className='h5 my-3 text-center'>{e.name}</div>
-											<Button type='primary'>Read More</Button>
-										</div>
-									</div>
-								</Card>
-							</div>
-						</Fragment>
-					))}
-				</div>
+				<Mentors mentorsData={programData.mentors} />
 			</div>
 		</div>
 	);

@@ -58,12 +58,12 @@ const BlogDetail = () => {
 						</div>
 						{details?
 						<div className='blog__details-author-section section'>
-							<h3 className='text-primary'>About the Author</h3>
+							<h2 className='custom-text-primary'>About the Author</h2>
 							<Card className='mt-10'>
 								<div className='blog__details-author'>
-									<Avatar />
+									{/* <Avatar /> */}
 									<div className='blog__details-author-info'>
-										<h4 className='text-primary'>{details.author_name}</h4>
+										<h3 className='custom-text-primary'>{details.author_name}</h3>
 										<p>{details.author_title}</p>
 										<p className='blog__details-author-description'>
 											{details.author_des}
@@ -74,8 +74,8 @@ const BlogDetail = () => {
 						</div>:null}
 
 						<div className='blog__details-also-like section'>
-							<h4 className='text-primary'>You May Also Like</h4>
-							<Row gutter={[20, 30]} className='mt-10'>
+							{/* <h4 className='text-primary'>You May Also Like</h4> */}
+							<Row gutter={[20, 30]} className='mt-0'>
 								{/* {realted.map((item, index) => (
 									<Col xs={24} sm={24} md={8} lg={8} key={index}>
 										<BlogCard item={item} />
