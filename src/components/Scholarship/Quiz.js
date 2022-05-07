@@ -249,7 +249,7 @@ function Quiz() {
 								<div>Your Result:-</div>
 								{totalWrong ? (
 									<>
-										<div>Correct Ansqer:- {totalcorrect}/{qes.length} </div>
+										<div>Correct Answer:- {totalcorrect}/{qes.length} </div>
 										<div>Wrong Answer:- {totalWrong}/{qes.length}</div>
 									</>
 								) : (
