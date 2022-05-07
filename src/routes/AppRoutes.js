@@ -19,9 +19,9 @@ const AppRoutes = () => {
 			<Route path='/home' element={<Home />} />
 			<Route path='/blogs' element={<Blogs />} />
 			<Route path='/scholarship' element={<Scholarship />} />
-			<Route path='/blog-details' element={<BlogDetail />} />
+			<Route path='/blog-details/:id' element={<BlogDetail />} />
 			<Route path='/programs' element={<Programs />} />
-			<Route path='/scholarship/quiz' element={<Quiz />} />
+			<Route path='/scholarship/quiz/:id' element={<Quiz />} />
 			<Route path='/contact' element={<Contact />} />
 			{Program_DB_Master.map((e, i) => (
 				<Route

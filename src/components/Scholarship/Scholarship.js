@@ -12,7 +12,7 @@ function Scholarship() {
 
   const onButtonClick = (item) => {
     console.log("set time id is ..",item.id)
-    navigate("/scholarship/quiz",{ state:{ id: item.id}});
+    navigate("/scholarship/quiz/"+item.name,{ state:{ id: item.id}});
   };
   useEffect(()=>{
 getAllQuiz()

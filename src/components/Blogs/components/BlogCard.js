@@ -12,7 +12,7 @@ const BlogCard = (item,allArray) => {
     const detailPage=(item,allArray)=>{
         console.log("Blog Data.2..",item);
         console.log("blog card array..",allArray);
-        navigate("/blog-details",{ state:{ blogId: item,allArray:allArray}})
+        navigate("/blog-details/"+item.id,{ state:{ blogId: item,allArray:allArray}})
     }
 
     return (

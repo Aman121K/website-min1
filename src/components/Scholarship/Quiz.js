@@ -176,7 +176,7 @@ function Quiz() {
         <h3 className="admission_heading"> Quiz Details </h3>
         {isActive?
         <div className="text-center" onClick={()=>setIsActive(true)} >
-          time : {time} 
+          Time : {time} 
           </div>:null
 
         // <div className="text-center" onClick={()=>setIsActive(true)} >
@@ -241,8 +241,8 @@ function Quiz() {
         <div>Your Result:-</div>
         {totalWrong?
         <>
-           <div>Correct Anser:- {totalcorrect}/10 </div>
-           <div>Wrong Anser:- {totalWrong}/10</div>
+           <div>Correct Answer:- {totalcorrect}/10 </div>
+           <div>Wrong Answer:- {totalWrong}/10</div>
            </>:<>Loading..Result Please wait.</>}
           </Card>
       </Modal>:null}
