@@ -25,9 +25,9 @@ function Aboutus() {
 					style={{ backgroundImage: `url(${banner})` }}
 				>
 					<div className='container pl-4'>
-						<h1 className='admission_heading mb-2' style={{ color: '#fff' }}>
+						<h2 className='admission_heading mb-2' style={{ color: '#fff' }}>
 							About US
-						</h1>
+						</h2>
 
 						<Row>
 							<Col lg={12}>

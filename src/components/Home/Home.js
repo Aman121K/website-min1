@@ -291,18 +291,17 @@ const Home = () => {
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
 				<h3 className='mb-4 '>We don't just train, We make careers</h3>
 			</div>
-			<div className='home__banner-left-content d-flex flex-column justify-content-center mb-5 container mx-auto'>
+			<div className='home__banner-left-content d-flex flex-column justify-content-center mb-2 container mx-auto'>
 				<div className='container pt-4 pl-4'>
 					<h2
 						className='text-white admission_heading'
-						style={{ fontWeight: 'bold' }}
 					>
 						Get the Boost
 					</h2>
 					<div>
 						<Row>
 							<Col lg={12}>
-								<h3 className='mb-4 text-white' style={{ lineHeight: '1.5' }}>
+								<h3 className='mb-2 text-white' style={{ lineHeight: '1.5' }}>
 									Excelsior is ideal for professionals who wants to master their
 									skill set and grow their career. With well-structured programs,
 									industry experts as mentors, tailored for every student with a

@@ -47,9 +47,9 @@ function Contact() {
 					style={{ backgroundImage: `url(${banner})` }}
 				>
 					<div className='container pl-4'>
-						<h1 className='admission_heading mb-2' style={{ color: '#fff' }}>
+						<h2 className='admission_heading mb-2' style={{ color: '#fff' }}>
 							Contact Us
-						</h1>
+						</h2>
 
 						<Row>
 							<Col lg={12}>

@@ -14,6 +14,7 @@ import Review from './Review';
 import Blogs from './Blogs';
 import SpeakWithExpert from './SpeakWithExpert';
 import FAQ from './FAQ';
+import HtmlHead from '../HtmlHead';
 
 const ProgramDetails = ({ programData }) => {
 	useEffect(() => {
@@ -33,11 +34,10 @@ const ProgramDetails = ({ programData }) => {
 
 	return (
 		<>
-			<Helmet>
-				<meta charSet='utf-8' />
-				<title>Home</title>
-				<link rel='canonical' href='http://mysite.com/example' />
-			</Helmet>
+			<HtmlHead
+				title='About Excelsior |Best Online Education Platform for Data Science'
+				desc='Students can enrol in online courses on topics such as Data Analytics, Marketing Analytics, and Artificial Intelligence. Get in touch with us at +91-9289470444, or email us at info@getexcelsior.com.'
+			/>
 			<div className='container mt-4'>
 				<h1 className='Banner_Heading'>EXCELSIOR</h1>
 				<p className='mb-4 '>Excelsior is ideal for professionals who wants to</p>
