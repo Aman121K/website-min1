@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { HomeOutlined } from "@ant-design/icons";
+import { FieldTimeOutlined } from "@ant-design/icons";
 import {Row, Col, Card, Form, Input, Upload , Button, Modal } from "antd";
 import { RightOutlined, UploadOutlined } from "@ant-design/icons";
 import axios from "axios";
@@ -48,7 +48,7 @@ getAllQuiz()
               <div className="g-0 align-items-center mb-1 row">
                 <div className="col-auto">
                   <div className="sw-3 sh-4 d-flex justify-content-center align-items-center">
-                    <HomeOutlined />
+                    <FieldTimeOutlined />
                   </div>
                 </div>
                 <div className="ps-3 col">
