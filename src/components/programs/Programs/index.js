@@ -86,10 +86,10 @@ const Program = () => {
 									Scholarship Test
 								</h3>
 								<p>
-									<Link to='/'>Mathematics Test</Link>
+									<Link to='../scholarship'>Mathematics Test</Link>
 								</p>
 								<p>
-									<Link to='/'>Aptitude Test</Link>
+									<Link to='../scholarship'>Aptitude Test</Link>
 								</p>
 							</div>
 							<div>
@@ -100,10 +100,10 @@ const Program = () => {
 									Practice Test
 								</h3>
 								<p>
-									<Link to='/'>Python Test</Link>
+									<Link to='../scholarship'>Python Test</Link>
 								</p>
 								<p>
-									<Link to='/'>Machine Learning Test</Link>
+									<Link to='../scholarship'>Machine Learning Test</Link>
 								</p>
 							</div>
 						</div>

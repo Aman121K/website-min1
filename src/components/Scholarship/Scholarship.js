@@ -26,7 +26,7 @@ getAllQuiz()
   }
   return (
     <div className="container mt-3 mb-5">
-      <h3 className="admission_heading"> Quiz </h3>
+      <h1 className="admission_heading"> Scholarship Test </h1>
       <Row gutter={[20, 30]}>
       {quiz.map((item,inde)=>(
         <Col className="hover-scale-up" xs={24} sm={24} md={12} lg={8} onClick={()=>onButtonClick(item)}>

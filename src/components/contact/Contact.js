@@ -53,9 +53,9 @@ function Contact() {
 					</h2>
 					<Row gutter={[20, 30]} className='mb-3'>
 						<Col xs={24} sm={24} md={12} lg={12}>
-							<h5 className='mb-5'>
-								<strong>Ask how we can help you:</strong>
-							</h5>
+							<h2 className='mb-5 custom-text-primary'>
+								Ask how we can help you:
+							</h2>
 							<div className='mb-4'>
 								<Divider
 									className='mb-2'
@@ -92,9 +92,9 @@ function Contact() {
 							</div>
 							<div className='mt-5'>
 								<div className='mb-3'>
-									<h3 className='mb-5 '>
-										<b> Points of Contact</b>
-									</h3>
+									<h2 className='mb-5 custom-text-primary'>
+										Points of Contact
+									</h2>
 									<div className='mb-4'>
 										<div className='d-flex mb-3'>
 											<h6>
